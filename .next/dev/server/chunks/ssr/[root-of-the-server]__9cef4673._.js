@@ -74,8 +74,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$
 ;
 ;
 const metadata = {
-    title: "Instagram Video Downloader - Download Reels & Videos",
-    description: "Download Instagram videos, reels, and IGTV content for free. Fast, secure, and easy to use.",
+    title: "Instagram & Facebook Video Downloader - Download Reels & Videos",
+    description: "Download Instagram and Facebook videos, reels, and IGTV content for free. Fast, secure, and easy to use.",
     generator: "v0.app",
     icons: {
         icon: [

@@ -34,18 +34,32 @@ export function VideoDownloader() {
     return patterns.some((pattern) => pattern.test(url))
   }
 
+  const validateFacebookUrl = (url: string): boolean => {
+    const patterns = [
+      /^https?:\/\/(www\.)?facebook\.com\/.*\/videos\//,
+      /^https?:\/\/(www\.)?facebook\.com\/reel\//,
+      /^https?:\/\/(www\.)?facebook\.com\/watch\//,
+      /^https?:\/\/fb\.watch\//,
+    ]
+    return patterns.some((pattern) => pattern.test(url))
+  }
+
+  const validateUrl = (url: string): boolean => {
+    return validateInstagramUrl(url) || validateFacebookUrl(url)
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
     setVideoData(null)
 
     if (!url.trim()) {
-      setError("Please enter an Instagram URL")
+      setError("Please enter an Instagram or Facebook URL")
       return
     }
 
-    if (!validateInstagramUrl(url)) {
-      setError("Invalid Instagram URL. Please enter a valid video, reel, or IGTV link.")
+    if (!validateUrl(url)) {
+      setError("Invalid URL. Please enter a valid Instagram or Facebook video/reel link.")
       return
     }
 
@@ -103,7 +117,7 @@ export function VideoDownloader() {
   const handlePaste = async () => {
     try {
       const text = await navigator.clipboard.readText()
-      if (text && validateInstagramUrl(text)) {
+      if (text && validateUrl(text)) {
         setUrl(text)
         setError(null)
       }
@@ -120,10 +134,10 @@ export function VideoDownloader() {
           <Instagram className="w-8 h-8 text-primary" />
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3 tracking-tight">
-          Instagram Video Downloader
+          Instagram & Facebook Video Downloader
         </h1>
         <p className="text-muted-foreground text-base md:text-lg max-w-md mx-auto">
-          Download videos, reels, and IGTV content from Instagram instantly
+          Download videos and reels from Instagram & Facebook instantly
         </p>
       </div>
 
@@ -133,13 +147,13 @@ export function VideoDownloader() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="url" className="text-sm font-medium text-foreground">
-                Instagram URL
+                Instagram or Facebook URL
               </label>
               <div className="relative">
                 <Input
                   id="url"
                   type="text"
-                  placeholder="https://www.instagram.com/reel/..."
+                  placeholder="Paste your video link here..."
                   value={url}
                   onChange={(e) => {
                     setUrl(e.target.value)
@@ -195,8 +209,8 @@ export function VideoDownloader() {
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl">
         <FeatureCard
           icon={<Video className="w-5 h-5" />}
-          title="Multiple Formats"
-          description="Support for Reels, Feed Videos, and IGTV"
+          title="Multiple Platforms"
+          description="Instagram & Facebook Reels, Videos, IGTV"
         />
         <FeatureCard
           icon={<CheckCircle2 className="w-5 h-5" />}
@@ -212,7 +226,7 @@ export function VideoDownloader() {
 
       {/* Footer */}
       <footer className="mt-16 text-center text-sm text-muted-foreground">
-        <p>Only public Instagram videos can be downloaded</p>
+        <p>Only public Instagram and Facebook videos can be downloaded</p>
       </footer>
     </div>
   )

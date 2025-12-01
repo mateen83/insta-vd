@@ -97,7 +97,7 @@ function Input({ className, type, ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
         type: type,
         "data-slot": "input",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])('file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm', 'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]', 'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive', className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])('file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm', 'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[1px]', 'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive', className),
         ...props
     }, void 0, false, {
         fileName: "[project]/components/ui/input.tsx",
@@ -319,7 +319,6 @@ function VideoResult({ data }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: data.thumbnail || "/placeholder.svg",
-                                alt: "Video thumbnail",
                                 className: "w-full h-full object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/components/video-result.tsx",
@@ -538,16 +537,28 @@ function VideoDownloader() {
         ];
         return patterns.some((pattern)=>pattern.test(url));
     };
+    const validateFacebookUrl = (url)=>{
+        const patterns = [
+            /^https?:\/\/(www\.)?facebook\.com\/.*\/videos\//,
+            /^https?:\/\/(www\.)?facebook\.com\/reel\//,
+            /^https?:\/\/(www\.)?facebook\.com\/watch\//,
+            /^https?:\/\/fb\.watch\//
+        ];
+        return patterns.some((pattern)=>pattern.test(url));
+    };
+    const validateUrl = (url)=>{
+        return validateInstagramUrl(url) || validateFacebookUrl(url);
+    };
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setError(null);
         setVideoData(null);
         if (!url.trim()) {
-            setError("Please enter an Instagram URL");
+            setError("Please enter an Instagram or Facebook URL");
             return;
         }
-        if (!validateInstagramUrl(url)) {
-            setError("Invalid Instagram URL. Please enter a valid video, reel, or IGTV link.");
+        if (!validateUrl(url)) {
+            setError("Invalid URL. Please enter a valid Instagram or Facebook video/reel link.");
             return;
         }
         setLoading(true);
@@ -598,7 +609,7 @@ function VideoDownloader() {
     const handlePaste = async ()=>{
         try {
             const text = await navigator.clipboard.readText();
-            if (text && validateInstagramUrl(text)) {
+            if (text && validateUrl(text)) {
                 setUrl(text);
                 setError(null);
             }
@@ -618,34 +629,34 @@ function VideoDownloader() {
                             className: "w-8 h-8 text-primary"
                         }, void 0, false, {
                             fileName: "[project]/components/video-downloader.tsx",
-                            lineNumber: 120,
+                            lineNumber: 134,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/video-downloader.tsx",
-                        lineNumber: 119,
+                        lineNumber: 133,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                         className: "text-3xl md:text-4xl font-bold text-foreground mb-3 tracking-tight",
-                        children: "Instagram Video Downloader"
+                        children: "Instagram & Facebook Video Downloader"
                     }, void 0, false, {
                         fileName: "[project]/components/video-downloader.tsx",
-                        lineNumber: 122,
+                        lineNumber: 136,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-muted-foreground text-base md:text-lg max-w-md mx-auto",
-                        children: "Download videos, reels, and IGTV content from Instagram instantly"
+                        children: "Download videos and reels from Instagram & Facebook instantly"
                     }, void 0, false, {
                         fileName: "[project]/components/video-downloader.tsx",
-                        lineNumber: 125,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/video-downloader.tsx",
-                lineNumber: 118,
+                lineNumber: 132,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -663,10 +674,10 @@ function VideoDownloader() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                             htmlFor: "url",
                                             className: "text-sm font-medium text-foreground",
-                                            children: "Instagram URL"
+                                            children: "Instagram or Facebook URL"
                                         }, void 0, false, {
                                             fileName: "[project]/components/video-downloader.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 149,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -675,7 +686,7 @@ function VideoDownloader() {
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                                                     id: "url",
                                                     type: "text",
-                                                    placeholder: "https://www.instagram.com/reel/...",
+                                                    placeholder: "Paste your video link here...",
                                                     value: url,
                                                     onChange: (e)=>{
                                                         setUrl(e.target.value);
@@ -686,7 +697,7 @@ function VideoDownloader() {
                                                     disabled: loading
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/video-downloader.tsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 153,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -696,19 +707,19 @@ function VideoDownloader() {
                                                     children: "Paste"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/video-downloader.tsx",
-                                                    lineNumber: 152,
+                                                    lineNumber: 166,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/video-downloader.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 152,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/video-downloader.tsx",
-                                    lineNumber: 134,
+                                    lineNumber: 148,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -721,7 +732,7 @@ function VideoDownloader() {
                                                 className: "w-5 h-5 mr-2 animate-spin"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/video-downloader.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 183,
                                                 columnNumber: 19
                                             }, this),
                                             "Processing..."
@@ -732,7 +743,7 @@ function VideoDownloader() {
                                                 className: "w-5 h-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/video-downloader.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 188,
                                                 columnNumber: 19
                                             }, this),
                                             "Download Video"
@@ -740,13 +751,13 @@ function VideoDownloader() {
                                     }, void 0, true)
                                 }, void 0, false, {
                                     fileName: "[project]/components/video-downloader.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 176,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/video-downloader.tsx",
-                            lineNumber: 133,
+                            lineNumber: 147,
                             columnNumber: 11
                         }, this),
                         error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -756,7 +767,7 @@ function VideoDownloader() {
                                     className: "w-5 h-5 text-destructive flex-shrink-0 mt-0.5"
                                 }, void 0, false, {
                                     fileName: "[project]/components/video-downloader.tsx",
-                                    lineNumber: 184,
+                                    lineNumber: 198,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -764,31 +775,31 @@ function VideoDownloader() {
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/components/video-downloader.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 199,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/video-downloader.tsx",
-                            lineNumber: 183,
+                            lineNumber: 197,
                             columnNumber: 13
                         }, this),
                         videoData && videoData.success && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$video$2d$result$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VideoResult"], {
                             data: videoData
                         }, void 0, false, {
                             fileName: "[project]/components/video-downloader.tsx",
-                            lineNumber: 190,
+                            lineNumber: 204,
                             columnNumber: 46
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/video-downloader.tsx",
-                    lineNumber: 132,
+                    lineNumber: 146,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/video-downloader.tsx",
-                lineNumber: 131,
+                lineNumber: 145,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -799,14 +810,14 @@ function VideoDownloader() {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/components/video-downloader.tsx",
-                            lineNumber: 197,
+                            lineNumber: 211,
                             columnNumber: 17
                         }, void 0),
-                        title: "Multiple Formats",
-                        description: "Support for Reels, Feed Videos, and IGTV"
+                        title: "Multiple Platforms",
+                        description: "Instagram & Facebook Reels, Videos, IGTV"
                     }, void 0, false, {
                         fileName: "[project]/components/video-downloader.tsx",
-                        lineNumber: 196,
+                        lineNumber: 210,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FeatureCard, {
@@ -814,14 +825,14 @@ function VideoDownloader() {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/components/video-downloader.tsx",
-                            lineNumber: 202,
+                            lineNumber: 216,
                             columnNumber: 17
                         }, void 0),
                         title: "High Quality",
                         description: "Download videos in original quality"
                     }, void 0, false, {
                         fileName: "[project]/components/video-downloader.tsx",
-                        lineNumber: 201,
+                        lineNumber: 215,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FeatureCard, {
@@ -829,40 +840,40 @@ function VideoDownloader() {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/components/video-downloader.tsx",
-                            lineNumber: 207,
+                            lineNumber: 221,
                             columnNumber: 17
                         }, void 0),
                         title: "Fast & Secure",
                         description: "No data stored, instant downloads"
                     }, void 0, false, {
                         fileName: "[project]/components/video-downloader.tsx",
-                        lineNumber: 206,
+                        lineNumber: 220,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/video-downloader.tsx",
-                lineNumber: 195,
+                lineNumber: 209,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
                 className: "mt-16 text-center text-sm text-muted-foreground",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    children: "Only public Instagram videos can be downloaded"
+                    children: "Only public Instagram and Facebook videos can be downloaded"
                 }, void 0, false, {
                     fileName: "[project]/components/video-downloader.tsx",
-                    lineNumber: 215,
+                    lineNumber: 229,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/video-downloader.tsx",
-                lineNumber: 214,
+                lineNumber: 228,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/video-downloader.tsx",
-        lineNumber: 116,
+        lineNumber: 130,
         columnNumber: 5
     }, this);
 }
@@ -877,7 +888,7 @@ function FeatureCard({ icon, title, description }) {
                 children: icon
             }, void 0, false, {
                 fileName: "[project]/components/video-downloader.tsx",
-                lineNumber: 232,
+                lineNumber: 246,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -885,7 +896,7 @@ function FeatureCard({ icon, title, description }) {
                 children: title
             }, void 0, false, {
                 fileName: "[project]/components/video-downloader.tsx",
-                lineNumber: 235,
+                lineNumber: 249,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -893,13 +904,13 @@ function FeatureCard({ icon, title, description }) {
                 children: description
             }, void 0, false, {
                 fileName: "[project]/components/video-downloader.tsx",
-                lineNumber: 236,
+                lineNumber: 250,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/video-downloader.tsx",
-        lineNumber: 231,
+        lineNumber: 245,
         columnNumber: 5
     }, this);
 }

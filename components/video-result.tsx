@@ -86,7 +86,7 @@ export function VideoResult({ data }: VideoResultProps) {
             <>
               <img
                 src={data.thumbnail || "/placeholder.svg"}
-                alt="Video thumbnail"
+               
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/30">
