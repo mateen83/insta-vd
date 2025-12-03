@@ -41,7 +41,10 @@ export function VideoDownloader() {
     { label: "Platforms", href: "#supported-platforms" },
     { label: "Benefits", href: "#why-choose" },
     { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
+    { label: "Compatibility", href: "#works-anywhere" },
+    { label: "Use cases", href: "#usage-tips" },
+    { label: "Contact", href: "#contact" }
+    
   ]
 
   const validateInstagramUrl = (url: string): boolean => {
