@@ -1,295 +1,353 @@
-# Instagram Reel Scraper Backend
+# Instagram Video Downloader Backend
 
-A production-ready Node.js + Express + Puppeteer backend API for extracting Instagram Reel video URLs in real-time.
+Production-ready backend service for downloading Instagram videos (Reels, Posts, TV) in MP4 format and converting to MP3.
 
-## 🚀 Features
+## Features
 
-- **Real-time video URL extraction** from Instagram Reels, Posts, and IGTV
-- **Multiple extraction methods** for maximum reliability
-- **Rate limiting** and security middleware
-- **CORS support** for frontend integration
-- **Error handling** and validation
-- **Production-ready** with proper logging and graceful shutdown
+- ✅ Extract video URLs from public Instagram posts, reels, and TV videos
+- ✅ Stream MP4 videos directly to clients
+- ✅ Convert videos to MP3 using FFmpeg with VBR quality
+- ✅ Redis-based caching and rate limiting
+- ✅ Headless browser (Playwright) for reliable extraction
+- ✅ Docker support with docker-compose
+- ✅ Production-ready error handling and logging
+- ✅ No permanent data storage
+- ✅ Streaming architecture (no full file buffering)
 
-## 📦 Installation
+## Prerequisites
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+- Node.js 20+
+- Redis 7+
+- FFmpeg (with libmp3lame support)
+- Docker & Docker Compose (for containerized deployment)
 
-### Setup
+## Quick Start
 
-1. **Navigate to backend directory:**
-```bash
-cd backend
-```
+### Local Development
 
-2. **Install dependencies:**
+1. **Install dependencies:**
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. **Environment setup:**
+2. **Install Playwright browsers:**
+```bash
+npx playwright install chromium
+```
+
+3. **Create `.env` file:**
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` file with your configuration:
-```env
-PORT=3001
-NODE_ENV=development
-FRONTEND_URL=http://localhost:3000,http://192.168.1.34:3000
+4. **Start Redis:**
+```bash
+docker run -d -p 6379:6379 redis:7-alpine
 ```
 
-## 🏃‍♂️ Running the Server
-
-### Development Mode
+5. **Run development server:**
 ```bash
 npm run dev
 ```
 
-### Production Mode
+Server will start on `http://localhost:3001`
+
+### Docker Deployment
+
+1. **Build and start services:**
 ```bash
-npm start
+docker-compose up -d
 ```
 
-The server will start on `http://localhost:3001` (or your configured PORT).
-
-## 📡 API Endpoints
-
-### Health Check
+2. **Check logs:**
+```bash
+docker-compose logs -f backend
 ```
-GET /health
+
+3. **Stop services:**
+```bash
+docker-compose down
 ```
+
+## API Documentation
+
+### 1. Resolve Instagram Video
+
+Extract video URL from Instagram post.
+
+**Endpoint:** `POST /api/resolve`
+
+**Request Body:**
+```json
+{
+  "url": "https://www.instagram.com/reel/XXXX/"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "success": true,
+  "source_type": "reel",
+  "video_direct_url": "https://scontent.cdninstagram.com/...",
+  "thumbnail_url": "https://scontent.cdninstagram.com/...",
+  "expires_hint": "Instagram CDN links may expire; re-resolve if download fails.",
+  "method": "playwright"
+}
+```
+
+**Error Response (400/500):**
+```json
+{
+  "success": false,
+  "error": "Error message"
+}
+```
+
+**Example with curl:**
+```bash
+curl -X POST http://localhost:3001/api/resolve \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://www.instagram.com/reel/XXXX/"}'
+```
+
+### 2. Download Video
+
+Download video in MP4 or convert to MP3.
+
+**Endpoint:** `GET /api/download?url=VIDEO_URL&format=FORMAT`
+
+**Query Parameters:**
+- `url` (required): Direct video URL from `/api/resolve`
+- `format` (required): `mp4` or `mp3`
+
+**Response:** Binary stream (video/audio file)
+
+**Headers:**
+- `Content-Type`: `video/mp4` or `audio/mpeg`
+- `Content-Disposition`: `attachment; filename="instagram_TIMESTAMP.mp4"`
+
+**Example with curl (MP4):**
+```bash
+curl "http://localhost:3001/api/download?url=VIDEO_URL&format=mp4" \
+  -o video.mp4
+```
+
+**Example with curl (MP3):**
+```bash
+curl "http://localhost:3001/api/download?url=VIDEO_URL&format=mp3" \
+  -o audio.mp3
+```
+
+### 3. Health Check
+
+Check service health.
+
+**Endpoint:** `GET /health`
 
 **Response:**
 ```json
 {
-  "success": true,
-  "message": "Instagram Reel Scraper API is running",
+  "status": "ok",
+  "redis": "connected",
+  "uptime": 12345.67,
   "timestamp": "2024-01-01T00:00:00.000Z"
 }
 ```
 
-### Extract Video URL
-```
-GET /api/reel?url={INSTAGRAM_URL}
-```
+## Complete Workflow Example
 
-**Parameters:**
-- `url` (required): Instagram Reel/Post/IGTV URL
-
-**Success Response:**
-```json
-{
-  "success": true,
-  "videoUrl": "https://scontent.cdninstagram.com/v/...",
-  "method": "direct-video-tag"
-}
-```
-
-**Error Response:**
-```json
-{
-  "success": false,
-  "message": "Video not found"
-}
-```
-
-### Batch Processing (Optional)
-```
-POST /api/reel/batch
-```
-
-**Body:**
-```json
-{
-  "urls": [
-    "https://www.instagram.com/reel/XXXXXXXX/",
-    "https://www.instagram.com/reel/YYYYYYYY/"
-  ]
-}
-```
-
-## 🧪 Testing
-
-### Run Test Suite
 ```bash
-npm test
+# Step 1: Resolve Instagram video
+RESPONSE=$(curl -s -X POST http://localhost:3001/api/resolve \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://www.instagram.com/reel/XXXX/"}')
+
+# Step 2: Extract video URL
+VIDEO_URL=$(echo $RESPONSE | jq -r '.video_direct_url')
+
+# Step 3: Download as MP4
+curl "$VIDEO_URL" -o video.mp4
+
+# Or download as MP3
+curl "http://localhost:3001/api/download?url=$VIDEO_URL&format=mp3" \
+  -o audio.mp3
 ```
 
-### Manual Testing
-```bash
-# Health check
-curl http://localhost:3001/health
-
-# Test with Instagram URL
-curl "http://localhost:3001/api/reel?url=https://www.instagram.com/reel/XXXXXXXX/"
-```
-
-## 🌐 Frontend Integration
-
-### JavaScript/Fetch
-```javascript
-async function getVideoUrl(instagramUrl) {
-  try {
-    const response = await fetch(`http://localhost:3001/api/reel?url=${encodeURIComponent(instagramUrl)}`);
-    const data = await response.json();
-    
-    if (data.success) {
-      return data.videoUrl;
-    } else {
-      throw new Error(data.message);
-    }
-  } catch (error) {
-    console.error('Error fetching video URL:', error);
-    throw error;
-  }
-}
-
-// Usage
-getVideoUrl('https://www.instagram.com/reel/XXXXXXXX/')
-  .then(videoUrl => {
-    console.log('Video URL:', videoUrl);
-    // Use videoUrl in your video player or download
-  })
-  .catch(error => {
-    console.error('Failed to get video URL:', error);
-  });
-```
-
-### React Hook
-```javascript
-import { useState, useCallback } from 'react';
-
-export function useInstagramVideo() {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  const getVideoUrl = useCallback(async (instagramUrl) => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await fetch(`http://localhost:3001/api/reel?url=${encodeURIComponent(instagramUrl)}`);
-      const data = await response.json();
-
-      if (!data.success) {
-        throw new Error(data.message);
-      }
-
-      return data.videoUrl;
-    } catch (err) {
-      setError(err.message);
-      throw err;
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  return { getVideoUrl, loading, error };
-}
-```
-
-## 🚀 Deployment
-
-### Vercel
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel`
-3. Follow the prompts
-
-### Railway
-1. Connect your GitHub repo to Railway
-2. Set environment variables in Railway dashboard
-3. Deploy automatically on push
-
-### Render
-1. Connect your GitHub repo
-2. Set build command: `npm install`
-3. Set start command: `npm start`
-4. Add environment variables
-
-### Docker (Optional)
-```dockerfile
-FROM node:18-alpine
-
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-
-# Install Puppeteer dependencies
-RUN apk add --no-cache \
-    chromium \
-    nss \
-    freetype \
-    freetype-dev \
-    harfbuzz \
-    ca-certificates \
-    ttf-freefont
-
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
-
-COPY . .
-EXPOSE 3001
-CMD ["npm", "start"]
-```
-
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
-- `PORT`: Server port (default: 3001)
-- `NODE_ENV`: Environment (development/production)
-- `FRONTEND_URL`: Allowed CORS origins
 
-### Puppeteer Options
-The server uses optimized Puppeteer settings for production:
-- Headless mode enabled
-- Sandbox disabled for containerized environments
-- Memory and CPU optimizations
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT` | `3001` | Server port |
+| `NODE_ENV` | `development` | Environment mode |
+| `REDIS_URL` | `redis://localhost:6379` | Redis connection URL |
+| `PROXY_URL` | - | Optional HTTP proxy |
+| `HEADLESS` | `true` | Run browser in headless mode |
+| `RATE_LIMIT_MAX` | `10` | Max requests per window |
+| `RATE_LIMIT_WINDOW` | `60000` | Rate limit window (ms) |
+| `CACHE_TTL` | `600` | Cache TTL in seconds |
+| `MAX_VIDEO_SIZE_MB` | `500` | Maximum video size |
+| `FFMPEG_TIMEOUT` | `300000` | FFmpeg timeout (ms) |
 
-## 🔒 Security Features
+## Architecture
 
-- **Rate limiting**: 100 requests per 15 minutes per IP
-- **CORS protection**: Configurable allowed origins
-- **Input validation**: URL format validation
-- **Error handling**: Sanitized error messages
-- **Helmet.js**: Security headers
+```
+┌─────────────┐
+│   Client    │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────────────────────────┐
+│     Fastify Server              │
+│  ┌──────────┐  ┌──────────┐   │
+│  │ /resolve │  │/download │   │
+│  └────┬─────┘  └────┬─────┘   │
+│       │             │          │
+│  ┌────▼─────────────▼─────┐   │
+│  │   Rate Limiting         │   │
+│  │   (Redis)               │   │
+│  └─────────────────────────┘   │
+└─────────────────────────────────┘
+       │             │
+       ▼             ▼
+┌─────────────┐ ┌──────────┐
+│  Playwright │ │  FFmpeg  │
+│  (Extract)  │ │(Convert) │
+└─────────────┘ └──────────┘
+```
 
-## 🐛 Troubleshooting
+## Security & Legal Notes
 
-### Common Issues
+⚠️ **Important:**
 
-1. **Puppeteer fails to launch:**
-   - Install missing dependencies: `sudo apt-get install -y gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget`
+1. **Public Content Only:** This service only works with public Instagram posts. Private posts require authentication and are not supported.
 
-2. **Instagram blocks requests:**
-   - The API uses multiple extraction methods
-   - Rotates user agents and headers
-   - Implements delays and retries
+2. **Terms of Service:** Users must comply with Instagram's Terms of Service. This tool is for personal use and authorized content only.
 
-3. **CORS errors:**
-   - Update `FRONTEND_URL` in `.env`
-   - Ensure frontend URL is included in CORS origins
+3. **Rate Limiting:** Built-in rate limiting prevents abuse. Default: 10 requests per minute per IP.
 
-## 📝 License
+4. **No Data Storage:** No user data or videos are stored permanently. All operations are streaming-based.
 
-MIT License - feel free to use in your projects!
+5. **CDN Link Expiration:** Instagram CDN links expire after some time. If a download fails, re-resolve the URL.
 
-## 🤝 Contributing
+6. **Copyright:** Users are responsible for ensuring they have rights to download content.
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
+## Troubleshooting
 
-## 📞 Support
+### Browser Issues
 
-If you encounter issues:
-1. Check the troubleshooting section
-2. Review server logs
-3. Test with the provided test script
-4. Open an issue with detailed error information
+If Playwright fails to launch:
+
+```bash
+# Install system dependencies (Ubuntu/Debian)
+sudo apt-get install -y \
+  libnss3 \
+  libnspr4 \
+  libatk1.0-0 \
+  libatk-bridge2.0-0 \
+  libcups2 \
+  libdrm2 \
+  libxkbcommon0 \
+  libxcomposite1 \
+  libxdamage1 \
+  libxfixes3 \
+  libxrandr2 \
+  libgbm1 \
+  libasound2
+```
+
+### FFmpeg Issues
+
+Ensure FFmpeg is installed with MP3 support:
+
+```bash
+# Check FFmpeg
+ffmpeg -version
+
+# Check for libmp3lame
+ffmpeg -codecs | grep mp3
+```
+
+### Redis Connection
+
+Test Redis connection:
+
+```bash
+redis-cli ping
+# Should return: PONG
+```
+
+## Performance Tips
+
+1. **Caching:** Results are cached for 10 minutes by default. Adjust `CACHE_TTL` as needed.
+
+2. **Rate Limiting:** Adjust `RATE_LIMIT_MAX` and `RATE_LIMIT_WINDOW` based on your needs.
+
+3. **Proxy:** Use `PROXY_URL` if Instagram blocks your IP.
+
+4. **Resource Limits:** Set `MAX_VIDEO_SIZE_MB` to prevent memory issues.
+
+## Monitoring
+
+### Health Check
+
+```bash
+curl http://localhost:3001/health
+```
+
+### Docker Logs
+
+```bash
+# Follow logs
+docker-compose logs -f backend
+
+# Last 100 lines
+docker-compose logs --tail=100 backend
+```
+
+### Redis Monitoring
+
+```bash
+# Connect to Redis
+docker-compose exec redis redis-cli
+
+# Check keys
+KEYS *
+
+# Monitor commands
+MONITOR
+```
+
+## Development
+
+### Build TypeScript
+
+```bash
+npm run build
+```
+
+### Run Production Build
+
+```bash
+npm start
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+## License
+
+MIT
+
+## Support
+
+For issues and questions, please open an issue on the repository.
+
+---
+
+**Note:** This is a backend service only. You'll need to integrate it with your Next.js frontend by calling these API endpoints from your existing `/api/download` route.

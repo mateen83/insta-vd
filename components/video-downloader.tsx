@@ -6,7 +6,6 @@ import { useState } from "react"
 import {
   Download,
   Instagram,
-  Facebook,
   AlertCircle,
   CheckCircle2,
   Loader2,
@@ -57,19 +56,7 @@ export function VideoDownloader() {
     return patterns.some((pattern) => pattern.test(url))
   }
 
-  const validateFacebookUrl = (url: string): boolean => {
-    const patterns = [
-      /^https?:\/\/(www\.)?facebook\.com\/.*\/videos\//,
-      /^https?:\/\/(www\.)?facebook\.com\/reel\//,
-      /^https?:\/\/(www\.)?facebook\.com\/watch\//,
-      /^https?:\/\/fb\.watch\//,
-    ]
-    return patterns.some((pattern) => pattern.test(url))
-  }
 
-  const validateUrl = (url: string): boolean => {
-    return validateInstagramUrl(url) || validateFacebookUrl(url)
-  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -77,12 +64,12 @@ export function VideoDownloader() {
     setVideoData(null)
 
     if (!url.trim()) {
-      setError("Please enter an Instagram or Facebook URL")
+      setError("Please enter an Instagram URL")
       return
     }
 
-    if (!validateUrl(url)) {
-      setError("Invalid URL. Please enter a valid Instagram or Facebook video/reel link.")
+    if (!validateInstagramUrl(url)) {
+      setError("Invalid Instagram URL. Please enter a valid video, reel, or IGTV link.")
       return
     }
 
@@ -140,7 +127,7 @@ export function VideoDownloader() {
   const handlePaste = async () => {
     try {
       const text = await navigator.clipboard.readText()
-      if (text && validateUrl(text)) {
+      if (text && validateInstagramUrl(text)) {
         setUrl(text)
         setError(null)
       }
@@ -174,7 +161,7 @@ export function VideoDownloader() {
               <p className="text-sm font-semibold text-foreground tracking-tight">
                 Instant Social Downloader
               </p>
-              <p className="text-xs text-muted-foreground">Instagram • Facebook</p>
+              <p className="text-xs text-muted-foreground">Instagram</p>
             </div>
           </div>
 
@@ -231,23 +218,20 @@ export function VideoDownloader() {
 
       {/* Hero copy */}
       <div className="mt-24 mb-10 text-center md:mt-28">
-        <div className="mb-5 flex items-center justify-center gap-3">
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-            <Instagram className="h-5 w-5 text-primary" />
-          </div>
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-            <Facebook className="h-5 w-5 text-primary" />
+        <div className="mb-5 flex items-center justify-center">
+          <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+            <Instagram className="h-8 w-8 text-primary" />
           </div>
         </div>
         <h1 className="text-3xl font-bold text-foreground tracking-tight md:text-4xl lg:text-5xl">
-          Instagram & Facebook Video Downloader
+          Instagram Video Downloader
         </h1>
         <p className="mt-4 text-base text-muted-foreground md:text-lg">
-          Download reels and videos from Instagram & Facebook in seconds. No account, no watermark,
+          Download reels and videos from Instagram in seconds. No account, no watermark,
           no hassle.
         </p>
         <p className="mt-2 text-xs text-muted-foreground">
-          Paste a public video link from Instagram or Facebook. More platforms coming soon.
+          Paste a public video link from Instagram. More platforms coming soon.
         </p>
       </div>
 
@@ -257,7 +241,7 @@ export function VideoDownloader() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="url" className="text-sm font-medium text-foreground">
-                Instagram or Facebook URL
+                Instagram URL
               </label>
               <div className="relative">
                 <Input
@@ -320,7 +304,7 @@ export function VideoDownloader() {
         <FeatureCard
           icon={<Video className="w-5 h-5" />}
           title="Multiple Platforms"
-          description="Instagram & Facebook Reels, Videos, IGTV"
+          description="Instagram Reels, Videos, IGTV"
         />
         <FeatureCard
           icon={<CheckCircle2 className="w-5 h-5" />}
@@ -336,7 +320,7 @@ export function VideoDownloader() {
 
       {/* Footer */}
       <footer className="mt-16 text-center text-sm text-muted-foreground">
-        <p>Only public Instagram and Facebook videos can be downloaded</p>
+        <p>Only public Instagram and videos can be downloaded</p>
       </footer>
     </div>
   )

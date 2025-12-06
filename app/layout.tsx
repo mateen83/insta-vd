@@ -7,17 +7,16 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-// <CHANGE> Updated metadata for Instagram & Facebook Video Downloader
+// <CHANGE> Updated metadata for Instagram Video Downloader
 export const metadata: Metadata = {
-  title: "Instagram & Facebook Video Downloader - Download Reels & Videos",
+  title: "Instagram Video Downloader - Download Reels & Videos",
   description:
-    "Download Instagram and Facebook videos, reels, and IGTV content for free. Fast, secure, and easy to use.",
+    "Download Instagram videos, reels, and IGTV content for free. Fast, secure, and easy to use.",
   generator: "Social video downloader",
   icons: {
     icon: "/fav-icon.png",
   },
 }
-
 
 export const viewport: Viewport = {
   themeColor: "#0d0d0d",

@@ -90,7 +90,7 @@ function HowItWorksSection() {
               step: "Step 1",
               title: "Paste Link",
               description:
-                "Copy the video URL from Instagram or Facebook and paste it into the box at the top of the page.",
+                "Copy the video URL from Instagram and paste it into the box at the top of the page.",
               icon: "🔗",
             },
             {

@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, ExternalLink, Play } from "lucide-react"
+import { Download, ExternalLink, Play, Music } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 
@@ -15,11 +15,17 @@ interface VideoResultProps {
 
 export function VideoResult({ data }: VideoResultProps) {
   const [downloading, setDownloading] = useState(false)
+  const [downloadingMp3, setDownloadingMp3] = useState(false)
 
-  const handleDownload = async () => {
+  const handleDownload = async (format: 'mp4' | 'mp3' = 'mp4') => {
+    const isMP3 = format === 'mp3'
     if (!data.video_url) return
 
-    setDownloading(true)
+    if (isMP3) {
+      setDownloadingMp3(true)
+    } else {
+      setDownloading(true)
+    }
     try {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout for downloads
@@ -29,7 +35,7 @@ export function VideoResult({ data }: VideoResultProps) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ url: data.video_url }),
+        body: JSON.stringify({ url: data.video_url, format }),
         signal: controller.signal
       })
 
@@ -50,11 +56,11 @@ export function VideoResult({ data }: VideoResultProps) {
       const a = document.createElement("a")
       a.href = url
       
-      // Get file extension from content type or default to mp4
-      const contentType = response.headers.get('content-type') || 'video/mp4'
-      const extension = contentType.includes('webm') ? 'webm' : 'mp4'
+      // Get file extension based on format
+      const extension = isMP3 ? 'mp3' : 'mp4'
+      const prefix = isMP3 ? 'instagram-audio' : 'instagram-video'
       
-      a.download = `instagram-video-${Date.now()}.${extension}`
+      a.download = `${prefix}-${Date.now()}.${extension}`
       document.body.appendChild(a)
       a.click()
       window.URL.revokeObjectURL(url)
@@ -73,7 +79,11 @@ export function VideoResult({ data }: VideoResultProps) {
         alert("Download failed Please try again.")
       }
     } finally {
-      setDownloading(false)
+      if (isMP3) {
+        setDownloadingMp3(false)
+      } else {
+        setDownloading(false)
+      }
     }
   }
 
@@ -123,32 +133,50 @@ export function VideoResult({ data }: VideoResultProps) {
               )}
               {data.duration && <span className="px-2 py-1 rounded bg-muted">{data.duration}</span>}
               <span className="px-2 py-1 rounded bg-muted">MP4</span>
+              <span className="px-2 py-1 rounded bg-muted">MP3</span>
             </div>
           </div>
 
-          {/* Download Button */}
-          <div className="flex gap-2 mt-3">
+          {/* Download Buttons */}
+          <div className="flex flex-col gap-2 mt-3">
+            <div className="flex gap-2">
+              <Button
+                onClick={() => handleDownload('mp4')}
+                disabled={downloading || !data.video_url}
+                className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                {downloading ? (
+                  "Downloading..."
+                ) : (
+                  <>
+                    <Download className="w-4 h-4 mr-2" />
+                    Download MP4
+                  </>
+                )}
+              </Button>
+              {data.video_url && (
+                <Button variant="outline" size="icon" asChild className="border-border hover:bg-secondary bg-transparent">
+                  <a href={data.video_url} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </Button>
+              )}
+            </div>
             <Button
-              onClick={handleDownload}
-              disabled={downloading || !data.video_url}
-              className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
+              onClick={() => handleDownload('mp3')}
+              disabled={downloadingMp3 || !data.video_url}
+              variant="outline"
+              className="w-full border-primary/50 hover:bg-primary/10 text-foreground"
             >
-              {downloading ? (
-                "Downloading..."
+              {downloadingMp3 ? (
+                "Converting & Downloading..."
               ) : (
                 <>
-                  <Download className="w-4 h-4 mr-2" />
-                  Download MP4
+                  <Music className="w-4 h-4 mr-2" />
+                  Download MP3 (Audio Only)
                 </>
               )}
             </Button>
-            {data.video_url && (
-              <Button variant="outline" size="icon" asChild className="border-border hover:bg-secondary bg-transparent">
-                <a href={data.video_url} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </Button>
-            )}
           </div>
         </div>
       </div>
