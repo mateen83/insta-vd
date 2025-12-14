@@ -2,11 +2,13 @@
 
 import { Download, ExternalLink, Play, Music } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
+import { FFmpeg } from "@ffmpeg/ffmpeg"
+import { fetchFile, toBlobURL } from "@ffmpeg/util"
 
 interface VideoResultProps {
   data: {
-   thumbnail?: string
+    thumbnail?: string
     video_url?: string
     quality?: string
     duration?: string
@@ -16,6 +18,29 @@ interface VideoResultProps {
 export function VideoResult({ data }: VideoResultProps) {
   const [downloading, setDownloading] = useState(false)
   const [downloadingMp3, setDownloadingMp3] = useState(false)
+  const [loaded, setLoaded] = useState(false)
+  const ffmpegRef = useRef(new FFmpeg())
+  const messageRef = useRef<HTMLParagraphElement | null>(null)
+
+  const load = async () => {
+    const baseURL = 'https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd'
+    const ffmpeg = ffmpegRef.current
+    ffmpeg.on('log', ({ message }) => {
+      if (messageRef.current) messageRef.current.innerHTML = message
+      console.log(message)
+    })
+    // toBlobURL is used to bypass CORS issue, urls with the same
+    // domain can be used directly.
+    await ffmpeg.load({
+      coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
+      wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
+    })
+    setLoaded(true)
+  }
+
+  useEffect(() => {
+    load()
+  }, [])
 
   const handleDownload = async (format: 'mp4' | 'mp3' = 'mp4') => {
     const isMP3 = format === 'mp3'
@@ -28,14 +53,15 @@ export function VideoResult({ data }: VideoResultProps) {
     }
     try {
       const controller = new AbortController()
-      const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout for downloads
+      const timeoutId = setTimeout(() => controller.abort(), 120000) // 2 minute timeout
 
+      // Always request MP4 from proxy
       const response = await fetch("/api/proxy-download", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ url: data.video_url, format }),
+        body: JSON.stringify({ url: data.video_url, format: 'mp4' }),
         signal: controller.signal
       })
 
@@ -46,20 +72,31 @@ export function VideoResult({ data }: VideoResultProps) {
         throw new Error(`Download failed: ${response.status} - ${errorText}`)
       }
 
-      const blob = await response.blob()
-      
+      let blob = await response.blob()
+
       if (blob.size === 0) {
         throw new Error("Downloaded file is empty")
+      }
+
+      if (isMP3) {
+        if (!loaded) {
+          await load()
+        }
+        const ffmpeg = ffmpegRef.current
+        await ffmpeg.writeFile('input.mp4', await fetchFile(blob))
+        await ffmpeg.exec(['-i', 'input.mp4', '-q:a', '0', '-map', 'a', 'output.mp3'])
+        const data = await ffmpeg.readFile('output.mp3')
+        blob = new Blob([data], { type: 'audio/mpeg' })
       }
 
       const url = window.URL.createObjectURL(blob)
       const a = document.createElement("a")
       a.href = url
-      
+
       // Get file extension based on format
       const extension = isMP3 ? 'mp3' : 'mp4'
       const prefix = isMP3 ? 'instagram-audio' : 'instagram-video'
-      
+
       a.download = `${prefix}-${Date.now()}.${extension}`
       document.body.appendChild(a)
       a.click()
@@ -67,7 +104,7 @@ export function VideoResult({ data }: VideoResultProps) {
       document.body.removeChild(a)
     } catch (error) {
       console.error("Download error:", error)
-      
+
       // Show user-friendly error message
       if (error instanceof Error) {
         if (error.name === 'AbortError') {

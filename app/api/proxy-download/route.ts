@@ -9,46 +9,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "URL is required" }, { status: 400 })
     }
 
-    // For MP3, we need to use the backend service if available
+    // MP3 conversion is now handled on the frontend
     if (format === 'mp3') {
-      const backendUrl = process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_URL
-      
-      if (backendUrl) {
-        // Redirect to backend MP3 conversion service
-        try {
-          const backendResponse = await fetch(`${backendUrl}/api/download?url=${encodeURIComponent(url)}&format=mp3`, {
-            headers: {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            },
-          })
-
-          if (backendResponse.ok) {
-            const headers = new Headers({
-              "Content-Type": "audio/mpeg",
-              "Content-Disposition": `attachment; filename="instagram-audio-${Date.now()}.mp3"`,
-              "Cache-Control": "no-cache",
-            })
-
-            return new NextResponse(backendResponse.body, {
-              status: 200,
-              headers,
-            })
-          }
-        } catch (backendError) {
-          console.error("Backend MP3 conversion failed:", backendError)
-        }
-      }
-      
-      // If backend is not available, return error
-      return NextResponse.json({ 
-        error: "MP3 conversion requires backend service. Please set BACKEND_URL environment variable." 
-      }, { status: 503 })
+      // We still fetch the video as MP4, conversion happens in browser
+      // This block is intentionally empty or could be removed, 
+      // but keeping the check to ensure we don't try to use the old backend logic
     }
 
     // Validate that it's a valid video URL (more permissive)
     const validDomains = ["instagram", "cdninstagram", "fbcdn", "scontent"]
     const isValidUrl = validDomains.some(domain => url.includes(domain)) || url.startsWith("https://")
-    
+
     if (!isValidUrl) {
       return NextResponse.json({ error: "Invalid video URL" }, { status: 400 })
     }
@@ -100,8 +71,8 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error("[v0] Proxy download error:", error)
-    return NextResponse.json({ 
-      error: error instanceof Error ? error.message : "Download failed" 
+    return NextResponse.json({
+      error: error instanceof Error ? error.message : "Download failed"
     }, { status: 500 })
   }
 }
