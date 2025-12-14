@@ -16,7 +16,7 @@ function checkRateLimit(ip: string): boolean {
 
   if (record.count >= RATE_LIMIT) {
     return false;
-    
+
   }
   record.count++;
   return true;
@@ -43,32 +43,16 @@ function extractShortcode(url: string): string | null {
 
 async function fetchInstagramData(url: string) {
   // First try the new Puppeteer backend
+  // First try the new Puppeteer backend
+  // Backend service has been removed, skipping directly to fallbacks
+  /* 
   try {
     const backendUrl = process.env.BACKEND_URL || "http://localhost:3001";
-    const response = await fetch(
-      `${backendUrl}/api/reel?url=${encodeURIComponent(url)}`,
-      {
-        headers: {
-          Accept: "application/json",
-          "User-Agent": "Instagram-Downloader-Frontend/1.0",
-        },
-      }
-    );
-
-    if (response.ok) {
-      const data = await response.json();
-      if (data.success && data.videoUrl) {
-        return {
-          video_url: data.videoUrl,
-          thumbnail: null, // Will be extracted separately if needed
-          quality: "HD",
-          method: `puppeteer-${data.method}`,
-        };
-      }
-    }
+    // ... code removed ...
   } catch (e) {
     console.log("[v0] Puppeteer backend failed, trying fallback methods:", e);
-  }
+  } 
+  */
 
   // Fallback to existing methods
   const shortcode = extractShortcode(url);
@@ -168,9 +152,9 @@ async function fetchViaInstagramAPI(shortcode: string) {
         .replace(/\\/g, "");
       const thumbnail = thumbnailMatch
         ? thumbnailMatch[1]
-            .replace(/\\u0026/g, "&")
-            .replace(/\\u002F/g, "/")
-            .replace(/\\/g, "")
+          .replace(/\\u0026/g, "&")
+          .replace(/\\u002F/g, "/")
+          .replace(/\\/g, "")
         : undefined;
 
       return {
@@ -273,9 +257,9 @@ async function fetchViaAlternativeService(url: string) {
 
       const thumbnail = thumbnailMatch
         ? thumbnailMatch[1]
-            .replace(/\\u0026/g, "&")
-            .replace(/\\u002F/g, "/")
-            .replace(/\\/g, "")
+          .replace(/\\u0026/g, "&")
+          .replace(/\\u002F/g, "/")
+          .replace(/\\/g, "")
         : undefined;
 
       return {
@@ -394,8 +378,8 @@ function extractVideoFromJSON(data: any) {
           quality: "HD",
           duration: item.video_duration
             ? `${Math.floor(item.video_duration / 60)}:${String(
-                Math.floor(item.video_duration % 60)
-              ).padStart(2, "0")}`
+              Math.floor(item.video_duration % 60)
+            ).padStart(2, "0")}`
             : undefined,
         };
       }
@@ -411,8 +395,8 @@ function extractVideoFromJSON(data: any) {
           quality: "HD",
           duration: items.video_duration
             ? `${Math.floor(items.video_duration / 60)}:${String(
-                Math.floor(items.video_duration % 60)
-              ).padStart(2, "0")}`
+              Math.floor(items.video_duration % 60)
+            ).padStart(2, "0")}`
             : undefined,
         };
       }

@@ -76,3 +76,60 @@ export async function POST(request: NextRequest) {
     }, { status: 500 })
   }
 }
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url)
+    const url = searchParams.get('url')
+
+    if (!url) {
+      return NextResponse.json({ error: "URL is required" }, { status: 400 })
+    }
+
+    // Validate that it's a valid video URL
+    const validDomains = ["instagram", "cdninstagram", "fbcdn", "scontent"]
+    const isValidUrl = validDomains.some(domain => url.includes(domain)) || url.startsWith("https://")
+
+    if (!isValidUrl) {
+      return NextResponse.json({ error: "Invalid video URL" }, { status: 400 })
+    }
+
+    // Fetch the video through our proxy
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+        "Accept": "video/mp4,video/webm,video/*;q=0.9,*/*;q=0.8",
+        "Referer": "https://www.instagram.com/",
+        "Origin": "https://www.instagram.com",
+      },
+      redirect: "follow"
+    })
+
+    if (!response.ok) {
+      return NextResponse.json({ error: `Failed to fetch video: ${response.status}` }, { status: response.status })
+    }
+
+    const contentType = response.headers.get("content-type") || "video/mp4"
+    const contentLength = response.headers.get("content-length")
+
+    const headers = new Headers({
+      "Content-Type": contentType,
+      "Cache-Control": "public, max-age=3600",
+      "Access-Control-Allow-Origin": "*"
+    })
+
+    if (contentLength) {
+      headers.set("Content-Length", contentLength)
+    }
+
+    return new NextResponse(response.body, {
+      status: 200,
+      headers,
+    })
+  } catch (error) {
+    console.error("[v0] Proxy stream error:", error)
+    return NextResponse.json({
+      error: error instanceof Error ? error.message : "Stream failed"
+    }, { status: 500 })
+  }
+}

@@ -132,7 +132,7 @@ export function VideoResult({ data }: VideoResultProps) {
           {data.video_url ? (
             <>
               <video
-                src={data.video_url}
+                src={`/api/proxy-download?url=${encodeURIComponent(data.video_url)}`}
                 muted
                 loop
                 autoPlay
