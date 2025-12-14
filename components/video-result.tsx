@@ -126,9 +126,9 @@ export function VideoResult({ data }: VideoResultProps) {
 
   return (
     <div className="mt-6 p-4 rounded-xl bg-secondary/50 border border-border">
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-col gap-4">
         {/* Thumbnail */}
-        <div className="relative w-full sm:w-40 h-32 sm:h-24 rounded-lg overflow-hidden bg-muted flex-shrink-0">
+        <div className="relative w-full sm:w-120 h-70 sm:h-80 rounded-lg overflow-hidden bg-muted flex-shrink-0">
           {data.video_url ? (
             <>
               <video

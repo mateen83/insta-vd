@@ -43,7 +43,7 @@ export function VideoDownloader() {
     { label: "Compatibility", href: "#works-anywhere" },
     { label: "Use cases", href: "#usage-tips" },
     { label: "Contact", href: "#contact" }
-    
+
   ]
 
   const validateInstagramUrl = (url: string): boolean => {
@@ -137,7 +137,7 @@ export function VideoDownloader() {
   }
 
   return (
-<div className="flex-1 flex flex-col items-center px-4 pb-10 pt-4 md:pt-6 md:pb-14 relative overflow-hidden
+    <div className="flex-1 flex flex-col items-center px-4 pb-10 pt-4 md:pt-6 md:pb-14 relative overflow-hidden
   bg-[radial-gradient(1200px_600px_at_50%_50%,rgba(34,197,94,0.18),rgba(0,0,0,0)_60%)]
   before:content-[''] before:absolute before:inset-0 before:-z-10
   before:bg-[radial-gradient(520px_520px_at_15%_50%,rgba(34,197,94,0.18),rgba(0,0,0,0)_70%)]
@@ -148,7 +148,7 @@ export function VideoDownloader() {
 
       {/* Hero navigation / header */}
       <header className="fixed inset-x-0 top-5 z-40 pl-[15px] pr-[15px] ">
-  <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 
   rounded-3xl border border-white/20 
   bg-[rgba(255,255,255,0.08)]
   backdrop-blur-lg 
@@ -224,7 +224,7 @@ export function VideoDownloader() {
           </div>
         </div>
         <h1 className="text-3xl font-bold text-foreground tracking-tight md:text-4xl lg:text-5xl">
-          Instagram Video Downloader
+          Instagram Reels & Video Download
         </h1>
         <p className="mt-4 text-base text-muted-foreground md:text-lg">
           Download reels and videos from Instagram in seconds. No account, no watermark,
