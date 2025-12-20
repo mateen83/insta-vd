@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {
   Download,
   Instagram,
@@ -13,6 +13,7 @@ import {
   FileVideo,
   Menu,
   X,
+  ArrowUp,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -34,6 +35,7 @@ export function VideoDownloader() {
   const [error, setError] = useState<string | null>(null)
   const [videoData, setVideoData] = useState<VideoData | null>(null)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   const navItems = [
     { label: "How it works", href: "#how-it-works" },
@@ -46,6 +48,15 @@ export function VideoDownloader() {
 
   ]
 
+  // Show/hide scroll-to-top button based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const validateInstagramUrl = (url: string): boolean => {
     const patterns = [
       /^https?:\/\/(www\.)?instagram\.com\/p\/[\w-]+\/?/,
@@ -54,6 +65,20 @@ export function VideoDownloader() {
       /^https?:\/\/(www\.)?instagram\.com\/reels\/[\w-]+\/?/,
     ]
     return patterns.some((pattern) => pattern.test(url))
+  }
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const targetId = href.replace('#', '')
+    const element = document.getElementById(targetId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    setMenuOpen(false)
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
 
@@ -167,7 +192,12 @@ export function VideoDownloader() {
 
           <nav className="hidden items-center gap-5 text-sm text-muted-foreground min-[900px]:flex">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} className="hover:text-primary transition">
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => handleSmoothScroll(e, item.href)}
+                className="hover:text-primary transition cursor-pointer"
+              >
                 {item.label}
               </a>
             ))}
@@ -176,7 +206,8 @@ export function VideoDownloader() {
           <div className="hidden md:flex">
             <a
               href="#video-downloader-hero"
-              className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground"
+              onClick={(e) => handleSmoothScroll(e, '#video-downloader-hero')}
+              className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground cursor-pointer"
             >
               Download now
             </a>
@@ -199,16 +230,16 @@ export function VideoDownloader() {
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-xl px-3 py-2 hover:bg-primary/10 hover:text-foreground"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, item.href)}
+                className="rounded-xl px-3 py-2 hover:bg-primary/10 hover:text-foreground cursor-pointer"
               >
                 {item.label}
               </a>
             ))}
             <a
               href="#video-downloader-hero"
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground"
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => handleSmoothScroll(e, '#video-downloader-hero')}
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground cursor-pointer"
             >
               Download now
             </a>
@@ -322,6 +353,17 @@ export function VideoDownloader() {
       <footer className="mt-16 text-center text-sm text-muted-foreground">
         <p>Only public Instagram and videos can be downloaded</p>
       </footer>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-110 active:scale-95 cursor-pointer"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="h-5 w-5" />
+        </button>
+      )}
     </div>
   )
 }

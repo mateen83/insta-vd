@@ -1,5 +1,7 @@
 import Image from "next/image"
 import { VideoDownloader } from "@/components/video-downloader"
+import { Link2, Eye, Download, Zap, MonitorPlay, KeyRound, Shield, Instagram, Facebook, Youtube, Twitter } from "lucide-react"
+
 
 export default function Home() {
   return (
@@ -12,8 +14,8 @@ export default function Home() {
       {/* New marketing / information sections below the hero */}
       <SupportedPlatformsSection />
       <HowItWorksSection />
-      
-      
+
+
       <WorksOnAnyDeviceSection />
       <WhyChooseSection />
       <UsageTipsSection />
@@ -91,29 +93,29 @@ function HowItWorksSection() {
               title: "Paste Link",
               description:
                 "Copy the video URL from Instagram and paste it into the box at the top of the page.",
-              icon: "🔗",
+              icon: Link2,
             },
             {
               step: "Step 2",
               title: "Preview & Choose Quality",
               description:
                 "We fetch the video and show available quality options when the platform supports it.",
-              icon: "👀",
+              icon: Eye,
             },
             {
               step: "Step 3",
               title: "Download Instantly",
               description:
                 "Click the download button to save the MP4 file directly to your device.",
-              icon: "⬇️",
+              icon: Download,
             },
           ].map((item) => (
             <div
               key={item.title}
               className="group flex h-full flex-col rounded-2xl border border-border/70 bg-card/60 p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary hover:shadow-lg"
             >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-lg">
-                <span aria-hidden="true">{item.icon}</span>
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <item.icon className="h-5 w-5" />
               </div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 {item.step}
@@ -144,29 +146,32 @@ function SupportedPlatformsSection() {
       name: "Instagram",
       description: "Reels, posts, and IGTV — public content only.",
       status: "Live",
+      icon: Instagram,
     },
     {
       name: "Facebook",
       description: "Reels and public page videos.",
       status: "Live",
+      icon: Facebook,
     },
     {
       name: "YouTube",
       description: "Shorts and full videos support is planned.",
       status: "Coming soon",
+      icon: Youtube,
     },
   ]
 
   return (
-     <div
-    id="supported-platforms"
-    className="relative overflow-hidden rounded-3xl
+    <div
+      id="supported-platforms"
+      className="relative overflow-hidden rounded-3xl
       bg-[radial-gradient(900px_420px_at_50%_45%,rgba(59,130,246,0.12),rgba(0,0,0,0)_60%)]
       before:content-[''] before:absolute before:inset-0 before:pointer-events-none
       before:bg-[radial-gradient(520px_520px_at_18%_55%,rgba(99,102,241,0.10),rgba(0,0,0,0)_70%)]
       after:content-[''] after:absolute after:inset-0 after:pointer-events-none
       after:bg-[radial-gradient(560px_560px_at_82%_55%,rgba(168,85,247,0.08),rgba(0,0,0,0)_75%)]"
-  >
+    >
       <SectionWrapper>
         <SectionHeader
           eyebrow="Platforms"
@@ -181,19 +186,18 @@ function SupportedPlatformsSection() {
               className="flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-card p-5"
             >
               <div>
-                <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-sm font-semibold text-primary">
-                  {p.name[0]}
+                <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <p.icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-base font-semibold text-foreground">{p.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
               </div>
               <div className="mt-4 flex items-center justify-between text-xs">
                 <span
-                  className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ${
-                    p.status === "Live"
-                      ? "bg-primary/10 text-primary"
-                      : "bg-muted text-muted-foreground"
-                  }`}
+                  className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ${p.status === "Live"
+                    ? "bg-primary/10 text-primary"
+                    : "bg-muted text-muted-foreground"
+                    }`}
                 >
                   {p.status}
                 </span>
@@ -216,25 +220,25 @@ function WhyChooseSection() {
       title: "Fast & Reliable",
       description:
         "Our infrastructure is tuned to fetch videos in seconds, even for longer reels and HD clips.",
-      icon: "⚡",
+      icon: Zap,
     },
     {
       title: "Original Quality",
       description:
         "Whenever the platform allows it, we keep the original resolution and clarity of your videos.",
-      icon: "HD",
+      icon: MonitorPlay,
     },
     {
       title: "No Login Required",
       description:
         "You never need to sign in with your social accounts. Just paste a link and you are ready to go.",
-      icon: "🔑",
+      icon: KeyRound,
     },
     {
       title: "Privacy-Friendly",
       description:
         "We do not store your downloads or track the links you paste, beyond what is needed to process the request.",
-      icon: "🛡️",
+      icon: Shield,
     },
   ]
 
@@ -258,10 +262,8 @@ function WhyChooseSection() {
         <div className="grid gap-6 md:grid-cols-2">
           {benefits.map((b) => (
             <div key={b.title} className="flex gap-4 rounded-2xl border border-border/60 bg-card/60 p-5">
-              <div className="mt-1 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-base">
-                <span aria-hidden="true" className="font-semibold">
-                  {b.icon}
-                </span>
+              <div className="mt-1 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <b.icon className="h-5 w-5" />
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-foreground md:text-base">{b.title}</h3>
@@ -579,13 +581,13 @@ function FaqSection() {
 
 function AppFooterSection() {
   return (
-   <footer
-  className="mx-auto w-full max-w-7xl border-t border-border/60 border border-white/20
+    <footer
+      className="mx-auto w-full max-w-7xl border-t border-border/60 border border-white/20
     rounded-t-3xl
     bg-[rgba(255,255,255,0.08)]
     backdrop-blur-lg
     supports-[backdrop-filter]:bg-[rgba(255,255,255,0.05)]"
->
+    >
 
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 md:flex-row md:items-start md:justify-between">
         <div className="space-y-3 md:max-w-sm">
@@ -640,14 +642,19 @@ function AppFooterSection() {
               Follow
             </h3>
             <div className="flex gap-2">
-              {["IG", "FB", "YT", "X"].map((label) => (
+              {[
+                { icon: Instagram, label: "Instagram" },
+                { icon: Facebook, label: "Facebook" },
+                { icon: Youtube, label: "YouTube" },
+                { icon: Twitter, label: "Twitter" },
+              ].map((social) => (
                 <a
-                  key={label}
+                  key={social.label}
                   href="#"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-xs font-semibold text-muted-foreground hover:border-primary hover:text-primary"
-                  aria-label={label}
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground hover:border-primary hover:text-primary transition"
+                  aria-label={social.label}
                 >
-                  {label}
+                  <social.icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
