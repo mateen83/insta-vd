@@ -81,38 +81,8 @@ async function fetchInstagramData(url: string) {
   );
 }
 
-// Free Instagram downloader API
-async function fetchViaRapidAPI(url: string) {
-  try {
-    // Using a free Instagram downloader service
-    const apiUrl = `https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/index`;
+// function fetchViaRapidAPI removed as requested
 
-    const response = await fetch(apiUrl, {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": process.env.RAPIDAPI_KEY || "demo-key",
-        "X-RapidAPI-Host":
-          "instagram-downloader-download-instagram-videos-stories.p.rapidapi.com",
-      },
-    });
-
-    if (!response.ok) return null;
-
-    const data = await response.json();
-
-    if (data.video_url) {
-      return {
-        video_url: data.video_url,
-        thumbnail: data.thumbnail || data.image_url,
-        quality: "HD",
-        duration: data.duration,
-      };
-    }
-  } catch (e) {
-    console.log("RapidAPI approach failed:", e);
-  }
-  return null;
-}
 
 // Alternative free service approach
 async function fetchViaInstagramAPI(shortcode: string) {
