@@ -247,24 +247,32 @@ export function VideoDownloader() {
         )}
       </header>
 
-      {/* Hero copy */}
-      <div className="mt-24 mb-10 text-center md:mt-28">
-        <div className="mb-5 flex items-center justify-center">
-          <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-            <Instagram className="h-8 w-8 text-primary" />
-          </div>
-        </div>
-        <h1 className="text-3xl font-bold text-foreground tracking-tight md:text-4xl lg:text-5xl">
-          Instagram Reels & Video Download
-        </h1>
-        <p className="mt-4 text-base text-muted-foreground md:text-lg">
-          Download reels and videos from Instagram in seconds. No account, no watermark,
-          no hassle.
-        </p>
-        <p className="mt-2 text-xs text-muted-foreground">
-          Paste a public video link from Instagram. More platforms coming soon.
-        </p>
-      </div>
+    {/* Hero copy */}
+<div className="mt-24 mb-10 text-center md:mt-28">
+  <div className="mb-5 flex items-center justify-center">
+    <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+      <Instagram
+        className="h-8 w-8 text-primary"
+        role="img"
+        aria-label="Instagram video, reels and MP3 audio downloader"
+      />
+    </div>
+  </div>
+
+  <h1 className="text-3xl font-bold text-foreground tracking-tight md:text-4xl lg:text-5xl">
+    Instagram Video, Reels & MP3 Downloader
+  </h1>
+
+  <p className="mt-4 text-base text-muted-foreground md:text-lg">
+    Download Instagram videos, reels, and audio (MP3) online in seconds. Free, fast,
+    no watermark, and no login required.
+  </p>
+
+  <p className="mt-2 text-xs text-muted-foreground">
+    Paste a public Instagram video or reel link to download MP4 video or extract MP3 audio instantly.
+  </p>
+</div>
+
 
       {/* Main Card */}
       <Card className="w-full max-w-xl bg-card border-border shadow-xl">
@@ -331,28 +339,39 @@ export function VideoDownloader() {
       </Card>
 
       {/* Features */}
-      <div className="mt-12 grid grid-cols-1 gap-6 w-full max-w-3xl md:grid-cols-3">
-        <FeatureCard
-          icon={<Video className="w-5 h-5" />}
-          title="Multiple Platforms"
-          description="Instagram Reels, Videos, IGTV"
-        />
-        <FeatureCard
-          icon={<CheckCircle2 className="w-5 h-5" />}
-          title="High Quality"
-          description="Download videos in original quality"
-        />
-        <FeatureCard
-          icon={<FileVideo className="w-5 h-5" />}
-          title="Fast & Secure"
-          description="No data stored, instant downloads"
-        />
-      </div>
+<div className="mt-12 grid grid-cols-1 gap-6 w-full max-w-3xl md:grid-cols-3">
+  <FeatureCard
+    icon={<Video className="w-5 h-5" role="img" aria-label="Instagram video and reels downloader support" />}
+    title="Supports Instagram Content"
+    description="Download Instagram videos, reels, and IGTV online in MP4 format."
+  />
 
-      {/* Footer */}
-      <footer className="mt-16 text-center text-sm text-muted-foreground">
-        <p>Only public Instagram and videos can be downloaded</p>
-      </footer>
+  <FeatureCard
+    icon={<CheckCircle2 className="w-5 h-5" role="img" aria-label="High quality Instagram video downloader" />}
+    title="HD & Original Quality"
+    description="Save Instagram videos and reels in HD without watermark or quality loss."
+  />
+
+  <FeatureCard
+    icon={<FileVideo className="w-5 h-5" role="img" aria-label="Fast and secure Instagram downloader" />}
+    title="Fast, Free & Secure"
+    description="Instant Instagram downloads with no login, no tracking, and no data storage."
+  />
+</div>
+
+ {/* Footer */}
+<footer className="mt-16 text-center text-sm text-muted-foreground w-full">
+  <p className="flex flex-col sm:flex-row justify-center gap-1">
+    <span>
+      This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only.
+    </span>
+    <span>
+      Private or restricted content cannot be accessed.
+    </span>
+  </p>
+</footer>
+
+
 
       {/* Scroll to Top Button */}
       {showScrollTop && (

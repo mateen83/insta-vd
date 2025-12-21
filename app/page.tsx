@@ -83,7 +83,7 @@ function HowItWorksSection() {
         <SectionHeader
           eyebrow="How it works"
           title="How It Works"
-          subtitle="Download any public video in three simple steps."
+          subtitle="Download Instagram videos, Reels, photos, and MP3 audio in three simple steps."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -92,29 +92,33 @@ function HowItWorksSection() {
               step: "Step 1",
               title: "Paste Link",
               description:
-                "Copy the video URL from Instagram and paste it into the box at the top of the page.",
+                "Copy the Instagram video, Reel, photo, or MP3 audio URL and paste it into the box at the top of the page.",
               icon: Link2,
             },
             {
               step: "Step 2",
               title: "Preview & Choose Quality",
               description:
-                "We fetch the video and show available quality options when the platform supports it.",
+                "We fetch the content and display available quality options for videos, photos, and audio when supported.",
               icon: Eye,
             },
             {
               step: "Step 3",
               title: "Download Instantly",
               description:
-                "Click the download button to save the MP4 file directly to your device.",
+                "Click the download button to save the MP4 video or MP3 audio file directly to your device.",
               icon: Download,
             },
           ].map((item) => (
             <div
               key={item.title}
               className="group flex h-full flex-col rounded-2xl border border-border/70 bg-card/60 p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary hover:shadow-lg"
+              aria-label={item.title}
             >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <div
+                className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary"
+                aria-hidden="true"
+              >
                 <item.icon className="h-5 w-5" />
               </div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -136,27 +140,29 @@ function HowItWorksSection() {
         </div>
       </SectionWrapper>
     </div>
-  )
+  );
 }
-
 
 function SupportedPlatformsSection() {
   const platforms = [
     {
       name: "Instagram",
-      description: "Reels, posts, and IGTV — public content only.",
+      description:
+        "Download public Instagram videos, reels, IGTV, and audio (MP3) instantly and in HD.",
       status: "Live",
       icon: Instagram,
     },
     {
       name: "Facebook",
-      description: "Reels and public page videos.",
-      status: "Live",
+      description:
+        "Facebook video downloader support is coming soon, including Shorts and full-length videos.",
+      status: "Coming soon",
       icon: Facebook,
     },
     {
       name: "YouTube",
-      description: "Shorts and full videos support is planned.",
+      description:
+        "YouTube video downloader support is coming soon for Shorts and full-length videos.",
       status: "Coming soon",
       icon: Youtube,
     },
@@ -176,28 +182,27 @@ function SupportedPlatformsSection() {
         <SectionHeader
           eyebrow="Platforms"
           title="Supported Platforms"
-          subtitle="Built for the most popular social platforms today, with more on the way."
+          subtitle="Download videos, reels, and audio from popular social platforms quickly and securely."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {platforms.map((p) => (
-            <div
-              key={p.name}
-              className="flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-card p-5"
-            >
+             <div
+    key={p.name.toLowerCase()} 
+    className="flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-card p-5"
+  >
               <div>
                 <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <p.icon className="h-5 w-5" />
+                  <p.icon className="h-5 w-5" role="img" aria-label={`${p.name} icon`} />
                 </div>
                 <h3 className="text-base font-semibold text-foreground">{p.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
               </div>
               <div className="mt-4 flex items-center justify-between text-xs">
                 <span
-                  className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ${p.status === "Live"
-                    ? "bg-primary/10 text-primary"
-                    : "bg-muted text-muted-foreground"
-                    }`}
+                  className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ${
+                    p.status === "Live" ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"
+                  }`}
                 >
                   {p.status}
                 </span>
@@ -207,7 +212,7 @@ function SupportedPlatformsSection() {
         </div>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          Get notified when new platforms are added by bookmarking this page or checking back soon.
+          Bookmark this page or check back soon to download videos, reels, and MP3 audio from more platforms as they are added.
         </p>
       </SectionWrapper>
     </div>
@@ -217,30 +222,30 @@ function SupportedPlatformsSection() {
 function WhyChooseSection() {
   const benefits = [
     {
-      title: "Fast & Reliable",
+      title: "Fast & Reliable Instagram Video & Audio Downloads",
       description:
-        "Our infrastructure is tuned to fetch videos in seconds, even for longer reels and HD clips.",
+        "Download Instagram videos, Reels, photos, and MP3 audio in seconds. Our infrastructure ensures smooth, high-speed downloads even for longer HD clips.",
       icon: Zap,
     },
     {
-      title: "Original Quality",
+      title: "Original Quality Preservation",
       description:
-        "Whenever the platform allows it, we keep the original resolution and clarity of your videos.",
+        "Keep your videos and audio in their original resolution and clarity whenever Instagram allows, including HD and 4K content.",
       icon: MonitorPlay,
     },
     {
       title: "No Login Required",
       description:
-        "You never need to sign in with your social accounts. Just paste a link and you are ready to go.",
+        "Download Instagram content securely without signing in. Just paste the video, Reel, or audio link and start downloading instantly.",
       icon: KeyRound,
     },
     {
-      title: "Privacy-Friendly",
+      title: "Privacy-Friendly & Secure",
       description:
-        "We do not store your downloads or track the links you paste, beyond what is needed to process the request.",
+        "We do not store your downloads or track the links you paste, ensuring your Instagram activity stays private.",
       icon: Shield,
     },
-  ]
+  ];
 
   return (
     <div
@@ -255,14 +260,21 @@ function WhyChooseSection() {
       <SectionWrapper>
         <SectionHeader
           eyebrow="Benefits"
-          title="Why Choose Our Downloader?"
-          subtitle="A simple interface built for speed, quality, and privacy."
+          title="Why Choose Our Instagram Downloader?"
+          subtitle="Fast, secure, and high-quality downloads for videos, Reels, photos, and MP3 audio."
         />
 
         <div className="grid gap-6 md:grid-cols-2">
           {benefits.map((b) => (
-            <div key={b.title} className="flex gap-4 rounded-2xl border border-border/60 bg-card/60 p-5">
-              <div className="mt-1 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <div
+              key={b.title}
+              className="flex gap-4 rounded-2xl border border-border/60 bg-card/60 p-5"
+              aria-label={b.title}
+            >
+              <div
+                className="mt-1 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
+                aria-hidden="true"
+              >
                 <b.icon className="h-5 w-5" />
               </div>
               <div>
@@ -274,11 +286,11 @@ function WhyChooseSection() {
         </div>
 
         <div className="mt-6 text-center text-xs text-muted-foreground">
-          Curious about privacy details? See the FAQ section below for a concise overview.
+          Curious about privacy details? Check the FAQ section below for a concise overview of our secure Instagram video, Reel, photo, and MP3 audio download process.
         </div>
       </SectionWrapper>
     </div>
-  )
+  );
 }
 
 function WorksOnAnyDeviceSection() {
@@ -295,22 +307,21 @@ function WorksOnAnyDeviceSection() {
       <SectionWrapper>
         <SectionHeader
           eyebrow="Compatibility"
-          title="Download to Any Device"
-          subtitle="Use the downloader on your phone, tablet, or desktop with smooth playback on most modern media players."
+          title="Download Instagram Videos & MP3 Audio on Any Device"
+          subtitle="Use our downloader on your phone, tablet, or desktop for smooth playback and fast downloads."
         />
 
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="space-y-5 text-left">
             <p className="text-sm text-muted-foreground">
-              All downloads are MP4 files, so you can save them to your camera roll, laptop, or cloud
-              storage and watch them whenever you like.
+              All downloads are available as MP4 videos or MP3 audio files. Save them to your camera roll, laptop, or cloud storage and enjoy anytime.
             </p>
             <ul className="space-y-3 text-sm text-muted-foreground">
               {[
-                "Mobile-friendly interface for quick downloads on the go.",
-                "No app install required — everything runs in your browser.",
-                "Save directly to your device storage or preferred folder.",
-                "Share clips to messaging apps or teams in just a couple of taps.",
+                "Mobile-friendly interface for quick video and audio downloads on the go.",
+                "No app installation required — everything works in your browser.",
+                "Save directly to device storage or your preferred folder.",
+                "Easily share downloaded clips or audio to messaging apps or teams with a tap.",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 rounded-full bg-primary/80" />
@@ -322,12 +333,14 @@ function WorksOnAnyDeviceSection() {
               <button
                 type="button"
                 className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:bg-primary/90"
+                aria-label="Open downloader on your phone"
               >
                 Open on your phone
               </button>
               <button
                 type="button"
                 className="inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground hover:border-primary hover:text-foreground"
+                aria-label="Copy link to share downloader"
               >
                 Copy link to share
               </button>
@@ -338,44 +351,44 @@ function WorksOnAnyDeviceSection() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border/70 bg-card">
               <Image
                 src="/img.webp"
-                alt="Preview of downloads on desktop, tablet and mobile devices"
+                alt="Preview of Instagram video and MP3 audio downloads on desktop, tablet, and mobile devices"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
         </div>
+
         <div className="mt-4 rounded-2xl border border-border/60 bg-card/80 p-4 text-center text-xs text-muted-foreground">
-          Preview how your downloads look across desktop, tablet, and mobile devices — the same simple
-          interface everywhere.
+          Preview how your Instagram video and MP3 audio downloads look across desktop, tablet, and mobile devices — the same simple interface everywhere.
         </div>
       </SectionWrapper>
     </div>
-  )
+  );
 }
 function UsageTipsSection() {
   const tips = [
     {
-      title: "Save Your Own Reels",
+      title: "Save Your Own Reels & Videos",
       description:
-        "Download your own Instagram or Facebook content for editing, archiving, or reposting on other platforms.",
+        "Download your own Instagram or Facebook videos, Reels, photos, and MP3 audio for editing, archiving, or reposting on other platforms.",
     },
     {
-      title: "Offline Viewing",
+      title: "Offline Viewing Anytime",
       description:
-        "Keep tutorials, recipes, or workout videos offline so you can watch them without burning mobile data.",
+        "Keep tutorials, workout videos, Reels, or music offline so you can watch or listen without using mobile data.",
     },
     {
       title: "Share With Friends & Teams",
       description:
-        "Collect reference clips for campaigns, design inspiration, or content brainstorms in one shared folder.",
+        "Collect reference clips, Reels, videos, or MP3 audio for campaigns, design inspiration, or content brainstorms in one shared folder.",
     },
     {
-      title: "Content Inspiration",
+      title: "Content Inspiration & Library",
       description:
-        "Create a personal library of inspirational clips while you plan your next post or marketing idea.",
+        "Create a personal library of videos, Reels, photos, and MP3 audio clips to inspire your next post, marketing idea, or creative project.",
     },
-  ]
+  ];
 
   return (
     <div
@@ -389,9 +402,9 @@ function UsageTipsSection() {
     >
       <SectionWrapper>
         <SectionHeader
-          eyebrow="Use cases"
-          title="Smart Ways to Use the Downloader"
-          subtitle="Here are a few creator-friendly ways people use downloaded videos."
+          eyebrow="Use Cases"
+          title="Smart Ways to Use Our Instagram Downloader"
+          subtitle="Discover creative ways to download Instagram videos, Reels, photos, and MP3 audio for personal or professional use."
         />
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -407,13 +420,12 @@ function UsageTipsSection() {
         </div>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          Always respect creators&apos; copyrights and each platform&apos;s terms of service.
+          Always respect creators&apos; copyrights and platform terms while downloading Instagram videos, Reels, photos, or MP3 audio.
         </p>
       </SectionWrapper>
     </div>
-  )
+  );
 }
-
 
 function ContactSection() {
   return (
@@ -429,12 +441,15 @@ function ContactSection() {
       <SectionWrapper>
         <SectionHeader
           eyebrow="Contact"
-          title="Get in Touch"
-          subtitle="Have feedback, questions, or partnership ideas? Send a quick message and we’ll get back to you."
+          title="Get in Touch with Our Instagram Downloader Team"
+          subtitle="Have questions, feedback, or business inquiries about our Video, Reels, Story, or Photo Downloader? Send us a message and we’ll respond quickly."
         />
 
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
-          <form className="space-y-4 rounded-2xl border border-border/70 bg-card/80 p-5 md:p-6">
+          <form
+            className="space-y-4 rounded-2xl border border-border/70 bg-card/80 p-5 md:p-6"
+            aria-label="Contact form for Instagram Video, Reels, Story, and Photo Downloader"
+          >
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-1.5">
                 <label htmlFor="contact-name" className="text-sm font-medium text-foreground">
@@ -444,7 +459,8 @@ function ContactSection() {
                   id="contact-name"
                   type="text"
                   className="w-full rounded-lg border border-input bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                  placeholder="Your name"
+                  placeholder="Your full name"
+                  aria-label="Enter your name for Instagram downloader support"
                 />
               </div>
               <div className="space-y-1.5">
@@ -456,6 +472,7 @@ function ContactSection() {
                   type="email"
                   className="w-full rounded-lg border border-input bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   placeholder="you@example.com"
+                  aria-label="Enter your email for Instagram downloader support"
                 />
               </div>
             </div>
@@ -467,7 +484,8 @@ function ContactSection() {
                 id="contact-message"
                 rows={4}
                 className="w-full resize-none rounded-lg border border-input bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                placeholder="Tell us how we can help…"
+                placeholder="Write your question or feedback about Instagram Video, Reels, Story, or Photo Downloader…"
+                aria-label="Message content for Instagram downloader support"
               />
             </div>
             <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
@@ -475,27 +493,24 @@ function ContactSection() {
                 type="submit"
                 className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
               >
-                Send message
+                Send Message
               </button>
               <p className="text-xs text-muted-foreground">
-                We reply to most messages within 1–2 business days.
+                We typically reply within 1–2 business days.
               </p>
             </div>
           </form>
 
           <div className="space-y-4 rounded-2xl border border-border/60 bg-card/60 p-5 text-sm text-muted-foreground">
-            <h3 className="text-sm font-semibold text-foreground">Support & feedback</h3>
+            <h3 className="text-sm font-semibold text-foreground">Support & Feedback for Instagram Downloader</h3>
             <p>
-              Use this form for general questions, feature requests, or business inquiries. For urgent
-              technical issues, you can also mention details about the URL or platform that is not
-              working.
+              Use this contact form for questions, feature requests, or business partnerships related to our Video Downloader, Reels Downloader, Story Saver, Highlights Downloader, or Photo Downloader. For technical issues, include the URL or platform details.
             </p>
             <p className="text-xs">
-              Please do not share passwords or sensitive personal information. We will never ask for
-              your social media login details.
+              Never share passwords or sensitive personal information. We do not request social media login credentials.
             </p>
             <p className="text-xs">
-              Our support team typically responds within 24–48 hours. For complex issues, please provide as much context as possible so we can assist you efficiently.
+              Our support team typically responds within 24–48 hours. Provide clear details for faster assistance with Instagram video, Reels, or story downloads.
             </p>
           </div>
         </div>
@@ -507,30 +522,30 @@ function ContactSection() {
 function FaqSection() {
   const faqs = [
     {
-      q: "Is this tool free to use?",
-      a: "Yes. The downloader is free for personal, non-commercial use.",
+      q: "Is the Instagram Video Downloader free to use?",
+      a: "Yes. Our Instagram Video Downloader is completely free. There are no hidden charges, and you can download as many Instagram videos, Reels, stories, photos, or MP3 audio as you want.",
     },
     {
-      q: "Can I download private videos?",
-      a: "No. Only publicly accessible videos are supported.",
+      q: "Are there any limits on the number of downloads?",
+      a: "No. You can use our Instagram downloader to save unlimited videos, Reels, photos, stories, highlights, and audio files. Download as much as you need, completely free.",
+    },
+    {
+      q: "Do I need to install any software to download Instagram videos?",
+      a: "No. This Instagram Video Downloader is web-based, so you don't need to install any apps. Just copy the URL of the video, paste it into our tool, and click 'Download'.",
+    },
+    {
+      q: "Can I download Instagram videos on my smartphone?",
+      a: "Yes. Our Instagram Video Downloader works on mobile, tablet, and desktop browsers. Simply copy the video, Reels, or story URL, paste it into our tool, and download instantly.",
+    },
+    {
+      q: "Can I download private Instagram videos?",
+      a: "No. Only publicly accessible videos, Reels, stories, highlights, and photos are supported. Private content cannot be downloaded due to Instagram restrictions.",
     },
     {
       q: "Do you store my videos or links?",
-      a: "We do not store your downloaded files or keep logs of video URLs longer than needed to process your request.",
+      a: "No. We respect your privacy. Downloaded files and URLs are never stored beyond the time needed to process your request.",
     },
-    {
-      q: "The download failed. What can I do?",
-      a: "Make sure the video is public, copy the full URL, and try again. Some platforms may temporarily block access.",
-    },
-    {
-      q: "Is it legal to download videos?",
-      a: "Always follow each platform’s terms and local laws. Only download videos you own or have permission to save.",
-    },
-    {
-      q: "Do I need to log in?",
-      a: "No. You never need to log in with your social media credentials to use this downloader.",
-    },
-  ]
+  ];
 
   return (
     <div
@@ -546,7 +561,7 @@ function FaqSection() {
         <SectionHeader
           eyebrow="FAQ"
           title="Frequently Asked Questions"
-          subtitle="Short answers to the most common questions about using this downloader."
+          subtitle="Quick answers about downloading Instagram videos, Reels, stories, highlights, photos, and MP3 audio."
         />
 
         <div className="space-y-3">
@@ -566,17 +581,15 @@ function FaqSection() {
         </div>
 
         <p className="mt-6 text-xs text-muted-foreground">
-          This site is not affiliated with Instagram, Facebook, or Meta Platforms, Inc. Always follow
-          local laws and each platform&apos;s terms of service.
+          This site is not affiliated with Instagram, Facebook, or Meta Platforms, Inc. Always follow platform rules and local laws while using our free Instagram downloader.
         </p>
 
         <p className="mt-2 text-xs text-muted-foreground">
-          Still have questions? You can add a simple contact link or email here to let people reach
-          out.
+          Still have questions? <a href="mailto:support@yoursite.com" className="underline">Contact us</a> for help downloading Instagram videos, Reels, stories, photos, or MP3 audio.
         </p>
       </SectionWrapper>
     </div>
-  )
+  );
 }
 
 function AppFooterSection() {
@@ -603,30 +616,7 @@ function AppFooterSection() {
           </p>
         </div>
 
-        <div className="flex flex-1 flex-col gap-6 text-sm min-[900px]:flex-row min-[900px]:justify-end">
-          <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Navigation
-            </h3>
-            <ul className="space-y-1 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#how-it-works" className="hover:text-foreground">
-                  How it works
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-foreground">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
+      
           <div>
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
               Legal
@@ -636,7 +626,8 @@ function AppFooterSection() {
               respect copyrights and platform terms.
             </p>
           </div>
-
+  <div className="flex flex-1 flex-col gap-6 text-sm min-[900px]:flex-row min-[900px]:justify-end">
+         
           <div>
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
               Follow

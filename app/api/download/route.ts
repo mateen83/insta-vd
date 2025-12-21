@@ -539,7 +539,7 @@ export async function POST(request: NextRequest) {
       ...videoData,
     });
   } catch (error) {
-    console.error("[v0] Error processing request:", error);
+    console.error("Error processing request:", error);
 
     const message =
       error instanceof Error ? error.message : "An unexpected error occurred";
