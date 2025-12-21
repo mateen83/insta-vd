@@ -175,10 +175,10 @@ export function VideoDownloader() {
       <header className="fixed inset-x-0 top-5 z-40 pl-[15px] pr-[15px] ">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 
   rounded-3xl border border-white/20 
-  bg-[rgba(255,255,255,0.08)]
+
   backdrop-blur-lg 
-  supports-[backdrop-filter]:bg-[rgba(255,255,255,0.05)]
-  px-4 py-3">
+  
+  px-4 py-3  bg-card/95">
 
 
           <div className="flex items-center gap-3">
@@ -225,7 +225,7 @@ export function VideoDownloader() {
         </div>
 
         {menuOpen && (
-          <div className="mx-auto mt-2 flex w-full max-w-5xl flex-col gap-2 rounded-2xl border border-border/60 bg-card/80 p-4 text-sm text-muted-foreground min-[900px]:hidden">
+          <div className="mx-auto mt-2 flex w-full max-w-5xl flex-col gap-2 rounded-2xl border border-border/60 bg-card/95 p-4 text-sm text-muted-foreground min-[900px]:hidden">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -377,10 +377,10 @@ export function VideoDownloader() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-110 active:scale-95 cursor-pointer"
+          className="fixed bottom-5 right-5 z-50 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-110 active:scale-95 cursor-pointer"
           aria-label="Scroll to top"
         >
-          <ArrowUp className="h-5 w-5" />
+          <ArrowUp className="h-4 w-4" />
         </button>
       )}
     </div>

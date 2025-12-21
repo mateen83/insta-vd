@@ -14,8 +14,6 @@ export default function Home() {
       {/* New marketing / information sections below the hero */}
       <SupportedPlatformsSection />
       <HowItWorksSection />
-
-
       <WorksOnAnyDeviceSection />
       <WhyChooseSection />
       <UsageTipsSection />
@@ -585,7 +583,7 @@ function FaqSection() {
         </p>
 
         <p className="mt-2 text-xs text-muted-foreground">
-          Still have questions? <a href="mailto:support@yoursite.com" className="underline">Contact us</a> for help downloading Instagram videos, Reels, stories, photos, or MP3 audio.
+          Still have questions? <a href="#contact" className="underline">Contact us</a> for help downloading Instagram videos, Reels, stories, photos, or MP3 audio.
         </p>
       </SectionWrapper>
     </div>
@@ -653,14 +651,24 @@ function AppFooterSection() {
         </div>
       </div>
 
-      {/* Bottom copyright row (no extra styling added) */}
-      <div className="border-t border-border/60">
-        <div className="mx-auto w-full max-w-5xl px-4 py-4">
-          <p className="text-center text-xs text-muted-foreground">
-            © 2025 Social Video Downloader. All rights reserved.
-          </p>
-        </div>
-      </div>
+     {/* Bottom copyright row (no extra styling added) */}
+<div className="border-t border-border/60">
+  <div className="mx-auto w-full max-w-5xl px-4 py-4">
+    <p className="text-center text-xs text-muted-foreground">
+      © 2025 Social Video Downloader By{" "}
+      <a
+        href="https://www.linkedin.com/in/abdul-mateen-5b6197261/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-400 hover:underline"
+      >
+        Abdul Mateen
+      </a>
+      . All rights reserved.
+    </p>
+  </div>
+</div>
+
     </footer>
   )
 }
