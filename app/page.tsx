@@ -68,15 +68,15 @@ function SectionHeader({
 }
 function HowItWorksSection() {
   return (
-    <div
-      id="how-it-works"
-      className="relative overflow-hidden rounded-3xl
-        bg-[radial-gradient(900px_420px_at_50%_40%,rgba(34,197,94,0.14),rgba(0,0,0,0)_60%)]
-        before:content-[''] before:absolute before:inset-0 before:pointer-events-none
-        before:bg-[radial-gradient(520px_520px_at_15%_55%,rgba(34,197,94,0.10),rgba(0,0,0,0)_70%)]
-        after:content-[''] after:absolute after:inset-0 after:pointer-events-none
-        after:bg-[radial-gradient(560px_560px_at_85%_55%,rgba(20,184,166,0.10),rgba(59,130,246,0.06)_35%,rgba(0,0,0,0)_75%)]"
-    >
+<div
+  id="how-it-works"
+  className="relative overflow-hidden
+    bg-[radial-gradient(900px_420px_at_50%_45%,rgba(236,72,153,0.14),rgba(0,0,0,0)_60%)]
+    before:content-[''] before:absolute before:inset-0 before:pointer-events-none
+    before:bg-[radial-gradient(520px_520px_at_18%_55%,rgba(168,85,247,0.12),rgba(0,0,0,0)_70%)]
+    after:content-[''] after:absolute after:inset-0 after:pointer-events-none
+    after:bg-[radial-gradient(560px_560px_at_82%_55%,rgba(236,72,153,0.10),rgba(0,0,0,0)_75%)]"
+>
       <SectionWrapper>
         <SectionHeader
           eyebrow="How it works"
@@ -167,9 +167,9 @@ function SupportedPlatformsSection() {
   ]
 
   return (
-    <div
+<div
       id="supported-platforms"
-      className="relative overflow-hidden rounded-3xl
+      className="relative overflow-hidden
       bg-[radial-gradient(900px_420px_at_50%_45%,rgba(59,130,246,0.12),rgba(0,0,0,0)_60%)]
       before:content-[''] before:absolute before:inset-0 before:pointer-events-none
       before:bg-[radial-gradient(520px_520px_at_18%_55%,rgba(99,102,241,0.10),rgba(0,0,0,0)_70%)]
@@ -246,14 +246,14 @@ function WhyChooseSection() {
   ];
 
   return (
-    <div
+   <div
       id="why-choose"
-      className="relative overflow-hidden rounded-3xl
-        bg-[radial-gradient(900px_420px_at_50%_45%,rgba(34,197,94,0.12),rgba(0,0,0,0)_62%)]
+      className="relative overflow-hidden
+        bg-[radial-gradient(900px_420px_at_50%_45%,rgba(236,72,153,0.13),rgba(255,255,255,0.03)_62%)]
         before:content-[''] before:absolute before:inset-0 before:pointer-events-none
-        before:bg-[radial-gradient(560px_560px_at_18%_55%,rgba(16,185,129,0.10),rgba(0,0,0,0)_72%)]
+        before:bg-[radial-gradient(560px_560px_at_18%_55%,rgba(168,85,247,0.11),rgba(0,0,0,0)_72%)]
         after:content-[''] after:absolute after:inset-0 after:pointer-events-none
-        after:bg-[radial-gradient(620px_620px_at_82%_55%,rgba(34,197,94,0.08),rgba(0,0,0,0)_76%)]"
+        after:bg-[radial-gradient(620px_620px_at_82%_55%,rgba(236,72,153,0.09),rgba(255,255,255,0.02)_76%)]"
     >
       <SectionWrapper>
         <SectionHeader
@@ -293,14 +293,14 @@ function WhyChooseSection() {
 
 function WorksOnAnyDeviceSection() {
   return (
-    <div
+  <div
       id="works-anywhere"
-      className="relative overflow-hidden rounded-3xl
-        bg-[radial-gradient(900px_420px_at_50%_45%,rgba(20,184,166,0.10),rgba(0,0,0,0)_62%)]
+      className="relative overflow-hidden
+        bg-[radial-gradient(900px_420px_at_50%_45%,rgba(236,72,153,0.12),rgba(255,255,255,0.03)_62%)]
         before:content-[''] before:absolute before:inset-0 before:pointer-events-none
-        before:bg-[radial-gradient(560px_560px_at_18%_55%,rgba(59,130,246,0.08),rgba(0,0,0,0)_72%)]
+        before:bg-[radial-gradient(560px_560px_at_18%_55%,rgba(168,85,247,0.10),rgba(0,0,0,0)_72%)]
         after:content-[''] after:absolute after:inset-0 after:pointer-events-none
-        after:bg-[radial-gradient(620px_620px_at_82%_55%,rgba(34,197,94,0.06),rgba(0,0,0,0)_76%)]"
+        after:bg-[radial-gradient(620px_620px_at_82%_55%,rgba(236,72,153,0.08),rgba(255,255,255,0.02)_76%)]"
     >
       <SectionWrapper>
         <SectionHeader
@@ -389,14 +389,14 @@ function UsageTipsSection() {
   ];
 
   return (
-    <div
+   <div
       id="usage-tips"
-      className="relative overflow-hidden rounded-3xl
-        bg-[radial-gradient(900px_420px_at_20%_35%,rgba(34,197,94,0.11),rgba(0,0,0,0)_62%)]
+      className="relative overflow-hidden
+        bg-[radial-gradient(900px_420px_at_20%_35%,rgba(236,72,153,0.12),rgba(255,255,255,0.03)_62%)]
         before:content-[''] before:absolute before:inset-0 before:pointer-events-none
-        before:bg-[radial-gradient(560px_560px_at_75%_25%,rgba(20,184,166,0.09),rgba(0,0,0,0)_72%)]
+        before:bg-[radial-gradient(560px_560px_at_75%_25%,rgba(168,85,247,0.11),rgba(0,0,0,0)_72%)]
         after:content-[''] after:absolute after:inset-0 after:pointer-events-none
-        after:bg-[radial-gradient(620px_620px_at_55%_80%,rgba(59,130,246,0.06),rgba(0,0,0,0)_76%)]"
+        after:bg-[radial-gradient(620px_620px_at_55%_80%,rgba(236,72,153,0.08),rgba(255,255,255,0.02)_76%)]"
     >
       <SectionWrapper>
         <SectionHeader
@@ -546,14 +546,15 @@ function FaqSection() {
   ];
 
   return (
-    <div
+   
+<div
       id="faq"
-      className="relative overflow-hidden rounded-3xl
-        bg-[radial-gradient(900px_420px_at_25%_30%,rgba(99,102,241,0.10),rgba(0,0,0,0)_62%)]
+      className="relative overflow-hidden
+        bg-[radial-gradient(900px_420px_at_25%_30%,rgba(236,72,153,0.11),rgba(255,255,255,0.03)_62%)]
         before:content-[''] before:absolute before:inset-0 before:pointer-events-none
-        before:bg-[radial-gradient(560px_560px_at_85%_35%,rgba(59,130,246,0.09),rgba(0,0,0,0)_72%)]
+        before:bg-[radial-gradient(560px_560px_at_85%_35%,rgba(168,85,247,0.10),rgba(0,0,0,0)_72%)]
         after:content-[''] after:absolute after:inset-0 after:pointer-events-none
-        after:bg-[radial-gradient(620px_620px_at_50%_90%,rgba(20,184,166,0.06),rgba(0,0,0,0)_76%)]"
+        after:bg-[radial-gradient(620px_620px_at_50%_90%,rgba(236,72,153,0.07),rgba(255,255,255,0.02)_76%)]"
     >
       <SectionWrapper>
         <SectionHeader
