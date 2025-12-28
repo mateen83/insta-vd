@@ -598,14 +598,14 @@ function AppFooterSection() {
     rounded-t-3xl
     bg-[rgba(255,255,255,0.08)]
     backdrop-blur-lg
-    supports-[backdrop-filter]:bg-[rgba(255,255,255,0.05)]"
+    supports-[backdrop-filter]:bg-[rgba(255,255,255,0.05)]    bg-card/95"
     >
 
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 md:flex-row md:items-start md:justify-between">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 md:flex-row md:items-start md:justify-between  ">
         <div className="space-y-3 md:max-w-sm">
-          <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1">
-            <span className="h-2 w-2 rounded-full bg-primary" />
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+          <div className="inline-flex items-center rounded-full ">
+            <span className="h-2 w-2 rounded-full " />
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-200">
               Social Video Downloader
             </span>
           </div>
@@ -661,7 +661,7 @@ function AppFooterSection() {
         href="https://www.linkedin.com/in/abdul-mateen-5b6197261/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-400 hover:underline"
+        className="text-gray-200 hover:underline"
       >
         Abdul Mateen
       </a>
