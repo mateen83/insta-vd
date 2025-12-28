@@ -2,103 +2,113 @@
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
-/* Dark theme with lighter sections + clear card contrast */
+/* Light theme (default) */
 :root {
-  /* Page background: not pitch black anymore */
-  --background: oklch(0.18 0.02 260); /* soft charcoal */
-  --foreground: oklch(0.96 0.01 260); /* almost white text */
+  /* Page background: light mode */
+  --background: oklch(0.98 0.005 260); /* soft off-white */
+  --foreground: oklch(0.15 0.02 260); /* dark text */
 
   /* Cards / big panels */
-  --card: oklch(0.24 0.02 260); /* clearly lighter than background */
+  --card: oklch(1 0 0); /* white card */
   --card-foreground: var(--foreground);
 
   /* Small popovers / tooltips */
-  --popover: oklch(0.26 0.02 260);
+  --popover: oklch(1 0 0);
   --popover-foreground: var(--foreground);
 
   /* Instagram gradient accent (pink) */
-  --primary: oklch(0.65 0.22 0); /* Instagram pink */
+  --primary: oklch(0.60 0.24 0); /* Instagram pink */
   --primary-foreground: oklch(0.98 0.01 0); /* white text on primary */
 
-  /* Section backgrounds (like "How it works" blocks) */
-  --secondary: oklch(0.21 0.02 260); /* between bg and card */
+  /* Section backgrounds */
+  --secondary: oklch(0.96 0.005 260);
   --secondary-foreground: var(--foreground);
 
   /* Muted / input backgrounds */
-  --muted: oklch(0.20 0.015 260);
-  --muted-foreground: oklch(0.75 0.01 260);
+  --muted: oklch(0.94 0.005 260);
+  --muted-foreground: oklch(0.45 0.02 260);
 
-  /* Accent blocks (highlighted areas, chips) */
-  --accent: oklch(0.30 0.04 260); /* lighter bluish panel */
+  /* Accent blocks */
+  --accent: oklch(0.95 0.01 260);
   --accent-foreground: var(--foreground);
 
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
 
-  /* Borders clearly visible but subtle */
-  --border: oklch(0.32 0.02 260);
-  --input: oklch(0.22 0.02 260);
-  --ring: oklch(0.65 0.22 0); /* Instagram pink focus ring */
+  /* Borders */
+  --border: oklch(0.88 0.01 260);
+  --input: oklch(0.96 0.005 260);
+  --ring: oklch(0.60 0.24 0); /* Instagram pink focus ring */
 
-  /* Charts (for later) */
-  --chart-1: oklch(0.65 0.22 0); /* pink */
-  --chart-2: oklch(0.72 0.20 10); /* lighter pink/coral */
-  --chart-3: oklch(0.60 0.05 260);
-  --chart-4: oklch(0.68 0.10 230);
-  --chart-5: oklch(0.72 0.08 30);
+  /* Charts */
+  --chart-1: oklch(0.60 0.24 0); /* pink */
+  --chart-2: oklch(0.65 0.20 10);
+  --chart-3: oklch(0.55 0.08 260);
+  --chart-4: oklch(0.60 0.12 230);
+  --chart-5: oklch(0.65 0.10 30);
 
   --radius: 0.75rem;
 
-  /* Sidebar slightly darker than cards */
-  --sidebar: oklch(0.17 0.02 260);
+  /* Sidebar */
+  --sidebar: oklch(0.97 0.005 260);
   --sidebar-foreground: var(--foreground);
   --sidebar-primary: var(--primary);
   --sidebar-primary-foreground: var(--primary-foreground);
-  --sidebar-accent: oklch(0.22 0.02 260);
+  --sidebar-accent: oklch(0.94 0.005 260);
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
 
-  /* NEW: gradient used behind sections */
-  --section-gradient: radial-gradient(circle at 0% 0%, oklch(0.32 0.04 260 / 0.65), transparent 60%), radial-gradient(circle at 100% 0%, oklch(0.65 0.22 0 / 0.35), transparent 55%), radial-gradient(circle at 50% 100%,oklch(0.28 0.04 260 / 0.55), transparent 60%);
+  /* Section gradient for light mode */
+  --section-gradient: radial-gradient(circle at 0% 0%, oklch(0.90 0.04 260 / 0.45), transparent 60%), radial-gradient(circle at 100% 0%, oklch(0.60 0.24 0 / 0.20), transparent 55%), radial-gradient(circle at 50% 100%,oklch(0.88 0.04 260 / 0.40), transparent 60%);
 }
 
+/* Dark theme */
 .dark {
-  /* If you use .dark class, keep same feel but a hair deeper */
+  /* Page background: dark charcoal */
   --background: oklch(0.16 0.02 260);
   --foreground: oklch(0.97 0.01 260);
 
+  /* Cards */
   --card: oklch(0.23 0.02 260);
   --card-foreground: var(--foreground);
 
+  /* Popovers */
   --popover: oklch(0.25 0.02 260);
   --popover-foreground: var(--foreground);
 
+  /* Primary */
   --primary: oklch(0.68 0.23 0); /* Instagram pink */
   --primary-foreground: oklch(0.98 0.01 0);
 
+  /* Secondary */
   --secondary: oklch(0.20 0.02 260);
   --secondary-foreground: var(--foreground);
 
+  /* Muted */
   --muted: oklch(0.19 0.015 260);
   --muted-foreground: oklch(0.76 0.01 260);
 
+  /* Accent */
   --accent: oklch(0.29 0.04 260);
   --accent-foreground: var(--foreground);
 
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
 
+  /* Borders */
   --border: oklch(0.31 0.02 260);
   --input: oklch(0.21 0.02 260);
-  --ring: oklch(0.68 0.23 0); /* Instagram pink focus ring */
+  --ring: oklch(0.68 0.23 0);
 
-  --chart-1: oklch(0.65 0.22 0); /* pink */
-  --chart-2: oklch(0.72 0.20 10); /* lighter pink/coral */
+  /* Charts */
+  --chart-1: oklch(0.65 0.22 0);
+  --chart-2: oklch(0.72 0.20 10);
   --chart-3: oklch(0.60 0.05 260);
   --chart-4: oklch(0.68 0.10 230);
   --chart-5: oklch(0.72 0.08 30);
 
+  /* Sidebar */
   --sidebar: oklch(0.17 0.02 260);
   --sidebar-foreground: var(--foreground);
   --sidebar-primary: var(--primary);
@@ -108,7 +118,7 @@
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
 
-  /* NEW: slightly stronger gradient in dark mode */
+  /* Section gradient for dark mode */
   --section-gradient: radial-gradient(circle at 0% 0%, oklch(0.30 0.05 260 / 0.75), transparent 60%), radial-gradient(circle at 100% 0%, oklch(0.65 0.22 0 / 0.40), transparent 55%), radial-gradient(circle at 50% 100%,oklch(0.26 0.05 260 / 0.60), transparent 60%);
 }
 
@@ -156,7 +166,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* NEW: utility class to apply the gradient to sections */
+/* Utility class to apply the gradient to sections */
 @layer utilities {
   .bg-section-gradient {
     background-color: var(--background);

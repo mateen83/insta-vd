@@ -131,7 +131,7 @@ function HowItWorksSection() {
         <div className="mt-8 flex justify-center">
           <a
             href="#video-downloader-hero"
-            className="inline-flex items-center gap-2 rounded-full border border-primary/60 bg-primary/10 px-5 py-2 text-sm font-medium text-white transition hover:bg-primary/20"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/60 bg-primary/10 px-5 py-2 text-sm font-medium text-foreground transition hover:bg-primary/20"
           >
             Try it now
           </a>
@@ -584,7 +584,7 @@ function FaqSection() {
         </p>
 
         <p className="mt-2 text-xs text-muted-foreground">
-          Still have questions? <a href="#contact" className="underline">Contact us</a> for help downloading Instagram videos, Reels, stories, photos, or MP3 audio.
+          Still have questions? <a href="#contact" className="underline text-foreground">Contact us</a> for help downloading Instagram videos, Reels, stories, photos, or MP3 audio.
         </p>
       </SectionWrapper>
     </div>
@@ -594,8 +594,8 @@ function FaqSection() {
 function AppFooterSection() {
   return (
     <footer
-      className="mx-auto w-full max-w-7xl border-t border-border/60 border border-white/20
-    rounded-t-3xl
+      className="mx-auto w-full max-w-7xl border-t border
+    rounded-t-3xl border-border/60
     bg-[rgba(255,255,255,0.08)]
     backdrop-blur-lg
     supports-[backdrop-filter]:bg-[rgba(255,255,255,0.05)]    bg-card/95"
@@ -605,7 +605,7 @@ function AppFooterSection() {
         <div className="space-y-3 md:max-w-sm">
           <div className="inline-flex items-center rounded-full ">
             <span className="h-2 w-2 rounded-full " />
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-200">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
               Social Video Downloader
             </span>
           </div>
@@ -661,7 +661,7 @@ function AppFooterSection() {
         href="https://www.linkedin.com/in/abdul-mateen-5b6197261/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-200 hover:underline"
+        className="text-foreground hover:underline"
       >
         Abdul Mateen
       </a>

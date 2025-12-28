@@ -14,7 +14,10 @@ import {
   Menu,
   X,
   ArrowUp,
+  Sun,
+  Moon,
 } from "lucide-react"
+import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -36,6 +39,8 @@ export function VideoDownloader() {
   const [videoData, setVideoData] = useState<VideoData | null>(null)
   const [menuOpen, setMenuOpen] = useState(false)
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   const navItems = [
     { label: "How it works", href: "#how-it-works" },
@@ -48,6 +53,11 @@ export function VideoDownloader() {
 
   ]
 
+  // Prevent hydration mismatch for theme
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   // Show/hide scroll-to-top button based on scroll position
   useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +66,10 @@ export function VideoDownloader() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   const validateInstagramUrl = (url: string): boolean => {
     const patterns = [
@@ -174,7 +188,7 @@ export function VideoDownloader() {
       {/* Hero navigation / header */}
       <header className="fixed inset-x-0 top-5 z-40 pl-[15px] pr-[15px] ">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 
-  rounded-3xl border border-white/20 
+  rounded-3xl border border-border/60
 
   backdrop-blur-lg 
   
@@ -203,7 +217,20 @@ export function VideoDownloader() {
             ))}
           </nav>
 
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-center gap-3">
+            {/* Theme Toggle Button */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
+              aria-label={mounted && theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {mounted && theme === 'dark' ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </button>
             <a
               href="#video-downloader-hero"
               onClick={(e) => handleSmoothScroll(e, '#video-downloader-hero')}
@@ -213,15 +240,30 @@ export function VideoDownloader() {
             </a>
           </div>
 
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground min-[900px]:hidden"
-            aria-label="Toggle menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <div className="flex items-center gap-2 min-[900px]:hidden">
+            {/* Theme Toggle Button (Mobile) */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+              aria-label={mounted && theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {mounted && theme === 'dark' ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </button>
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground"
+              aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((prev) => !prev)}
+            >
+              {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
 
         {menuOpen && (
@@ -247,31 +289,31 @@ export function VideoDownloader() {
         )}
       </header>
 
-    {/* Hero copy */}
-<div className="mt-24 mb-10 text-center md:mt-28">
-  <div className="mb-5 flex items-center justify-center">
-    <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-      <Instagram
-        className="h-8 w-8 text-primary"
-        role="img"
-        aria-label="Instagram video, reels and MP3 audio downloader"
-      />
-    </div>
-  </div>
+      {/* Hero copy */}
+      <div className="mt-24 mb-10 text-center md:mt-28">
+        <div className="mb-5 flex items-center justify-center">
+          <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+            <Instagram
+              className="h-8 w-8 text-primary"
+              role="img"
+              aria-label="Instagram video, reels and MP3 audio downloader"
+            />
+          </div>
+        </div>
 
-  <h1 className="text-3xl font-bold text-foreground tracking-tight md:text-4xl lg:text-5xl">
-    Instagram Video, Reels & MP3 Downloader
-  </h1>
+        <h1 className="text-3xl font-bold text-foreground tracking-tight md:text-4xl lg:text-5xl">
+          Instagram Video, Reels & MP3 Downloader
+        </h1>
 
-  <p className="mt-4 text-base text-muted-foreground md:text-lg">
-    Download Instagram videos, reels, and audio (MP3) online in seconds. Free, fast,
-    no watermark, and no login required.
-  </p>
+        <p className="mt-4 text-base text-muted-foreground md:text-lg">
+          Download Instagram videos, reels, and audio (MP3) online in seconds. Free, fast,
+          no watermark, and no login required.
+        </p>
 
-  <p className="mt-2 text-xs text-muted-foreground">
-    Paste a public Instagram video or reel link to download MP4 video or extract MP3 audio instantly.
-  </p>
-</div>
+        <p className="mt-2 text-xs text-muted-foreground">
+          Paste a public Instagram video or reel link to download MP4 video or extract MP3 audio instantly.
+        </p>
+      </div>
 
 
       {/* Main Card */}
@@ -339,37 +381,37 @@ export function VideoDownloader() {
       </Card>
 
       {/* Features */}
-<div className="mt-12 grid grid-cols-1 gap-6 w-full max-w-3xl md:grid-cols-3">
-  <FeatureCard
-    icon={<Video className="w-5 h-5" role="img" aria-label="Instagram video and reels downloader support" />}
-    title="Supports Instagram Content"
-    description="Download Instagram videos, reels, and IGTV online in MP4 format."
-  />
+      <div className="mt-12 grid grid-cols-1 gap-6 w-full max-w-3xl md:grid-cols-3">
+        <FeatureCard
+          icon={<Video className="w-5 h-5" role="img" aria-label="Instagram video and reels downloader support" />}
+          title="Supports Instagram Content"
+          description="Download Instagram videos, reels, and IGTV online in MP4 format."
+        />
 
-  <FeatureCard
-    icon={<CheckCircle2 className="w-5 h-5" role="img" aria-label="High quality Instagram video downloader" />}
-    title="HD & Original Quality"
-    description="Save Instagram videos and reels in HD without watermark or quality loss."
-  />
+        <FeatureCard
+          icon={<CheckCircle2 className="w-5 h-5" role="img" aria-label="High quality Instagram video downloader" />}
+          title="HD & Original Quality"
+          description="Save Instagram videos and reels in HD without watermark or quality loss."
+        />
 
-  <FeatureCard
-    icon={<FileVideo className="w-5 h-5" role="img" aria-label="Fast and secure Instagram downloader" />}
-    title="Fast, Free & Secure"
-    description="Instant Instagram downloads with no login, no tracking, and no data storage."
-  />
-</div>
+        <FeatureCard
+          icon={<FileVideo className="w-5 h-5" role="img" aria-label="Fast and secure Instagram downloader" />}
+          title="Fast, Free & Secure"
+          description="Instant Instagram downloads with no login, no tracking, and no data storage."
+        />
+      </div>
 
- {/* Footer */}
-<footer className="mt-16 text-center text-sm text-muted-foreground w-full">
-  <p className="flex flex-col sm:flex-row justify-center gap-1">
-    <span>
-      This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only.
-    </span>
-    <span>
-      Private or restricted content cannot be accessed.
-    </span>
-  </p>
-</footer>
+      {/* Footer */}
+      <footer className="mt-16 text-center text-sm text-muted-foreground w-full">
+        <p className="flex flex-col sm:flex-row justify-center gap-1">
+          <span>
+            This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only.
+          </span>
+          <span>
+            Private or restricted content cannot be accessed.
+          </span>
+        </p>
+      </footer>
 
 
 
