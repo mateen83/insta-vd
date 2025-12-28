@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { useState, useRef, useEffect } from "react"
 import { FFmpeg } from "@ffmpeg/ffmpeg"
 import { fetchFile, toBlobURL } from "@ffmpeg/util"
+import { useTranslation } from "@/components/language-context"
 
 interface VideoResultProps {
   data: {
@@ -21,6 +22,7 @@ export function VideoResult({ data }: VideoResultProps) {
   const [loaded, setLoaded] = useState(false)
   const ffmpegRef = useRef(new FFmpeg())
   const messageRef = useRef<HTMLParagraphElement | null>(null)
+  const { t } = useTranslation()
 
   const load = async () => {
     const baseURL = '/ffmpeg'
@@ -108,12 +110,12 @@ export function VideoResult({ data }: VideoResultProps) {
       // Show user-friendly error message
       if (error instanceof Error) {
         if (error.name === 'AbortError') {
-          alert("Download timed out. Please try again.")
+          alert(t('videoResult.downloadTimeout'))
         } else {
-          alert(`Download failed: ${error.message}`)
+          alert(`${t('videoResult.downloadFailed')} (${error.message})`)
         }
       } else {
-        alert("Download failed Please try again.")
+        alert(t('videoResult.downloadFailed'))
       }
     } finally {
       if (isMP3) {
@@ -163,7 +165,7 @@ export function VideoResult({ data }: VideoResultProps) {
         {/* Info */}
         <div className="flex-1 flex flex-col justify-between">
           <div>
-            <p className="text-sm font-medium text-foreground mb-1">Video Ready</p>
+            <p className="text-sm font-medium text-foreground mb-1">{t('videoResult.videoReady')}</p>
             <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
               {data.quality && (
                 <span className="px-2 py-1 rounded bg-primary/10 text-primary font-medium">{data.quality}</span>
@@ -183,11 +185,11 @@ export function VideoResult({ data }: VideoResultProps) {
                 className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 {downloading ? (
-                  "Downloading..."
+                  t('videoResult.downloading')
                 ) : (
                   <>
                     <Download className="w-4 h-4 mr-2" />
-                    Download MP4
+                    {t('videoResult.downloadMp4')}
                   </>
                 )}
               </Button>
@@ -206,11 +208,11 @@ export function VideoResult({ data }: VideoResultProps) {
               className="w-full border-primary/50 hover:bg-primary/10 text-foreground"
             >
               {downloadingMp3 ? (
-                "Converting & Downloading..."
+                t('videoResult.converting')
               ) : (
                 <>
                   <Music className="w-4 h-4 mr-2" />
-                  Download MP3 (Audio Only)
+                  {t('videoResult.downloadMp3')}
                 </>
               )}
             </Button>

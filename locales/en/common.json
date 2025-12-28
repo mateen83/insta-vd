@@ -239,4 +239,14 @@
         "switchToDark": "Switch to dark mode",
         "selectLanguage": "Select language"
     }
+    ,
+  "download": {
+    "downloading": "Downloading...",
+    "converting": "Converting & Downloading...",
+    "mp4": "Download MP4",
+    "mp3": "Download MP3",
+    "audioOnly": "Audio Only"
+  }
 }
+
+

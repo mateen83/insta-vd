@@ -239,4 +239,14 @@
         "switchToDark": "Zum Dunkelmodus wechseln",
         "selectLanguage": "Sprache auswählen"
     }
+    ,
+  "download": {
+    "downloading": "Wird heruntergeladen...",
+    "converting": "Wird konvertiert & heruntergeladen...",
+    "mp4": "MP4 herunterladen",
+    "mp3": "MP3 herunterladen",
+    "audioOnly": "Nur Audio"
+  }
+
+
 }
