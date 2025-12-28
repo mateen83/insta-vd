@@ -1,0 +1,242 @@
+{
+    "header": {
+        "siteName": "Trình Tải Xuống Xã Hội Ngay Lập Tức",
+        "platform": "Instagram",
+        "downloadNow": "Tải xuống ngay",
+        "nav": {
+            "howItWorks": "Cách hoạt động",
+            "platforms": "Nền tảng",
+            "benefits": "Lợi ích",
+            "faq": "Câu hỏi thường gặp",
+            "compatibility": "Tương thích",
+            "useCases": "Trường hợp sử dụng",
+            "contact": "Liên hệ"
+        }
+    },
+    "hero": {
+        "title": "Trình Tải Xuống Video, Reels & MP3 Instagram",
+        "subtitle": "Tải xuống video, reels và âm thanh (MP3) Instagram trực tuyến chỉ trong vài giây. Miễn phí, nhanh chóng, không watermark và không cần đăng nhập.",
+        "description": "Dán liên kết video hoặc reels Instagram công khai để tải video MP4 hoặc trích xuất âm thanh MP3 ngay lập tức."
+    },
+    "downloader": {
+        "urlLabel": "URL Instagram",
+        "placeholder": "Dán liên kết video của bạn vào đây...",
+        "paste": "Dán",
+        "downloadVideo": "Tải Video",
+        "processing": "Đang xử lý...",
+        "errors": {
+            "emptyUrl": "Vui lòng nhập URL Instagram",
+            "invalidUrl": "URL Instagram không hợp lệ. Vui lòng nhập liên kết video, reels hoặc IGTV hợp lệ.",
+            "timeout": "Yêu cầu hết thời gian chờ. Vui lòng thử lại.",
+            "network": "Lỗi mạng. Vui lòng kiểm tra kết nối và thử lại.",
+            "server": "Không thể kết nối đến máy chủ. Vui lòng thử lại sau.",
+            "fetchFailed": "Không thể lấy video. Vui lòng thử lại.",
+            "noVideo": "Không tìm thấy video. Có thể là bài đăng hình ảnh hoặc video không khả dụng."
+        }
+    },
+    "videoResult": {
+        "videoReady": "Video Sẵn Sàng",
+        "downloadMp4": "Tải MP4",
+        "downloadMp3": "Tải MP3 (Chỉ Âm Thanh)",
+        "downloading": "Đang tải xuống...",
+        "converting": "Đang chuyển đổi & tải xuống...",
+        "downloadFailed": "Tải xuống thất bại. Vui lòng thử lại.",
+        "downloadTimeout": "Tải xuống hết thời gian chờ. Vui lòng thử lại."
+    },
+    "features": {
+        "instagram": {
+            "title": "Hỗ Trợ Nội Dung Instagram",
+            "description": "Tải xuống video, reels và IGTV Instagram trực tuyến ở định dạng MP4."
+        },
+        "quality": {
+            "title": "Chất Lượng HD & Gốc",
+            "description": "Lưu video và reels Instagram ở chất lượng HD mà không có watermark hoặc mất chất lượng."
+        },
+        "fast": {
+            "title": "Nhanh, Miễn Phí & An Toàn",
+            "description": "Tải xuống Instagram tức thì mà không cần đăng nhập, không theo dõi và không lưu trữ dữ liệu."
+        }
+    },
+    "heroFooter": {
+        "line1": "Công cụ này chỉ hỗ trợ tải xuống video, reels và âm thanh (MP3) từ các bài đăng công khai trên Instagram.",
+        "line2": "Nội dung riêng tư hoặc bị hạn chế không thể truy cập."
+    },
+    "platforms": {
+        "eyebrow": "Nền tảng",
+        "title": "Nền Tảng Được Hỗ Trợ",
+        "subtitle": "Tải xuống video, reels và âm thanh từ các nền tảng xã hội phổ biến một cách nhanh chóng và an toàn.",
+        "instagram": {
+            "name": "Instagram",
+            "description": "Tải xuống video, reels, IGTV và âm thanh (MP3) công khai từ Instagram tức thì và ở chất lượng HD.",
+            "status": "Đang hoạt động"
+        },
+        "facebook": {
+            "name": "Facebook",
+            "description": "Hỗ trợ tải video Facebook sắp ra mắt, bao gồm Shorts và video đầy đủ.",
+            "status": "Sắp ra mắt"
+        },
+        "youtube": {
+            "name": "YouTube",
+            "description": "Hỗ trợ tải video YouTube sắp ra mắt cho Shorts và video đầy đủ.",
+            "status": "Sắp ra mắt"
+        },
+        "footer": "Đánh dấu trang này hoặc kiểm tra lại sớm để tải video, reels và âm thanh MP3 từ nhiều nền tảng hơn khi chúng được thêm vào."
+    },
+    "howItWorks": {
+        "eyebrow": "Cách hoạt động",
+        "title": "Cách Hoạt Động",
+        "subtitle": "Tải xuống video, Reels, ảnh và âm thanh MP3 Instagram chỉ trong ba bước đơn giản.",
+        "step1": {
+            "step": "Bước 1",
+            "title": "Dán Liên Kết",
+            "description": "Sao chép URL video, Reels, ảnh hoặc âm thanh MP3 Instagram và dán vào ô ở đầu trang."
+        },
+        "step2": {
+            "step": "Bước 2",
+            "title": "Xem Trước & Chọn Chất Lượng",
+            "description": "Chúng tôi sẽ lấy nội dung và hiển thị các tùy chọn chất lượng có sẵn cho video, ảnh và âm thanh nếu được hỗ trợ."
+        },
+        "step3": {
+            "step": "Bước 3",
+            "title": "Tải Xuống Ngay Lập Tức",
+            "description": "Nhấp vào nút tải xuống để lưu file video MP4 hoặc âm thanh MP3 trực tiếp vào thiết bị của bạn."
+        },
+        "tryItNow": "Thử ngay bây giờ"
+    },
+    "whyChoose": {
+        "eyebrow": "Lợi ích",
+        "title": "Tại Sao Chọn Trình Tải Xuống Instagram Của Chúng Tôi?",
+        "subtitle": "Tải xuống nhanh chóng, an toàn và chất lượng cao cho video, Reels, ảnh và âm thanh MP3.",
+        "fast": {
+            "title": "Tải Xuống Video & Âm Thanh Instagram Nhanh Chóng Và Đáng Tin Cậy",
+            "description": "Tải xuống video, Reels, ảnh và âm thanh MP3 Instagram chỉ trong vài giây. Hạ tầng của chúng tôi đảm bảo tải xuống mượt mà và tốc độ cao ngay cả với clip HD dài hơn."
+        },
+        "quality": {
+            "title": "Bảo Tồn Chất Lượng Gốc",
+            "description": "Giữ video và âm thanh ở độ phân giải và độ rõ nét gốc bất cứ khi nào Instagram cho phép, bao gồm nội dung HD và 4K."
+        },
+        "noLogin": {
+            "title": "Không Cần Đăng Nhập",
+            "description": "Tải xuống nội dung Instagram an toàn mà không cần đăng nhập. Chỉ cần dán liên kết video, Reels hoặc âm thanh và bắt đầu tải ngay lập tức."
+        },
+        "privacy": {
+            "title": "Thân Thiện Với Quyền Riêng Tư & An Toàn",
+            "description": "Chúng tôi không lưu trữ tải xuống của bạn hoặc theo dõi liên kết bạn dán, đảm bảo hoạt động Instagram của bạn vẫn riêng tư."
+        },
+        "footer": "Tò mò về chi tiết quyền riêng tư? Kiểm tra phần Câu hỏi thường gặp bên dưới để có cái nhìn tổng quan ngắn gọn về quy trình tải xuống video, Reels, ảnh và âm thanh MP3 Instagram an toàn của chúng tôi."
+    },
+    "worksAnywhere": {
+        "eyebrow": "Tương thích",
+        "title": "Tải Xuống Video & Âm Thanh MP3 Instagram Trên Mọi Thiết Bị",
+        "subtitle": "Sử dụng trình tải xuống của chúng tôi trên điện thoại, máy tính bảng hoặc máy tính để bàn để phát mượt mà và tải nhanh.",
+        "description": "Tất cả tải xuống đều có sẵn dưới dạng file video MP4 hoặc âm thanh MP3. Lưu vào thư viện ảnh, laptop hoặc lưu trữ đám mây và thưởng thức bất cứ lúc nào.",
+        "features": {
+            "mobile": "Giao diện thân thiện với di động để tải video và âm thanh nhanh chóng khi di chuyển.",
+            "noApp": "Không cần cài đặt ứng dụng — mọi thứ hoạt động trong trình duyệt của bạn.",
+            "saveDirect": "Lưu trực tiếp vào bộ nhớ thiết bị hoặc thư mục bạn chọn.",
+            "share": "Dễ dàng chia sẻ clip hoặc âm thanh đã tải xuống đến ứng dụng nhắn tin hoặc nhóm chỉ với một cú chạm."
+        },
+        "openOnPhone": "Mở trên điện thoại của bạn",
+        "copyLink": "Sao chép liên kết để chia sẻ",
+        "imageAlt": "Xem trước tải xuống video và âm thanh MP3 Instagram trên máy tính để bàn, máy tính bảng và thiết bị di động",
+        "footer": "Xem trước cách tải xuống video và âm thanh MP3 Instagram của bạn trông như thế nào trên máy tính để bàn, máy tính bảng và di động — cùng giao diện đơn giản ở mọi nơi."
+    },
+    "usageTips": {
+        "eyebrow": "Trường hợp sử dụng",
+        "title": "Cách Sử Dụng Thông Minh Trình Tải Xuống Instagram Của Chúng Tôi",
+        "subtitle": "Khám phá các cách sáng tạo để tải xuống video, Reels, ảnh và âm thanh MP3 Instagram cho mục đích cá nhân hoặc chuyên nghiệp.",
+        "saveOwn": {
+            "title": "Lưu Reels & Video Của Chính Bạn",
+            "description": "Tải xuống video, Reels, ảnh và âm thanh MP3 của chính bạn từ Instagram hoặc Facebook để chỉnh sửa, lưu trữ hoặc đăng lại trên các nền tảng khác."
+        },
+        "offline": {
+            "title": "Xem Ngoại Tuyến Bất Kỳ Lúc Nào",
+            "description": "Lưu hướng dẫn, video tập luyện, Reels hoặc nhạc ngoại tuyến để xem hoặc nghe mà không tốn dữ liệu di động."
+        },
+        "share": {
+            "title": "Chia Sẻ Với Bạn Bè & Nhóm",
+            "description": "Thu thập clip tham khảo, Reels, video hoặc âm thanh MP3 cho chiến dịch, cảm hứng thiết kế hoặc brainstorm nội dung vào một thư mục chia sẻ."
+        },
+        "library": {
+            "title": "Cảm Hứng & Thư Viện Nội Dung",
+            "description": "Tạo thư viện cá nhân gồm clip video, Reels, ảnh và âm thanh MP3 để truyền cảm hứng cho bài đăng tiếp theo, ý tưởng tiếp thị hoặc dự án sáng tạo của bạn."
+        },
+        "footer": "Luôn tôn trọng bản quyền của người tạo và điều khoản nền tảng khi tải xuống video, Reels, ảnh hoặc âm thanh MP3 Instagram."
+    },
+    "contact": {
+        "eyebrow": "Liên hệ",
+        "title": "Liên Hệ Với Đội Ngũ Trình Tải Xuống Instagram Của Chúng Tôi",
+        "subtitle": "Có câu hỏi, phản hồi hoặc yêu cầu kinh doanh về Trình Tải Xuống Video, Reels, Story hoặc Ảnh của chúng tôi? Gửi tin nhắn và chúng tôi sẽ trả lời nhanh chóng.",
+        "form": {
+            "name": "Tên",
+            "namePlaceholder": "Tên đầy đủ của bạn",
+            "email": "Email",
+            "emailPlaceholder": "ban@vidu.com",
+            "message": "Tin nhắn",
+            "messagePlaceholder": "Viết câu hỏi hoặc phản hồi của bạn về Trình Tải Xuống Video, Reels, Story hoặc Ảnh Instagram…",
+            "send": "Gửi Tin Nhắn",
+            "responseTime": "Chúng tôi thường trả lời trong vòng 1–2 ngày làm việc."
+        },
+        "info": {
+            "title": "Hỗ Trợ & Phản Hồi Cho Trình Tải Xuống Instagram",
+            "description": "Sử dụng biểu mẫu liên hệ này cho câu hỏi, yêu cầu tính năng hoặc hợp tác kinh doanh liên quan đến Trình Tải Xuống Video, Reels, Story Saver, Highlights hoặc Ảnh của chúng tôi. Đối với vấn đề kỹ thuật, hãy bao gồm URL hoặc chi tiết nền tảng.",
+            "privacy": "Không bao giờ chia sẻ mật khẩu hoặc thông tin cá nhân nhạy cảm. Chúng tôi không yêu cầu thông tin đăng nhập mạng xã hội.",
+            "support": "Đội ngũ hỗ trợ của chúng tôi thường trả lời trong vòng 24–48 giờ. Cung cấp chi tiết rõ ràng để được hỗ trợ nhanh hơn với tải xuống video, Reels hoặc story Instagram."
+        }
+    },
+    "faq": {
+        "eyebrow": "Câu hỏi thường gặp",
+        "title": "Câu Hỏi Thường Gặp",
+        "subtitle": "Câu trả lời nhanh về tải xuống video, Reels, stories, highlights, ảnh và âm thanh MP3 Instagram.",
+        "show": "Hiển thị",
+        "hide": "Ẩn",
+        "questions": {
+            "free": {
+                "q": "Trình tải xuống video Instagram có miễn phí không?",
+                "a": "Có. Trình tải xuống video Instagram của chúng tôi hoàn toàn miễn phí. Không có phí ẩn, và bạn có thể tải xuống bao nhiêu video, Reels, stories, ảnh hoặc âm thanh MP3 Instagram tùy thích."
+            },
+            "limits": {
+                "q": "Có giới hạn số lượng tải xuống không?",
+                "a": "Không. Bạn có thể sử dụng trình tải xuống Instagram của chúng tôi để lưu không giới hạn video, Reels, ảnh, stories, highlights và file âm thanh. Tải xuống bao nhiêu tùy thích, hoàn toàn miễn phí."
+            },
+            "software": {
+                "q": "Tôi có cần cài đặt phần mềm để tải video Instagram không?",
+                "a": "Không. Trình tải xuống video Instagram này dựa trên web, nên bạn không cần cài đặt ứng dụng. Chỉ cần sao chép URL video, dán vào công cụ của chúng tôi và nhấp 'Tải xuống'."
+            },
+            "mobile": {
+                "q": "Tôi có thể tải video Instagram trên điện thoại thông minh không?",
+                "a": "Có. Trình tải xuống video Instagram của chúng tôi hoạt động trên trình duyệt di động, máy tính bảng và máy tính để bàn. Chỉ cần sao chép URL video, Reels hoặc story, dán vào công cụ và tải xuống ngay lập tức."
+            },
+            "private": {
+                "q": "Tôi có thể tải video Instagram riêng tư không?",
+                "a": "Không. Chỉ hỗ trợ video, Reels, stories, highlights và ảnh công khai. Nội dung riêng tư không thể tải xuống do hạn chế của Instagram."
+            },
+            "storage": {
+                "q": "Bạn có lưu trữ video hoặc liên kết của tôi không?",
+                "a": "Không. Chúng tôi tôn trọng quyền riêng tư của bạn. File tải xuống và URL không bao giờ được lưu trữ lâu hơn thời gian cần thiết để xử lý yêu cầu của bạn."
+            }
+        },
+        "disclaimer": "Trang web này không liên kết với Instagram, Facebook hoặc Meta Platforms, Inc. Luôn tuân thủ quy tắc nền tảng và luật địa phương khi sử dụng trình tải xuống Instagram miễn phí của chúng tôi.",
+        "contactPrompt": "Bạn vẫn còn câu hỏi?",
+        "contactLink": "Liên hệ chúng tôi",
+        "contactSuffix": "để được hỗ trợ tải xuống video, Reels, stories, ảnh hoặc âm thanh MP3 Instagram."
+    },
+    "footer": {
+        "brand": "Trình Tải Xuống Video Xã Hội",
+        "description": "Công cụ này được xây dựng để giúp lưu và sắp xếp các video công khai yêu thích của bạn từ các nền tảng xã hội dễ dàng hơn.",
+        "legal": {
+            "title": "Pháp lý",
+            "content": "Trang web này không liên kết với Instagram, Facebook hoặc Meta Platforms, Inc. Vui lòng tôn trọng bản quyền và điều khoản nền tảng."
+        },
+        "follow": "Theo dõi",
+        "copyright": "© 2025 Trình Tải Xuống Video Xã Hội Bởi",
+        "allRights": ". Bảo lưu toàn bộ quyền."
+    },
+    "accessibility": {
+        "scrollToTop": "Cuộn lên đầu",
+        "toggleMenu": "Bật/tắt menu",
+        "switchToLight": "Chuyển sang chế độ sáng",
+        "switchToDark": "Chuyển sang chế độ tối",
+        "selectLanguage": "Chọn ngôn ngữ"
+    }
+}

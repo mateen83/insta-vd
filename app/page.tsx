@@ -1,6 +1,9 @@
+'use client'
+
 import Image from "next/image"
 import { VideoDownloader } from "@/components/video-downloader"
 import { Link2, Eye, Download, Zap, MonitorPlay, KeyRound, Shield, Instagram, Facebook, Youtube, Twitter } from "lucide-react"
+import { useTranslation } from "@/components/language-context"
 
 
 export default function Home() {
@@ -67,44 +70,43 @@ function SectionHeader({
   )
 }
 function HowItWorksSection() {
+  const { t } = useTranslation()
+
   return (
-<div
-  id="how-it-works"
-  className="relative overflow-hidden
+    <div
+      id="how-it-works"
+      className="relative overflow-hidden
     bg-[radial-gradient(900px_420px_at_50%_45%,rgba(236,72,153,0.14),rgba(0,0,0,0)_60%)]
     before:content-[''] before:absolute before:inset-0 before:pointer-events-none
     before:bg-[radial-gradient(520px_520px_at_18%_55%,rgba(168,85,247,0.12),rgba(0,0,0,0)_70%)]
     after:content-[''] after:absolute after:inset-0 after:pointer-events-none
     after:bg-[radial-gradient(560px_560px_at_82%_55%,rgba(236,72,153,0.10),rgba(0,0,0,0)_75%)]"
->
+    >
       <SectionWrapper>
         <SectionHeader
-          eyebrow="How it works"
-          title="How It Works"
-          subtitle="Download Instagram videos, Reels, photos, and MP3 audio in three simple steps."
+          eyebrow={t('howItWorks.eyebrow')}
+          title={t('howItWorks.title')}
+          subtitle={t('howItWorks.subtitle')}
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              step: "Step 1",
-              title: "Paste Link",
-              description:
-                "Copy the Instagram video, Reel, photo, or MP3 audio URL and paste it into the box at the top of the page.",
+              step: t('howItWorks.step1.step'),
+              title: t('howItWorks.step1.title'),
+              description: t('howItWorks.step1.description'),
               icon: Link2,
             },
             {
-              step: "Step 2",
-              title: "Preview & Choose Quality",
-              description:
-                "We fetch the content and display available quality options for videos, photos, and audio when supported.",
+              step: t('howItWorks.step2.step'),
+              title: t('howItWorks.step2.title'),
+              description: t('howItWorks.step2.description'),
               icon: Eye,
             },
             {
-              step: "Step 3",
-              title: "Download Instantly",
-              description:
-                "Click the download button to save the MP4 video or MP3 audio file directly to your device.",
+              step: t('howItWorks.step3.step'),
+              title: t('howItWorks.step3.title'),
+              description: t('howItWorks.step3.description'),
               icon: Download,
             },
           ].map((item) => (
@@ -133,7 +135,7 @@ function HowItWorksSection() {
             href="#video-downloader-hero"
             className="inline-flex items-center gap-2 rounded-full border border-primary/60 bg-primary/10 px-5 py-2 text-sm font-medium text-foreground transition hover:bg-primary/20"
           >
-            Try it now
+            {t('howItWorks.tryItNow')}
           </a>
         </div>
       </SectionWrapper>
@@ -142,32 +144,34 @@ function HowItWorksSection() {
 }
 
 function SupportedPlatformsSection() {
+  const { t } = useTranslation()
+
   const platforms = [
     {
-      name: "Instagram",
-      description:
-        "Download public Instagram videos, reels, IGTV, and audio (MP3) instantly and in HD.",
-      status: "Live",
+      name: t('platforms.instagram.name'),
+      description: t('platforms.instagram.description'),
+      status: t('platforms.instagram.status'),
       icon: Instagram,
+      isLive: true,
     },
     {
-      name: "Facebook",
-      description:
-        "Facebook video downloader support is coming soon, including Shorts and full-length videos.",
-      status: "Coming soon",
+      name: t('platforms.facebook.name'),
+      description: t('platforms.facebook.description'),
+      status: t('platforms.facebook.status'),
       icon: Facebook,
+      isLive: false,
     },
     {
-      name: "YouTube",
-      description:
-        "YouTube video downloader support is coming soon for Shorts and full-length videos.",
-      status: "Coming soon",
+      name: t('platforms.youtube.name'),
+      description: t('platforms.youtube.description'),
+      status: t('platforms.youtube.status'),
       icon: Youtube,
+      isLive: false,
     },
   ]
 
   return (
-<div
+    <div
       id="supported-platforms"
       className="relative overflow-hidden
       bg-[radial-gradient(900px_420px_at_50%_45%,rgba(59,130,246,0.12),rgba(0,0,0,0)_60%)]
@@ -178,17 +182,17 @@ function SupportedPlatformsSection() {
     >
       <SectionWrapper>
         <SectionHeader
-          eyebrow="Platforms"
-          title="Supported Platforms"
-          subtitle="Download videos, reels, and audio from popular social platforms quickly and securely."
+          eyebrow={t('platforms.eyebrow')}
+          title={t('platforms.title')}
+          subtitle={t('platforms.subtitle')}
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {platforms.map((p) => (
-             <div
-    key={p.name.toLowerCase()} 
-    className="flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-card p-5"
-  >
+            <div
+              key={p.name.toLowerCase()}
+              className="flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-card p-5"
+            >
               <div>
                 <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <p.icon className="h-5 w-5" role="img" aria-label={`${p.name} icon`} />
@@ -198,9 +202,8 @@ function SupportedPlatformsSection() {
               </div>
               <div className="mt-4 flex items-center justify-between text-xs">
                 <span
-                  className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ${
-                    p.status === "Live" ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"
-                  }`}
+                  className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ${p.isLive ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"
+                    }`}
                 >
                   {p.status}
                 </span>
@@ -210,7 +213,7 @@ function SupportedPlatformsSection() {
         </div>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          Bookmark this page or check back soon to download videos, reels, and MP3 audio from more platforms as they are added.
+          {t('platforms.footer')}
         </p>
       </SectionWrapper>
     </div>
@@ -218,35 +221,33 @@ function SupportedPlatformsSection() {
 }
 
 function WhyChooseSection() {
+  const { t } = useTranslation()
+
   const benefits = [
     {
-      title: "Fast & Reliable Instagram Video & Audio Downloads",
-      description:
-        "Download Instagram videos, Reels, photos, and MP3 audio in seconds. Our infrastructure ensures smooth, high-speed downloads even for longer HD clips.",
+      title: t('whyChoose.fast.title'),
+      description: t('whyChoose.fast.description'),
       icon: Zap,
     },
     {
-      title: "Original Quality Preservation",
-      description:
-        "Keep your videos and audio in their original resolution and clarity whenever Instagram allows, including HD and 4K content.",
+      title: t('whyChoose.quality.title'),
+      description: t('whyChoose.quality.description'),
       icon: MonitorPlay,
     },
     {
-      title: "No Login Required",
-      description:
-        "Download Instagram content securely without signing in. Just paste the video, Reel, or audio link and start downloading instantly.",
+      title: t('whyChoose.noLogin.title'),
+      description: t('whyChoose.noLogin.description'),
       icon: KeyRound,
     },
     {
-      title: "Privacy-Friendly & Secure",
-      description:
-        "We do not store your downloads or track the links you paste, ensuring your Instagram activity stays private.",
+      title: t('whyChoose.privacy.title'),
+      description: t('whyChoose.privacy.description'),
       icon: Shield,
     },
   ];
 
   return (
-   <div
+    <div
       id="why-choose"
       className="relative overflow-hidden
         bg-[radial-gradient(900px_420px_at_50%_45%,rgba(236,72,153,0.13),rgba(255,255,255,0.03)_62%)]
@@ -257,9 +258,9 @@ function WhyChooseSection() {
     >
       <SectionWrapper>
         <SectionHeader
-          eyebrow="Benefits"
-          title="Why Choose Our Instagram Downloader?"
-          subtitle="Fast, secure, and high-quality downloads for videos, Reels, photos, and MP3 audio."
+          eyebrow={t('whyChoose.eyebrow')}
+          title={t('whyChoose.title')}
+          subtitle={t('whyChoose.subtitle')}
         />
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -284,7 +285,7 @@ function WhyChooseSection() {
         </div>
 
         <div className="mt-6 text-center text-xs text-muted-foreground">
-          Curious about privacy details? Check the FAQ section below for a concise overview of our secure Instagram video, Reel, photo, and MP3 audio download process.
+          {t('whyChoose.footer')}
         </div>
       </SectionWrapper>
     </div>
@@ -292,8 +293,10 @@ function WhyChooseSection() {
 }
 
 function WorksOnAnyDeviceSection() {
+  const { t } = useTranslation()
+
   return (
-  <div
+    <div
       id="works-anywhere"
       className="relative overflow-hidden
         bg-[radial-gradient(900px_420px_at_50%_45%,rgba(236,72,153,0.12),rgba(255,255,255,0.03)_62%)]
@@ -304,24 +307,24 @@ function WorksOnAnyDeviceSection() {
     >
       <SectionWrapper>
         <SectionHeader
-          eyebrow="Compatibility"
-          title="Download Instagram Videos & MP3 Audio on Any Device"
-          subtitle="Use our downloader on your phone, tablet, or desktop for smooth playback and fast downloads."
+          eyebrow={t('worksAnywhere.eyebrow')}
+          title={t('worksAnywhere.title')}
+          subtitle={t('worksAnywhere.subtitle')}
         />
 
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="space-y-5 text-left">
             <p className="text-sm text-muted-foreground">
-              All downloads are available as MP4 videos or MP3 audio files. Save them to your camera roll, laptop, or cloud storage and enjoy anytime.
+              {t('worksAnywhere.description')}
             </p>
             <ul className="space-y-3 text-sm text-muted-foreground">
               {[
-                "Mobile-friendly interface for quick video and audio downloads on the go.",
-                "No app installation required — everything works in your browser.",
-                "Save directly to device storage or your preferred folder.",
-                "Easily share downloaded clips or audio to messaging apps or teams with a tap.",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
+                t('worksAnywhere.features.mobile'),
+                t('worksAnywhere.features.noApp'),
+                t('worksAnywhere.features.saveDirect'),
+                t('worksAnywhere.features.share'),
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 rounded-full bg-primary/80" />
                   <span>{item}</span>
                 </li>
@@ -331,16 +334,16 @@ function WorksOnAnyDeviceSection() {
               <button
                 type="button"
                 className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:bg-primary/90"
-                aria-label="Open downloader on your phone"
+                aria-label={t('worksAnywhere.openOnPhone')}
               >
-                Open on your phone
+                {t('worksAnywhere.openOnPhone')}
               </button>
               <button
                 type="button"
                 className="inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground hover:border-primary hover:text-foreground"
-                aria-label="Copy link to share downloader"
+                aria-label={t('worksAnywhere.copyLink')}
               >
-                Copy link to share
+                {t('worksAnywhere.copyLink')}
               </button>
             </div>
           </div>
@@ -349,7 +352,7 @@ function WorksOnAnyDeviceSection() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border/70 bg-card">
               <Image
                 src="/img.webp"
-                alt="Preview of Instagram video and MP3 audio downloads on desktop, tablet, and mobile devices"
+                alt={t('worksAnywhere.imageAlt')}
                 fill
                 className="object-cover"
               />
@@ -358,38 +361,36 @@ function WorksOnAnyDeviceSection() {
         </div>
 
         <div className="mt-4 rounded-2xl border border-border/60 bg-card/80 p-4 text-center text-xs text-muted-foreground">
-          Preview how your Instagram video and MP3 audio downloads look across desktop, tablet, and mobile devices — the same simple interface everywhere.
+          {t('worksAnywhere.footer')}
         </div>
       </SectionWrapper>
     </div>
   );
 }
 function UsageTipsSection() {
+  const { t } = useTranslation()
+
   const tips = [
     {
-      title: "Save Your Own Reels & Videos",
-      description:
-        "Download your own Instagram or Facebook videos, Reels, photos, and MP3 audio for editing, archiving, or reposting on other platforms.",
+      title: t('usageTips.saveOwn.title'),
+      description: t('usageTips.saveOwn.description'),
     },
     {
-      title: "Offline Viewing Anytime",
-      description:
-        "Keep tutorials, workout videos, Reels, or music offline so you can watch or listen without using mobile data.",
+      title: t('usageTips.offline.title'),
+      description: t('usageTips.offline.description'),
     },
     {
-      title: "Share With Friends & Teams",
-      description:
-        "Collect reference clips, Reels, videos, or MP3 audio for campaigns, design inspiration, or content brainstorms in one shared folder.",
+      title: t('usageTips.share.title'),
+      description: t('usageTips.share.description'),
     },
     {
-      title: "Content Inspiration & Library",
-      description:
-        "Create a personal library of videos, Reels, photos, and MP3 audio clips to inspire your next post, marketing idea, or creative project.",
+      title: t('usageTips.library.title'),
+      description: t('usageTips.library.description'),
     },
   ];
 
   return (
-   <div
+    <div
       id="usage-tips"
       className="relative overflow-hidden
         bg-[radial-gradient(900px_420px_at_20%_35%,rgba(236,72,153,0.12),rgba(255,255,255,0.03)_62%)]
@@ -400,25 +401,25 @@ function UsageTipsSection() {
     >
       <SectionWrapper>
         <SectionHeader
-          eyebrow="Use Cases"
-          title="Smart Ways to Use Our Instagram Downloader"
-          subtitle="Discover creative ways to download Instagram videos, Reels, photos, and MP3 audio for personal or professional use."
+          eyebrow={t('usageTips.eyebrow')}
+          title={t('usageTips.title')}
+          subtitle={t('usageTips.subtitle')}
         />
 
         <div className="grid gap-6 md:grid-cols-2">
-          {tips.map((t) => (
+          {tips.map((tip) => (
             <div
-              key={t.title}
+              key={tip.title}
               className="h-full rounded-2xl border border-border/60 bg-slate-650/60 p-5 shadow-sm"
             >
-              <h3 className="text-sm font-semibold text-foreground md:text-base">{t.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{t.description}</p>
+              <h3 className="text-sm font-semibold text-foreground md:text-base">{tip.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{tip.description}</p>
             </div>
           ))}
         </div>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          Always respect creators&apos; copyrights and platform terms while downloading Instagram videos, Reels, photos, or MP3 audio.
+          {t('usageTips.footer')}
         </p>
       </SectionWrapper>
     </div>
@@ -426,6 +427,8 @@ function UsageTipsSection() {
 }
 
 function ContactSection() {
+  const { t } = useTranslation()
+
   return (
     <div
       id="contact"
@@ -438,52 +441,52 @@ function ContactSection() {
     >
       <SectionWrapper>
         <SectionHeader
-          eyebrow="Contact"
-          title="Get in Touch with Our Instagram Downloader Team"
-          subtitle="Have questions, feedback, or business inquiries about our Video, Reels, Story, or Photo Downloader? Send us a message and we’ll respond quickly."
+          eyebrow={t('contact.eyebrow')}
+          title={t('contact.title')}
+          subtitle={t('contact.subtitle')}
         />
 
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
           <form
             className="space-y-4 rounded-2xl border border-border/70 bg-card/80 p-5 md:p-6"
-            aria-label="Contact form for Instagram Video, Reels, Story, and Photo Downloader"
+            aria-label="Contact form"
           >
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-1.5">
                 <label htmlFor="contact-name" className="text-sm font-medium text-foreground">
-                  Name
+                  {t('contact.form.name')}
                 </label>
                 <input
                   id="contact-name"
                   type="text"
                   className="w-full rounded-lg border border-input bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                  placeholder="Your full name"
-                  aria-label="Enter your name for Instagram downloader support"
+                  placeholder={t('contact.form.namePlaceholder')}
+                  aria-label={t('contact.form.name')}
                 />
               </div>
               <div className="space-y-1.5">
                 <label htmlFor="contact-email" className="text-sm font-medium text-foreground">
-                  Email
+                  {t('contact.form.email')}
                 </label>
                 <input
                   id="contact-email"
                   type="email"
                   className="w-full rounded-lg border border-input bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                  placeholder="you@example.com"
-                  aria-label="Enter your email for Instagram downloader support"
+                  placeholder={t('contact.form.emailPlaceholder')}
+                  aria-label={t('contact.form.email')}
                 />
               </div>
             </div>
             <div className="space-y-1.5">
               <label htmlFor="contact-message" className="text-sm font-medium text-foreground">
-                Message
+                {t('contact.form.message')}
               </label>
               <textarea
                 id="contact-message"
                 rows={4}
                 className="w-full resize-none rounded-lg border border-input bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                placeholder="Write your question or feedback about Instagram Video, Reels, Story, or Photo Downloader…"
-                aria-label="Message content for Instagram downloader support"
+                placeholder={t('contact.form.messagePlaceholder')}
+                aria-label={t('contact.form.message')}
               />
             </div>
             <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
@@ -491,24 +494,24 @@ function ContactSection() {
                 type="submit"
                 className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
               >
-                Send Message
+                {t('contact.form.send')}
               </button>
               <p className="text-xs text-muted-foreground">
-                We typically reply within 1–2 business days.
+                {t('contact.form.responseTime')}
               </p>
             </div>
           </form>
 
           <div className="space-y-4 rounded-2xl border border-border/60 bg-card/60 p-5 text-sm text-muted-foreground">
-            <h3 className="text-sm font-semibold text-foreground">Support & Feedback for Instagram Downloader</h3>
+            <h3 className="text-sm font-semibold text-foreground">{t('contact.info.title')}</h3>
             <p>
-              Use this contact form for questions, feature requests, or business partnerships related to our Video Downloader, Reels Downloader, Story Saver, Highlights Downloader, or Photo Downloader. For technical issues, include the URL or platform details.
+              {t('contact.info.description')}
             </p>
             <p className="text-xs">
-              Never share passwords or sensitive personal information. We do not request social media login credentials.
+              {t('contact.info.privacy')}
             </p>
             <p className="text-xs">
-              Our support team typically responds within 24–48 hours. Provide clear details for faster assistance with Instagram video, Reels, or story downloads.
+              {t('contact.info.support')}
             </p>
           </div>
         </div>
@@ -518,36 +521,38 @@ function ContactSection() {
 }
 
 function FaqSection() {
+  const { t } = useTranslation()
+
   const faqs = [
     {
-      q: "Is the Instagram Video Downloader free to use?",
-      a: "Yes. Our Instagram Video Downloader is completely free. There are no hidden charges, and you can download as many Instagram videos, Reels, stories, photos, or MP3 audio as you want.",
+      q: t('faq.questions.free.q'),
+      a: t('faq.questions.free.a'),
     },
     {
-      q: "Are there any limits on the number of downloads?",
-      a: "No. You can use our Instagram downloader to save unlimited videos, Reels, photos, stories, highlights, and audio files. Download as much as you need, completely free.",
+      q: t('faq.questions.limits.q'),
+      a: t('faq.questions.limits.a'),
     },
     {
-      q: "Do I need to install any software to download Instagram videos?",
-      a: "No. This Instagram Video Downloader is web-based, so you don't need to install any apps. Just copy the URL of the video, paste it into our tool, and click 'Download'.",
+      q: t('faq.questions.software.q'),
+      a: t('faq.questions.software.a'),
     },
     {
-      q: "Can I download Instagram videos on my smartphone?",
-      a: "Yes. Our Instagram Video Downloader works on mobile, tablet, and desktop browsers. Simply copy the video, Reels, or story URL, paste it into our tool, and download instantly.",
+      q: t('faq.questions.mobile.q'),
+      a: t('faq.questions.mobile.a'),
     },
     {
-      q: "Can I download private Instagram videos?",
-      a: "No. Only publicly accessible videos, Reels, stories, highlights, and photos are supported. Private content cannot be downloaded due to Instagram restrictions.",
+      q: t('faq.questions.private.q'),
+      a: t('faq.questions.private.a'),
     },
     {
-      q: "Do you store my videos or links?",
-      a: "No. We respect your privacy. Downloaded files and URLs are never stored beyond the time needed to process your request.",
+      q: t('faq.questions.storage.q'),
+      a: t('faq.questions.storage.a'),
     },
   ];
 
   return (
-   
-<div
+
+    <div
       id="faq"
       className="relative overflow-hidden
         bg-[radial-gradient(900px_420px_at_25%_30%,rgba(236,72,153,0.11),rgba(255,255,255,0.03)_62%)]
@@ -558,9 +563,9 @@ function FaqSection() {
     >
       <SectionWrapper>
         <SectionHeader
-          eyebrow="FAQ"
-          title="Frequently Asked Questions"
-          subtitle="Quick answers about downloading Instagram videos, Reels, stories, highlights, photos, and MP3 audio."
+          eyebrow={t('faq.eyebrow')}
+          title={t('faq.title')}
+          subtitle={t('faq.subtitle')}
         />
 
         <div className="space-y-3">
@@ -571,8 +576,8 @@ function FaqSection() {
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
                 <span className="font-medium text-foreground">{item.q}</span>
-                <span className="text-xs text-muted-foreground group-open:hidden">Show</span>
-                <span className="hidden text-xs text-muted-foreground group-open:inline">Hide</span>
+                <span className="text-xs text-muted-foreground group-open:hidden">{t('faq.show')}</span>
+                <span className="hidden text-xs text-muted-foreground group-open:inline">{t('faq.hide')}</span>
               </summary>
               <p className="mt-2 text-sm text-muted-foreground">{item.a}</p>
             </details>
@@ -580,18 +585,20 @@ function FaqSection() {
         </div>
 
         <p className="mt-6 text-xs text-muted-foreground">
-          This site is not affiliated with Instagram, Facebook, or Meta Platforms, Inc. Always follow platform rules and local laws while using our free Instagram downloader.
+          {t('faq.disclaimer')}
         </p>
 
-        <p className="mt-2 text-xs text-muted-foreground">
-          Still have questions? <a href="#contact" className="underline text-foreground">Contact us</a> for help downloading Instagram videos, Reels, stories, photos, or MP3 audio.
-        </p>
+        {/* <p className="mt-2 text-xs text-muted-foreground">
+          {t('faq.contactPrompt')} <a href="#contact" className="underline text-foreground">{t('faq.contactLink')}</a> {t('faq.contactSuffix')}
+        </p> */}
       </SectionWrapper>
     </div>
   );
 }
 
 function AppFooterSection() {
+  const { t } = useTranslation()
+
   return (
     <footer
       className="mx-auto w-full max-w-7xl border-t border
@@ -606,30 +613,28 @@ function AppFooterSection() {
           <div className="inline-flex items-center rounded-full ">
             <span className="h-2 w-2 rounded-full " />
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
-              Social Video Downloader
+              {t('footer.brand')}
             </span>
           </div>
           <p className="text-sm text-muted-foreground">
-            This tool was built to make it easier to save and organize your favorite public videos
-            from social platforms.
+            {t('footer.description')}
           </p>
         </div>
 
-      
+
+        <div>
+          <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            {t('footer.legal.title')}
+          </h3>
+          <p className="text-xs text-muted-foreground">
+            {t('footer.legal.content')}
+          </p>
+        </div>
+        <div className="flex flex-1 flex-col gap-6 text-sm min-[900px]:flex-row min-[900px]:justify-end">
+
           <div>
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Legal
-            </h3>
-            <p className="text-xs text-muted-foreground">
-              This site is not affiliated with Instagram, Facebook, or Meta Platforms, Inc. Please
-              respect copyrights and platform terms.
-            </p>
-          </div>
-  <div className="flex flex-1 flex-col gap-6 text-sm min-[900px]:flex-row min-[900px]:justify-end">
-         
-          <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Follow
+              {t('footer.follow')}
             </h3>
             <div className="flex gap-2">
               {[
@@ -652,23 +657,23 @@ function AppFooterSection() {
         </div>
       </div>
 
-     {/* Bottom copyright row (no extra styling added) */}
-<div className="border-t border-border/60">
-  <div className="mx-auto w-full max-w-5xl px-4 py-4">
-    <p className="text-center text-xs text-muted-foreground">
-      © 2025 Social Video Downloader By{" "}
-      <a
-        href="https://www.linkedin.com/in/abdul-mateen-5b6197261/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-foreground hover:underline"
-      >
-        Abdul Mateen
-      </a>
-      . All rights reserved.
-    </p>
-  </div>
-</div>
+      {/* Bottom copyright row (no extra styling added) */}
+      <div className="border-t border-border/60">
+        <div className="mx-auto w-full max-w-5xl px-4 py-4">
+          <p className="text-center text-xs text-muted-foreground">
+            {t('footer.copyright')}{" "}
+            <a
+              href="https://www.linkedin.com/in/abdul-mateen-5b6197261/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:underline"
+            >
+              Abdul Mateen
+            </a>
+            {t('footer.allRights')}
+          </p>
+        </div>
+      </div>
 
     </footer>
   )

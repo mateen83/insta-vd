@@ -1,0 +1,242 @@
+{
+    "header": {
+        "siteName": "即时社交下载器",
+        "platform": "Instagram",
+        "downloadNow": "立即下载",
+        "nav": {
+            "howItWorks": "使用方法",
+            "platforms": "平台",
+            "benefits": "优势",
+            "faq": "常见问题",
+            "compatibility": "兼容性",
+            "useCases": "使用场景",
+            "contact": "联系我们"
+        }
+    },
+    "hero": {
+        "title": "Instagram 视频、Reels 和 MP3 下载器",
+        "subtitle": "几秒内在线下载 Instagram 视频、Reels 和音频（MP3）。免费、快速、无水印、无需登录。",
+        "description": "粘贴公开的 Instagram 视频或 Reels 链接，即可立即下载 MP4 视频或提取 MP3 音频。"
+    },
+    "downloader": {
+        "urlLabel": "Instagram 链接",
+        "placeholder": "在此粘贴您的视频链接...",
+        "paste": "粘贴",
+        "downloadVideo": "下载视频",
+        "processing": "处理中...",
+        "errors": {
+            "emptyUrl": "请输入 Instagram 链接",
+            "invalidUrl": "无效的 Instagram 链接。请传入有效的视频、Reels 或 IGTV 链接。",
+            "timeout": "请求超时。请重试。",
+            "network": "网络错误。请检查您的连接并重试。",
+            "server": "无法连接到服务器。请稍后重试。",
+            "fetchFailed": "获取视频失败。请重试。",
+            "noVideo": "未找到视频。这可能是图片帖子或视频不可用。"
+        }
+    },
+    "videoResult": {
+        "videoReady": "视频已准备好",
+        "downloadMp4": "下载 MP4",
+        "downloadMp3": "下载 MP3（仅音频）",
+        "downloading": "下载中...",
+        "converting": "转换并下载中...",
+        "downloadFailed": "下载失败。请重试。",
+        "downloadTimeout": "下载超时。请重试。"
+    },
+    "features": {
+        "instagram": {
+            "title": "支持 Instagram 内容",
+            "description": "在线下载 Instagram 视频、Reels 和 IGTV，格式为 MP4。"
+        },
+        "quality": {
+            "title": "HD 与原画质",
+            "description": "以 HD 质量保存 Instagram 视频和 Reels，无水印、无质量损失。"
+        },
+        "fast": {
+            "title": "快速、免费、安全",
+            "description": "即时 Instagram 下载，无需登录、无追踪、无数据存储。"
+        }
+    },
+    "heroFooter": {
+        "line1": "本工具仅支持从公开 Instagram 帖子下载视频、Reels 和音频（MP3）。",
+        "line2": "无法访问私人或受限内容。"
+    },
+    "platforms": {
+        "eyebrow": "平台",
+        "title": "支持的平台",
+        "subtitle": "快速、安全地从热门社交平台下载视频、Reels 和音频。",
+        "instagram": {
+            "name": "Instagram",
+            "description": "即时以 HD 质量下载公开的 Instagram 视频、Reels、IGTV 和音频（MP3）。",
+            "status": "已上线"
+        },
+        "facebook": {
+            "name": "Facebook",
+            "description": "Facebook 视频下载器即将上线，包括 Shorts 和完整视频。",
+            "status": "即将上线"
+        },
+        "youtube": {
+            "name": "YouTube",
+            "description": "YouTube 视频下载器即将上线，支持 Shorts 和完整视频。",
+            "status": "即将上线"
+        },
+        "footer": "收藏本页面或稍后回来查看，随着新平台添加，您可以下载更多平台的视频、Reels 和 MP3 音频。"
+    },
+    "howItWorks": {
+        "eyebrow": "使用方法",
+        "title": "使用方法",
+        "subtitle": "只需三个简单步骤，即可下载 Instagram 视频、Reels、照片和 MP3 音频。",
+        "step1": {
+            "step": "步骤 1",
+            "title": "粘贴链接",
+            "description": "复制 Instagram 视频、Reels、照片或 MP3 音频的 URL，并粘贴到页面顶部的输入框中。"
+        },
+        "step2": {
+            "step": "步骤 2",
+            "title": "预览并选择质量",
+            "description": "我们将获取内容，并在支持时显示视频、照片和音频的可用质量选项。"
+        },
+        "step3": {
+            "step": "步骤 3",
+            "title": "立即下载",
+            "description": "点击下载按钮，直接将 MP4 视频或 MP3 音频文件保存到您的设备。"
+        },
+        "tryItNow": "立即尝试"
+    },
+    "whyChoose": {
+        "eyebrow": "优势",
+        "title": "为什么选择我们的 Instagram 下载器？",
+        "subtitle": "为视频、Reels、照片和 MP3 音频提供快速、安全、高质量的下载。",
+        "fast": {
+            "title": "快速可靠的 Instagram 视频和音频下载",
+            "description": "几秒内下载 Instagram 视频、Reels、照片和 MP3 音频。我们的基础设施确保即使较长的 HD 片段也能顺畅高速下载。"
+        },
+        "quality": {
+            "title": "保留原质量",
+            "description": "在 Instagram 允许的情况下，保留视频和音频的原始分辨率和清晰度，包括 HD 和 4K 内容。"
+        },
+        "noLogin": {
+            "title": "无需登录",
+            "description": "无需登录即可安全下载 Instagram 内容。只需粘贴视频、Reels 或音频链接，即可立即开始下载。"
+        },
+        "privacy": {
+            "title": "注重隐私且安全",
+            "description": "我们不存储您的下载，也不追踪您粘贴的链接，确保您的 Instagram 活动保持私密。"
+        },
+        "footer": "对隐私细节好奇吗？请查看下面的常见问题部分，了解我们安全的 Instagram 视频、Reels、照片和 MP3 音频下载流程简要概述。"
+    },
+    "worksAnywhere": {
+        "eyebrow": "兼容性",
+        "title": "在任何设备上下载 Instagram 视频和 MP3 音频",
+        "subtitle": "在手机、平板或电脑上使用我们的下载器，实现流畅播放和快速下载。",
+        "description": "所有下载均以 MP4 视频或 MP3 音频文件形式提供。保存到相册、笔记本电脑或云存储，随时随地享用。",
+        "features": {
+            "mobile": "移动友好界面，便于随时随地快速下载视频和音频。",
+            "noApp": "无需安装应用 — 一切都在您的浏览器中运行。",
+            "saveDirect": "直接保存到设备存储或您喜欢的文件夹。",
+            "share": "一键轻松将下载的片段或音频分享到消息应用或团队。"
+        },
+        "openOnPhone": "在手机上打开",
+        "copyLink": "复制链接以分享",
+        "imageAlt": "Instagram 视频和 MP3 音频下载在桌面、平板和移动设备上的预览",
+        "footer": "预览您的 Instagram 视频和 MP3 音频下载在桌面、平板和移动设备上的外观 — 到处都是相同的简单界面。"
+    },
+    "usageTips": {
+        "eyebrow": "使用场景",
+        "title": "智能使用我们的 Instagram 下载器",
+        "subtitle": "发现个人或专业用途下下载 Instagram 视频、Reels、照片和 MP3 音频的创意方式。",
+        "saveOwn": {
+            "title": "保存您自己的 Reels 和视频",
+            "description": "下载您自己的 Instagram 或 Facebook 视频、Reels、照片和 MP3 音频，用于编辑、存档或在其他平台重新发布。"
+        },
+        "offline": {
+            "title": "随时离线观看",
+            "description": "离线保存教程、健身视频、Reels 或音乐，无需消耗移动数据即可观看或收听。"
+        },
+        "share": {
+            "title": "与朋友和团队分享",
+            "description": "为营销活动、设计灵感或内容头脑风暴收集参考片段、Reels、视频或 MP3 音频到一个共享文件夹。"
+        },
+        "library": {
+            "title": "内容灵感与库",
+            "description": "创建个人库，收藏视频、Reels、照片和 MP3 音频片段，为您的下一个帖子、营销创意或创作项目提供灵感。"
+        },
+        "footer": "下载 Instagram 视频、Reels、照片或 MP3 音频时，请始终尊重创作者的版权和平台条款。"
+    },
+    "contact": {
+        "eyebrow": "联系我们",
+        "title": "联系我们的 Instagram 下载器团队",
+        "subtitle": "对我们的视频、Reels、故事或照片下载器有疑问、反馈或商务咨询？发送消息，我们会快速回复。",
+        "form": {
+            "name": "姓名",
+            "namePlaceholder": "您的全名",
+            "email": "邮箱",
+            "emailPlaceholder": "you@example.com",
+            "message": "消息",
+            "messagePlaceholder": "写下您对 Instagram 视频、Reels、故事或照片下载器的疑问或反馈…",
+            "send": "发送消息",
+            "responseTime": "我们通常在 1–2 个工作日内回复。"
+        },
+        "info": {
+            "title": "Instagram 下载器支持与反馈",
+            "description": "使用此联系表单提交与我们的视频下载器、Reels 下载器、故事保存器、亮点下载器或照片下载器相关的疑问、功能请求或商务合作。技术问题请包含 URL 或平台详情。",
+            "privacy": "切勿分享密码或敏感个人信息。我们不会要求社交媒体登录凭证。",
+            "support": "我们的支持团队通常在 24–48 小时内回复。请提供清晰详情，以便更快协助 Instagram 视频、Reels 或故事下载。"
+        }
+    },
+    "faq": {
+        "eyebrow": "常见问题",
+        "title": "常见问题",
+        "subtitle": "关于下载 Instagram 视频、Reels、故事、亮点、照片和 MP3 音频的快速解答。",
+        "show": "显示",
+        "hide": "隐藏",
+        "questions": {
+            "free": {
+                "q": "Instagram 视频下载器免费吗？",
+                "a": "是的。我们的 Instagram 视频下载器完全免费。没有隐藏费用，您可以随意下载任意数量的 Instagram 视频、Reels、故事、照片或 MP3 音频。"
+            },
+            "limits": {
+                "q": "下载数量有限制吗？",
+                "a": "没有。您可以使用我们的 Instagram 下载器无限保存视频、Reels、照片、故事、亮点和音频文件。需要多少就下载多少，完全免费。"
+            },
+            "software": {
+                "q": "下载 Instagram 视频需要安装软件吗？",
+                "a": "不需要。此 Instagram 视频下载器基于网页，无需安装任何应用。只需复制视频 URL，粘贴到我们的工具中，然后点击“下载”。"
+            },
+            "mobile": {
+                "q": "可以在智能手机上下载 Instagram 视频吗？",
+                "a": "可以。我们的 Instagram 视频下载器支持移动端、平板和桌面浏览器。只需复制视频、Reels 或故事的 URL，粘贴到工具中，即可立即下载。"
+            },
+            "private": {
+                "q": "可以下载私人 Instagram 视频吗？",
+                "a": "不可以。由于 Instagram 限制，仅支持公开可访问的视频、Reels、故事、亮点和照片。私有内容无法下载。"
+            },
+            "storage": {
+                "q": "你们会存储我的视频或链接吗？",
+                "a": "不会。我们尊重您的隐私。下载的文件和 URL 仅在处理您的请求所需时间内保留，不会永久存储。"
+            }
+        },
+        "disclaimer": "本网站与 Instagram、Facebook 或 Meta Platforms, Inc. 无关。使用我们的免费 Instagram 下载器时，请始终遵守平台规则和当地法律。",
+        "contactPrompt": "还有疑问吗？",
+        "contactLink": "联系我们",
+        "contactSuffix": "以获取下载 Instagram 视频、Reels、故事、照片或 MP3 音频的帮助。"
+    },
+    "footer": {
+        "brand": "社交视频下载器",
+        "description": "此工具旨在让您更轻松地保存和整理来自社交平台的公开喜爱视频。",
+        "legal": {
+            "title": "法律声明",
+            "content": "本网站与 Instagram、Facebook 或 Meta Platforms, Inc. 无关。请尊重版权和平台条款。"
+        },
+        "follow": "关注",
+        "copyright": "© 2025 社交视频下载器 由",
+        "allRights": "。保留所有权利。"
+    },
+    "accessibility": {
+        "scrollToTop": "滚动到顶部",
+        "toggleMenu": "切换菜单",
+        "switchToLight": "切换到亮色模式",
+        "switchToDark": "切换到暗色模式",
+        "selectLanguage": "选择语言"
+    }
+}

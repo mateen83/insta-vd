@@ -1,0 +1,242 @@
+{
+    "header": {
+        "siteName": "Pengunduh Sosial Instan",
+        "platform": "Instagram",
+        "downloadNow": "Unduh Sekarang",
+        "nav": {
+            "howItWorks": "Cara Kerja",
+            "platforms": "Platform",
+            "benefits": "Keuntungan",
+            "faq": "FAQ",
+            "compatibility": "Kompatibilitas",
+            "useCases": "Kasus Penggunaan",
+            "contact": "Kontak"
+        }
+    },
+    "hero": {
+        "title": "Pengunduh Video, Reels & MP3 Instagram",
+        "subtitle": "Unduh video Instagram, reels, dan audio (MP3) secara online dalam hitungan detik. Gratis, cepat, tanpa watermark, dan tanpa login.",
+        "description": "Tempel tautan video atau reel Instagram publik untuk mengunduh video MP4 atau mengekstrak audio MP3 secara instan."
+    },
+    "downloader": {
+        "urlLabel": "URL Instagram",
+        "placeholder": "Tempel tautan video Anda di sini...",
+        "paste": "Tempel",
+        "downloadVideo": "Unduh Video",
+        "processing": "Memproses...",
+        "errors": {
+            "emptyUrl": "Masukkan URL Instagram",
+            "invalidUrl": "URL Instagram tidak valid. Masukkan tautan video, reel, atau IGTV yang valid.",
+            "timeout": "Permintaan habis waktu. Coba lagi.",
+            "network": "Kesalahan jaringan. Periksa koneksi Anda dan coba lagi.",
+            "server": "Tidak dapat terhubung ke server. Coba lagi nanti.",
+            "fetchFailed": "Gagal mengambil video. Coba lagi.",
+            "noVideo": "Tidak ada video ditemukan. Ini mungkin postingan gambar atau video tidak tersedia."
+        }
+    },
+    "videoResult": {
+        "videoReady": "Video Siap",
+        "downloadMp4": "Unduh MP4",
+        "downloadMp3": "Unduh MP3 (Audio Saja)",
+        "downloading": "Mengunduh...",
+        "converting": "Mengonversi & Mengunduh...",
+        "downloadFailed": "Pengunduhan gagal. Coba lagi.",
+        "downloadTimeout": "Pengunduhan habis waktu. Coba lagi."
+    },
+    "features": {
+        "instagram": {
+            "title": "Mendukung Konten Instagram",
+            "description": "Unduh video, reels, dan IGTV Instagram secara online dalam format MP4."
+        },
+        "quality": {
+            "title": "Kualitas HD & Asli",
+            "description": "Simpan video dan reels Instagram dalam HD tanpa watermark atau kehilangan kualitas."
+        },
+        "fast": {
+            "title": "Cepat, Gratis & Aman",
+            "description": "Pengunduhan Instagram instan tanpa login, tanpa pelacakan, dan tanpa penyimpanan data."
+        }
+    },
+    "heroFooter": {
+        "line1": "Alat ini hanya mendukung pengunduhan video, reels, dan audio (MP3) dari postingan Instagram publik.",
+        "line2": "Konten pribadi atau terbatas tidak dapat diakses."
+    },
+    "platforms": {
+        "eyebrow": "Platform",
+        "title": "Platform yang Didukung",
+        "subtitle": "Unduh video, reels, dan audio dari platform sosial populer dengan cepat dan aman.",
+        "instagram": {
+            "name": "Instagram",
+            "description": "Unduh video, reels, IGTV, dan audio (MP3) publik Instagram secara instan dan dalam HD.",
+            "status": "Aktif"
+        },
+        "facebook": {
+            "name": "Facebook",
+            "description": "Dukungan pengunduh video Facebook akan segera hadir, termasuk Shorts dan video berdurasi panjang.",
+            "status": "Segera Hadir"
+        },
+        "youtube": {
+            "name": "YouTube",
+            "description": "Dukungan pengunduh video YouTube akan segera hadir untuk Shorts dan video berdurasi panjang.",
+            "status": "Segera Hadir"
+        },
+        "footer": "Tandai halaman ini atau kunjungi kembali segera untuk mengunduh video, reels, dan audio MP3 dari lebih banyak platform saat ditambahkan."
+    },
+    "howItWorks": {
+        "eyebrow": "Cara Kerja",
+        "title": "Cara Kerja",
+        "subtitle": "Unduh video, Reels, foto, dan audio MP3 Instagram dalam tiga langkah sederhana.",
+        "step1": {
+            "step": "Langkah 1",
+            "title": "Tempel Tautan",
+            "description": "Salin URL video, Reel, foto, atau audio MP3 Instagram dan tempelkan ke kotak di bagian atas halaman."
+        },
+        "step2": {
+            "step": "Langkah 2",
+            "title": "Pratinjau & Pilih Kualitas",
+            "description": "Kami akan mengambil konten dan menampilkan opsi kualitas yang tersedia untuk video, foto, dan audio jika didukung."
+        },
+        "step3": {
+            "step": "Langkah 3",
+            "title": "Unduh Seketika",
+            "description": "Klik tombol unduh untuk menyimpan file video MP4 atau audio MP3 langsung ke perangkat Anda."
+        },
+        "tryItNow": "Coba Sekarang"
+    },
+    "whyChoose": {
+        "eyebrow": "Keuntungan",
+        "title": "Mengapa Memilih Pengunduh Instagram Kami?",
+        "subtitle": "Pengunduhan cepat, aman, dan berkualitas tinggi untuk video, Reels, foto, dan audio MP3.",
+        "fast": {
+            "title": "Pengunduhan Video & Audio Instagram Cepat & Handal",
+            "description": "Unduh video, Reels, foto, dan audio MP3 Instagram dalam hitungan detik. Infrastruktur kami memastikan pengunduhan lancar dan berkecepatan tinggi bahkan untuk klip HD yang lebih panjang."
+        },
+        "quality": {
+            "title": "Pelestarian Kualitas Asli",
+            "description": "Pertahankan video dan audio Anda dalam resolusi dan kejernihan asli jika diizinkan oleh Instagram, termasuk konten HD dan 4K."
+        },
+        "noLogin": {
+            "title": "Tidak Perlu Login",
+            "description": "Unduh konten Instagram dengan aman tanpa masuk. Cukup tempel tautan video, Reel, atau audio dan mulai mengunduh secara instan."
+        },
+        "privacy": {
+            "title": "Ramah Privasi & Aman",
+            "description": "Kami tidak menyimpan unduhan Anda atau melacak tautan yang Anda tempel, memastikan aktivitas Instagram Anda tetap pribadi."
+        },
+        "footer": "Penasaran dengan detail privasi? Lihat bagian FAQ di bawah untuk gambaran singkat proses pengunduhan video, Reel, foto, dan audio MP3 Instagram yang aman."
+    },
+    "worksAnywhere": {
+        "eyebrow": "Kompatibilitas",
+        "title": "Unduh Video & Audio MP3 Instagram di Perangkat Apa Saja",
+        "subtitle": "Gunakan pengunduh kami di ponsel, tablet, atau desktop untuk pemutaran lancar dan pengunduhan cepat.",
+        "description": "Semua unduhan tersedia sebagai file video MP4 atau audio MP3. Simpan ke galeri kamera, laptop, atau penyimpanan cloud dan nikmati kapan saja.",
+        "features": {
+            "mobile": "Antarmuka ramah seluler untuk pengunduhan video dan audio cepat saat bepergian.",
+            "noApp": "Tidak perlu instalasi aplikasi — semuanya berfungsi di browser Anda.",
+            "saveDirect": "Simpan langsung ke penyimpanan perangkat atau folder pilihan Anda.",
+            "share": "Bagikan klip atau audio yang diunduh dengan mudah ke aplikasi pesan atau tim hanya dengan satu ketuk."
+        },
+        "openOnPhone": "Buka di ponsel Anda",
+        "copyLink": "Salin tautan untuk dibagikan",
+        "imageAlt": "Pratinjau pengunduhan video dan audio MP3 Instagram di desktop, tablet, dan perangkat seluler",
+        "footer": "Lihat tampilan pengunduhan video dan audio MP3 Instagram Anda di desktop, tablet, dan seluler — antarmuka sederhana yang sama di mana saja."
+    },
+    "usageTips": {
+        "eyebrow": "Kasus Penggunaan",
+        "title": "Cara Cerdas Menggunakan Pengunduh Instagram Kami",
+        "subtitle": "Temukan cara kreatif mengunduh video, Reels, foto, dan audio MP3 Instagram untuk penggunaan pribadi atau profesional.",
+        "saveOwn": {
+            "title": "Simpan Reel & Video Anda Sendiri",
+            "description": "Unduh video, Reels, foto, dan audio MP3 Instagram atau Facebook Anda sendiri untuk pengeditan, pengarsipan, atau posting ulang di platform lain."
+        },
+        "offline": {
+            "title": "Tonton Offline Kapan Saja",
+            "description": "Simpan tutorial, video latihan, Reels, atau musik secara offline agar dapat ditonton atau didengar tanpa menggunakan data seluler."
+        },
+        "share": {
+            "title": "Bagikan dengan Teman & Tim",
+            "description": "Kumpulkan klip referensi, Reels, video, atau audio MP3 untuk kampanye, inspirasi desain, atau brainstorming konten dalam satu folder bersama."
+        },
+        "library": {
+            "title": "Inspirasi & Perpustakaan Konten",
+            "description": "Buat perpustakaan pribadi berisi klip video, Reels, foto, dan audio MP3 untuk menginspirasi postingan berikutnya, ide pemasaran, atau proyek kreatif Anda."
+        },
+        "footer": "Selalu hormati hak cipta pembuat dan ketentuan platform saat mengunduh video, Reels, foto, atau audio MP3 Instagram."
+    },
+    "contact": {
+        "eyebrow": "Kontak",
+        "title": "Hubungi Tim Pengunduh Instagram Kami",
+        "subtitle": "Ada pertanyaan, masukan, atau pertanyaan bisnis tentang Pengunduh Video, Reels, Story, atau Foto kami? Kirim pesan dan kami akan balas dengan cepat.",
+        "form": {
+            "name": "Nama",
+            "namePlaceholder": "Nama lengkap Anda",
+            "email": "Email",
+            "emailPlaceholder": "anda@contoh.com",
+            "message": "Pesan",
+            "messagePlaceholder": "Tuliskan pertanyaan atau masukan Anda tentang Pengunduh Video, Reels, Story, atau Foto Instagram…",
+            "send": "Kirim Pesan",
+            "responseTime": "Kami biasanya membalas dalam 1–2 hari kerja."
+        },
+        "info": {
+            "title": "Dukungan & Masukan untuk Pengunduh Instagram",
+            "description": "Gunakan formulir kontak ini untuk pertanyaan, permintaan fitur, atau kemitraan bisnis terkait Pengunduh Video, Reels, Story Saver, Highlights, atau Foto kami. Untuk masalah teknis, sertakan URL atau detail platform.",
+            "privacy": "Jangan pernah bagikan kata sandi atau informasi pribadi sensitif. Kami tidak meminta kredensial login media sosial.",
+            "support": "Tim dukungan kami biasanya membalas dalam 24–48 jam. Berikan detail jelas untuk bantuan lebih cepat dengan pengunduhan video, Reels, atau story Instagram."
+        }
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Pertanyaan yang Sering Diajukan",
+        "subtitle": "Jawaban cepat tentang pengunduhan video, Reels, stories, highlights, foto, dan audio MP3 Instagram.",
+        "show": "Tampilkan",
+        "hide": "Sembunyikan",
+        "questions": {
+            "free": {
+                "q": "Apakah Pengunduh Video Instagram gratis digunakan?",
+                "a": "Ya. Pengunduh Video Instagram kami sepenuhnya gratis. Tidak ada biaya tersembunyi, dan Anda dapat mengunduh sebanyak mungkin video, Reels, stories, foto, atau audio MP3 Instagram."
+            },
+            "limits": {
+                "q": "Apakah ada batasan jumlah unduhan?",
+                "a": "Tidak. Anda dapat menggunakan pengunduh Instagram kami untuk menyimpan video, Reels, foto, stories, highlights, dan file audio tanpa batas. Unduh sebanyak yang dibutuhkan, sepenuhnya gratis."
+            },
+            "software": {
+                "q": "Apakah saya perlu menginstal perangkat lunak untuk mengunduh video Instagram?",
+                "a": "Tidak. Pengunduh Video Instagram ini berbasis web, jadi Anda tidak perlu menginstal aplikasi apa pun. Cukup salin URL video, tempel ke alat kami, dan klik 'Unduh'."
+            },
+            "mobile": {
+                "q": "Dapatkah saya mengunduh video Instagram di ponsel pintar?",
+                "a": "Ya. Pengunduh Video Instagram kami bekerja di browser seluler, tablet, dan desktop. Cukup salin URL video, Reels, atau story, tempel ke alat kami, dan unduh secara instan."
+            },
+            "private": {
+                "q": "Dapatkah saya mengunduh video Instagram pribadi?",
+                "a": "Tidak. Hanya video, Reels, stories, highlights, dan foto yang dapat diakses publik yang didukung. Konten pribadi tidak dapat diunduh karena pembatasan Instagram."
+            },
+            "storage": {
+                "q": "Apakah Anda menyimpan video atau tautan saya?",
+                "a": "Tidak. Kami menghormati privasi Anda. File yang diunduh dan URL tidak pernah disimpan lebih lama dari waktu yang diperlukan untuk memproses permintaan Anda."
+            }
+        },
+        "disclaimer": "Situs ini tidak berafiliasi dengan Instagram, Facebook, atau Meta Platforms, Inc. Selalu patuhi aturan platform dan hukum setempat saat menggunakan pengunduh Instagram gratis kami.",
+        "contactPrompt": "Masih ada pertanyaan?",
+        "contactLink": "Hubungi kami",
+        "contactSuffix": "untuk bantuan mengunduh video, Reels, stories, foto, atau audio MP3 Instagram."
+    },
+    "footer": {
+        "brand": "Pengunduh Video Sosial",
+        "description": "Alat ini dibuat untuk memudahkan penyimpanan dan pengaturan video publik favorit Anda dari platform sosial.",
+        "legal": {
+            "title": "Legal",
+            "content": "Situs ini tidak berafiliasi dengan Instagram, Facebook, atau Meta Platforms, Inc. Hormati hak cipta dan ketentuan platform."
+        },
+        "follow": "Ikuti",
+        "copyright": "© 2025 Pengunduh Video Sosial Oleh",
+        "allRights": ". Semua hak dilindungi."
+    },
+    "accessibility": {
+        "scrollToTop": "Gulir ke atas",
+        "toggleMenu": "Alihkan menu",
+        "switchToLight": "Beralih ke mode terang",
+        "switchToDark": "Beralih ke mode gelap",
+        "selectLanguage": "Pilih bahasa"
+    }
+}

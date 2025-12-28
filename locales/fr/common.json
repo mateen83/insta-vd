@@ -1,0 +1,242 @@
+{
+    "header": {
+        "siteName": "Téléchargeur Social Instantané",
+        "platform": "Instagram",
+        "downloadNow": "Télécharger maintenant",
+        "nav": {
+            "howItWorks": "Comment ça marche",
+            "platforms": "Plateformes",
+            "benefits": "Avantages",
+            "faq": "FAQ",
+            "compatibility": "Compatibilité",
+            "useCases": "Cas d'utilisation",
+            "contact": "Contact"
+        }
+    },
+    "hero": {
+        "title": "Téléchargeur de Vidéos, Reels et MP3 Instagram",
+        "subtitle": "Téléchargez des vidéos, reels et audio (MP3) Instagram en ligne en quelques secondes. Gratuit, rapide, sans filigrane et sans connexion requise.",
+        "description": "Collez un lien de vidéo ou reel Instagram public pour télécharger la vidéo MP4 ou extraire l'audio MP3 instantanément."
+    },
+    "downloader": {
+        "urlLabel": "URL Instagram",
+        "placeholder": "Collez votre lien vidéo ici...",
+        "paste": "Coller",
+        "downloadVideo": "Télécharger la vidéo",
+        "processing": "Traitement en cours...",
+        "errors": {
+            "emptyUrl": "Veuillez entrer une URL Instagram",
+            "invalidUrl": "URL Instagram invalide. Veuillez entrer un lien valide vers une vidéo, un reel ou une IGTV.",
+            "timeout": "Délai d'attente dépassé. Veuillez réessayer.",
+            "network": "Erreur réseau. Veuillez vérifier votre connexion et réessayer.",
+            "server": "Impossible de se connecter au serveur. Veuillez réessayer plus tard.",
+            "fetchFailed": "Échec de récupération de la vidéo. Veuillez réessayer.",
+            "noVideo": "Aucune vidéo trouvée. Il s'agit peut-être d'une publication d'image ou la vidéo n'est pas disponible."
+        }
+    },
+    "videoResult": {
+        "videoReady": "Vidéo prête",
+        "downloadMp4": "Télécharger MP4",
+        "downloadMp3": "Télécharger MP3 (Audio uniquement)",
+        "downloading": "Téléchargement en cours...",
+        "converting": "Conversion et téléchargement en cours...",
+        "downloadFailed": "Échec du téléchargement. Veuillez réessayer.",
+        "downloadTimeout": "Délai de téléchargement dépassé. Veuillez réessayer."
+    },
+    "features": {
+        "instagram": {
+            "title": "Supporte le contenu Instagram",
+            "description": "Téléchargez des vidéos, reels et IGTV Instagram en ligne au format MP4."
+        },
+        "quality": {
+            "title": "Qualité HD & Originale",
+            "description": "Enregistrez des vidéos et reels Instagram en HD sans filigrane ni perte de qualité."
+        },
+        "fast": {
+            "title": "Rapide, Gratuit & Sécurisé",
+            "description": "Téléchargements Instagram instantanés sans connexion, sans suivi et sans stockage de données."
+        }
+    },
+    "heroFooter": {
+        "line1": "Cet outil permet uniquement de télécharger des vidéos, reels et audio (MP3) depuis des publications Instagram publiques.",
+        "line2": "Le contenu privé ou restreint n'est pas accessible."
+    },
+    "platforms": {
+        "eyebrow": "Plateformes",
+        "title": "Plateformes supportées",
+        "subtitle": "Téléchargez des vidéos, reels et audio depuis des plateformes sociales populaires rapidement et en toute sécurité.",
+        "instagram": {
+            "name": "Instagram",
+            "description": "Téléchargez instantanément des vidéos, reels, IGTV et audio (MP3) publics Instagram en HD.",
+            "status": "Disponible"
+        },
+        "facebook": {
+            "name": "Facebook",
+            "description": "Le support pour le téléchargeur de vidéos Facebook arrive bientôt, y compris les Shorts et vidéos longues.",
+            "status": "Bientôt disponible"
+        },
+        "youtube": {
+            "name": "YouTube",
+            "description": "Le support pour le téléchargeur de vidéos YouTube arrive bientôt pour les Shorts et vidéos longues.",
+            "status": "Bientôt disponible"
+        },
+        "footer": "Ajoutez cette page à vos favoris ou revenez bientôt pour télécharger des vidéos, reels et audio MP3 depuis d'autres plateformes au fur et à mesure qu'elles sont ajoutées."
+    },
+    "howItWorks": {
+        "eyebrow": "Comment ça marche",
+        "title": "Comment ça marche",
+        "subtitle": "Téléchargez des vidéos, Reels, photos et audio MP3 Instagram en trois étapes simples.",
+        "step1": {
+            "step": "Étape 1",
+            "title": "Coller le lien",
+            "description": "Copiez l'URL de la vidéo, Reel, photo ou audio MP3 Instagram et collez-la dans la zone en haut de la page."
+        },
+        "step2": {
+            "step": "Étape 2",
+            "title": "Prévisualiser & Choisir la qualité",
+            "description": "Nous récupérons le contenu et affichons les options de qualité disponibles pour les vidéos, photos et audio lorsque supporté."
+        },
+        "step3": {
+            "step": "Étape 3",
+            "title": "Télécharger instantanément",
+            "description": "Cliquez sur le bouton de téléchargement pour enregistrer le fichier vidéo MP4 ou audio MP3 directement sur votre appareil."
+        },
+        "tryItNow": "Essayez maintenant"
+    },
+    "whyChoose": {
+        "eyebrow": "Avantages",
+        "title": "Pourquoi choisir notre téléchargeur Instagram ?",
+        "subtitle": "Téléchargements rapides, sécurisés et de haute qualité pour vidéos, Reels, photos et audio MP3.",
+        "fast": {
+            "title": "Téléchargements vidéo & audio Instagram rapides et fiables",
+            "description": "Téléchargez des vidéos, Reels, photos et audio MP3 Instagram en quelques secondes. Notre infrastructure assure des téléchargements fluides et rapides même pour les clips HD longs."
+        },
+        "quality": {
+            "title": "Préservation de la qualité originale",
+            "description": "Conservez vos vidéos et audio dans leur résolution et clarté d'origine lorsque Instagram le permet, y compris le contenu HD et 4K."
+        },
+        "noLogin": {
+            "title": "Aucune connexion requise",
+            "description": "Téléchargez du contenu Instagram en toute sécurité sans vous connecter. Collez simplement le lien de la vidéo, Reel ou audio et commencez le téléchargement instantanément."
+        },
+        "privacy": {
+            "title": "Respectueux de la vie privée & Sécurisé",
+            "description": "Nous ne stockons pas vos téléchargements ni ne suivons les liens que vous collez, garantissant que votre activité Instagram reste privée."
+        },
+        "footer": "Curieux des détails de confidentialité ? Consultez la section FAQ ci-dessous pour un aperçu concis de notre processus sécurisé de téléchargement de vidéos, Reels, photos et audio MP3 Instagram."
+    },
+    "worksAnywhere": {
+        "eyebrow": "Compatibilité",
+        "title": "Téléchargez des vidéos & audio MP3 Instagram sur n'importe quel appareil",
+        "subtitle": "Utilisez notre téléchargeur sur votre téléphone, tablette ou ordinateur pour une lecture fluide et des téléchargements rapides.",
+        "description": "Tous les téléchargements sont disponibles sous forme de fichiers vidéo MP4 ou audio MP3. Enregistrez-les dans votre pellicule, ordinateur portable ou stockage cloud et profitez-en à tout moment.",
+        "features": {
+            "mobile": "Interface adaptée aux mobiles pour des téléchargements rapides de vidéos et audio en déplacement.",
+            "noApp": "Aucune installation d'application requise — tout fonctionne dans votre navigateur.",
+            "saveDirect": "Enregistrez directement dans le stockage de l'appareil ou votre dossier préféré.",
+            "share": "Partagez facilement les clips ou audio téléchargés vers des applications de messagerie ou équipes en un clic."
+        },
+        "openOnPhone": "Ouvrir sur votre téléphone",
+        "copyLink": "Copier le lien pour partager",
+        "imageAlt": "Aperçu des téléchargements de vidéos et audio MP3 Instagram sur ordinateur, tablette et appareils mobiles",
+        "footer": "Découvrez l'apparence de vos téléchargements de vidéos et audio MP3 Instagram sur ordinateur, tablette et mobile — la même interface simple partout."
+    },
+    "usageTips": {
+        "eyebrow": "Cas d'utilisation",
+        "title": "Façons intelligentes d'utiliser notre téléchargeur Instagram",
+        "subtitle": "Découvrez des façons créatives de télécharger des vidéos, Reels, photos et audio MP3 Instagram pour un usage personnel ou professionnel.",
+        "saveOwn": {
+            "title": "Enregistrez vos propres Reels & Vidéos",
+            "description": "Téléchargez vos propres vidéos, Reels, photos et audio MP3 Instagram ou Facebook pour édition, archivage ou republication sur d'autres plateformes."
+        },
+        "offline": {
+            "title": "Visionnage hors ligne à tout moment",
+            "description": "Gardez des tutoriels, vidéos d'entraînement, Reels ou musique hors ligne pour regarder ou écouter sans consommer de données mobiles."
+        },
+        "share": {
+            "title": "Partagez avec amis & équipes",
+            "description": "Collectez des clips de référence, Reels, vidéos ou audio MP3 pour campagnes, inspiration design ou brainstormings de contenu dans un dossier partagé."
+        },
+        "library": {
+            "title": "Inspiration & Bibliothèque de contenu",
+            "description": "Créez une bibliothèque personnelle de vidéos, Reels, photos et clips audio MP3 pour inspirer votre prochain post, idée marketing ou projet créatif."
+        },
+        "footer": "Respectez toujours les droits d'auteur des créateurs et les conditions des plateformes lors du téléchargement de vidéos, Reels, photos ou audio MP3 Instagram."
+    },
+    "contact": {
+        "eyebrow": "Contact",
+        "title": "Contactez notre équipe Téléchargeur Instagram",
+        "subtitle": "Vous avez des questions, des retours ou des demandes professionnelles concernant notre Téléchargeur de Vidéos, Reels, Stories ou Photos ? Envoyez-nous un message et nous répondrons rapidement.",
+        "form": {
+            "name": "Nom",
+            "namePlaceholder": "Votre nom complet",
+            "email": "Email",
+            "emailPlaceholder": "vous@exemple.com",
+            "message": "Message",
+            "messagePlaceholder": "Écrivez votre question ou retour concernant le Téléchargeur de Vidéos, Reels, Stories ou Photos Instagram…",
+            "send": "Envoyer le message",
+            "responseTime": "Nous répondons généralement sous 1 à 2 jours ouvrables."
+        },
+        "info": {
+            "title": "Support & Retours pour Téléchargeur Instagram",
+            "description": "Utilisez ce formulaire de contact pour des questions, demandes de fonctionnalités ou partenariats commerciaux liés à notre Téléchargeur de Vidéos, Reels, Stories, Highlights ou Photos. Pour les problèmes techniques, incluez l'URL ou les détails de la plateforme.",
+            "privacy": "Ne partagez jamais de mots de passe ou informations personnelles sensibles. Nous ne demandons pas d'identifiants de connexion aux réseaux sociaux.",
+            "support": "Notre équipe de support répond généralement sous 24 à 48 heures. Fournissez des détails clairs pour une assistance plus rapide avec les téléchargements de vidéos, Reels ou stories Instagram."
+        }
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Questions fréquemment posées",
+        "subtitle": "Réponses rapides sur le téléchargement de vidéos, Reels, stories, highlights, photos et audio MP3 Instagram.",
+        "show": "Afficher",
+        "hide": "Masquer",
+        "questions": {
+            "free": {
+                "q": "Le téléchargeur de vidéos Instagram est-il gratuit ?",
+                "a": "Oui. Notre téléchargeur de vidéos Instagram est entièrement gratuit. Il n'y a pas de frais cachés, et vous pouvez télécharger autant de vidéos, Reels, stories, photos ou audio MP3 Instagram que vous le souhaitez."
+            },
+            "limits": {
+                "q": "Y a-t-il des limites sur le nombre de téléchargements ?",
+                "a": "Non. Vous pouvez utiliser notre téléchargeur Instagram pour enregistrer un nombre illimité de vidéos, Reels, photos, stories, highlights et fichiers audio. Téléchargez autant que nécessaire, entièrement gratuit."
+            },
+            "software": {
+                "q": "Dois-je installer un logiciel pour télécharger des vidéos Instagram ?",
+                "a": "Non. Ce téléchargeur de vidéos Instagram est basé sur le web, donc vous n'avez pas besoin d'installer d'applications. Copiez simplement l'URL de la vidéo, collez-la dans notre outil et cliquez sur 'Télécharger'."
+            },
+            "mobile": {
+                "q": "Puis-je télécharger des vidéos Instagram sur mon smartphone ?",
+                "a": "Oui. Notre téléchargeur de vidéos Instagram fonctionne sur les navigateurs mobiles, tablettes et ordinateurs. Copiez simplement l'URL de la vidéo, Reel ou story, collez-la dans notre outil et téléchargez instantanément."
+            },
+            "private": {
+                "q": "Puis-je télécharger des vidéos Instagram privées ?",
+                "a": "Non. Seuls les vidéos, Reels, stories, highlights et photos accessibles publiquement sont supportés. Le contenu privé ne peut pas être téléchargé en raison des restrictions d'Instagram."
+            },
+            "storage": {
+                "q": "Stockez-vous mes vidéos ou liens ?",
+                "a": "Non. Nous respectons votre vie privée. Les fichiers téléchargés et les URL ne sont jamais stockés au-delà du temps nécessaire pour traiter votre demande."
+            }
+        },
+        "disclaimer": "Ce site n'est pas affilié à Instagram, Facebook ou Meta Platforms, Inc. Veuillez toujours respecter les règles des plateformes et les lois locales lors de l'utilisation de notre téléchargeur Instagram gratuit.",
+        "contactPrompt": "Vous avez encore des questions ?",
+        "contactLink": "Contactez-nous",
+        "contactSuffix": "pour de l'aide sur le téléchargement de vidéos, Reels, stories, photos ou audio MP3 Instagram."
+    },
+    "footer": {
+        "brand": "Téléchargeur Vidéo Social",
+        "description": "Cet outil a été créé pour faciliter l'enregistrement et l'organisation de vos vidéos publiques préférées depuis les plateformes sociales.",
+        "legal": {
+            "title": "Légal",
+            "content": "Ce site n'est pas affilié à Instagram, Facebook ou Meta Platforms, Inc. Veuillez respecter les droits d'auteur et les conditions des plateformes."
+        },
+        "follow": "Suivez",
+        "copyright": "© 2025 Téléchargeur Vidéo Social Par",
+        "allRights": ". Tous droits réservés."
+    },
+    "accessibility": {
+        "scrollToTop": "Remonter en haut",
+        "toggleMenu": "Basculer le menu",
+        "switchToLight": "Passer en mode clair",
+        "switchToDark": "Passer en mode sombre",
+        "selectLanguage": "Sélectionner la langue"
+    }
+}

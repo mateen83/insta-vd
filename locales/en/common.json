@@ -1,0 +1,242 @@
+{
+    "header": {
+        "siteName": "Instant Social Downloader",
+        "platform": "Instagram",
+        "downloadNow": "Download now",
+        "nav": {
+            "howItWorks": "How it works",
+            "platforms": "Platforms",
+            "benefits": "Benefits",
+            "faq": "FAQ",
+            "compatibility": "Compatibility",
+            "useCases": "Use cases",
+            "contact": "Contact"
+        }
+    },
+    "hero": {
+        "title": "Instagram Video, Reels & MP3 Downloader",
+        "subtitle": "Download Instagram videos, reels, and audio (MP3) online in seconds. Free, fast, no watermark, and no login required.",
+        "description": "Paste a public Instagram video or reel link to download MP4 video or extract MP3 audio instantly."
+    },
+    "downloader": {
+        "urlLabel": "Instagram URL",
+        "placeholder": "Paste your video link here...",
+        "paste": "Paste",
+        "downloadVideo": "Download Video",
+        "processing": "Processing...",
+        "errors": {
+            "emptyUrl": "Please enter an Instagram URL",
+            "invalidUrl": "Invalid Instagram URL. Please enter a valid video, reel, or IGTV link.",
+            "timeout": "Request timed out. Please try again.",
+            "network": "Network error. Please check your connection and try again.",
+            "server": "Unable to connect to server. Please try again later.",
+            "fetchFailed": "Failed to fetch video. Please try again.",
+            "noVideo": "No video found. This might be an image post or the video is unavailable."
+        }
+    },
+    "videoResult": {
+        "videoReady": "Video Ready",
+        "downloadMp4": "Download MP4",
+        "downloadMp3": "Download MP3 (Audio Only)",
+        "downloading": "Downloading...",
+        "converting": "Converting & Downloading...",
+        "downloadFailed": "Download failed. Please try again.",
+        "downloadTimeout": "Download timed out. Please try again."
+    },
+    "features": {
+        "instagram": {
+            "title": "Supports Instagram Content",
+            "description": "Download Instagram videos, reels, and IGTV online in MP4 format."
+        },
+        "quality": {
+            "title": "HD & Original Quality",
+            "description": "Save Instagram videos and reels in HD without watermark or quality loss."
+        },
+        "fast": {
+            "title": "Fast, Free & Secure",
+            "description": "Instant Instagram downloads with no login, no tracking, and no data storage."
+        }
+    },
+    "heroFooter": {
+        "line1": "This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only.",
+        "line2": "Private or restricted content cannot be accessed."
+    },
+    "platforms": {
+        "eyebrow": "Platforms",
+        "title": "Supported Platforms",
+        "subtitle": "Download videos, reels, and audio from popular social platforms quickly and securely.",
+        "instagram": {
+            "name": "Instagram",
+            "description": "Download public Instagram videos, reels, IGTV, and audio (MP3) instantly and in HD.",
+            "status": "Live"
+        },
+        "facebook": {
+            "name": "Facebook",
+            "description": "Facebook video downloader support is coming soon, including Shorts and full-length videos.",
+            "status": "Coming soon"
+        },
+        "youtube": {
+            "name": "YouTube",
+            "description": "YouTube video downloader support is coming soon for Shorts and full-length videos.",
+            "status": "Coming soon"
+        },
+        "footer": "Bookmark this page or check back soon to download videos, reels, and MP3 audio from more platforms as they are added."
+    },
+    "howItWorks": {
+        "eyebrow": "How it works",
+        "title": "How It Works",
+        "subtitle": "Download Instagram videos, Reels, photos, and MP3 audio in three simple steps.",
+        "step1": {
+            "step": "Step 1",
+            "title": "Paste Link",
+            "description": "Copy the Instagram video, Reel, photo, or MP3 audio URL and paste it into the box at the top of the page."
+        },
+        "step2": {
+            "step": "Step 2",
+            "title": "Preview & Choose Quality",
+            "description": "We fetch the content and display available quality options for videos, photos, and audio when supported."
+        },
+        "step3": {
+            "step": "Step 3",
+            "title": "Download Instantly",
+            "description": "Click the download button to save the MP4 video or MP3 audio file directly to your device."
+        },
+        "tryItNow": "Try it now"
+    },
+    "whyChoose": {
+        "eyebrow": "Benefits",
+        "title": "Why Choose Our Instagram Downloader?",
+        "subtitle": "Fast, secure, and high-quality downloads for videos, Reels, photos, and MP3 audio.",
+        "fast": {
+            "title": "Fast & Reliable Instagram Video & Audio Downloads",
+            "description": "Download Instagram videos, Reels, photos, and MP3 audio in seconds. Our infrastructure ensures smooth, high-speed downloads even for longer HD clips."
+        },
+        "quality": {
+            "title": "Original Quality Preservation",
+            "description": "Keep your videos and audio in their original resolution and clarity whenever Instagram allows, including HD and 4K content."
+        },
+        "noLogin": {
+            "title": "No Login Required",
+            "description": "Download Instagram content securely without signing in. Just paste the video, Reel, or audio link and start downloading instantly."
+        },
+        "privacy": {
+            "title": "Privacy-Friendly & Secure",
+            "description": "We do not store your downloads or track the links you paste, ensuring your Instagram activity stays private."
+        },
+        "footer": "Curious about privacy details? Check the FAQ section below for a concise overview of our secure Instagram video, Reel, photo, and MP3 audio download process."
+    },
+    "worksAnywhere": {
+        "eyebrow": "Compatibility",
+        "title": "Download Instagram Videos & MP3 Audio on Any Device",
+        "subtitle": "Use our downloader on your phone, tablet, or desktop for smooth playback and fast downloads.",
+        "description": "All downloads are available as MP4 videos or MP3 audio files. Save them to your camera roll, laptop, or cloud storage and enjoy anytime.",
+        "features": {
+            "mobile": "Mobile-friendly interface for quick video and audio downloads on the go.",
+            "noApp": "No app installation required — everything works in your browser.",
+            "saveDirect": "Save directly to device storage or your preferred folder.",
+            "share": "Easily share downloaded clips or audio to messaging apps or teams with a tap."
+        },
+        "openOnPhone": "Open on your phone",
+        "copyLink": "Copy link to share",
+        "imageAlt": "Preview of Instagram video and MP3 audio downloads on desktop, tablet, and mobile devices",
+        "footer": "Preview how your Instagram video and MP3 audio downloads look across desktop, tablet, and mobile devices — the same simple interface everywhere."
+    },
+    "usageTips": {
+        "eyebrow": "Use Cases",
+        "title": "Smart Ways to Use Our Instagram Downloader",
+        "subtitle": "Discover creative ways to download Instagram videos, Reels, photos, and MP3 audio for personal or professional use.",
+        "saveOwn": {
+            "title": "Save Your Own Reels & Videos",
+            "description": "Download your own Instagram or Facebook videos, Reels, photos, and MP3 audio for editing, archiving, or reposting on other platforms."
+        },
+        "offline": {
+            "title": "Offline Viewing Anytime",
+            "description": "Keep tutorials, workout videos, Reels, or music offline so you can watch or listen without using mobile data."
+        },
+        "share": {
+            "title": "Share With Friends & Teams",
+            "description": "Collect reference clips, Reels, videos, or MP3 audio for campaigns, design inspiration, or content brainstorms in one shared folder."
+        },
+        "library": {
+            "title": "Content Inspiration & Library",
+            "description": "Create a personal library of videos, Reels, photos, and MP3 audio clips to inspire your next post, marketing idea, or creative project."
+        },
+        "footer": "Always respect creators' copyrights and platform terms while downloading Instagram videos, Reels, photos, or MP3 audio."
+    },
+    "contact": {
+        "eyebrow": "Contact",
+        "title": "Get in Touch with Our Instagram Downloader Team",
+        "subtitle": "Have questions, feedback, or business inquiries about our Video, Reels, Story, or Photo Downloader? Send us a message and we'll respond quickly.",
+        "form": {
+            "name": "Name",
+            "namePlaceholder": "Your full name",
+            "email": "Email",
+            "emailPlaceholder": "you@example.com",
+            "message": "Message",
+            "messagePlaceholder": "Write your question or feedback about Instagram Video, Reels, Story, or Photo Downloader…",
+            "send": "Send Message",
+            "responseTime": "We typically reply within 1–2 business days."
+        },
+        "info": {
+            "title": "Support & Feedback for Instagram Downloader",
+            "description": "Use this contact form for questions, feature requests, or business partnerships related to our Video Downloader, Reels Downloader, Story Saver, Highlights Downloader, or Photo Downloader. For technical issues, include the URL or platform details.",
+            "privacy": "Never share passwords or sensitive personal information. We do not request social media login credentials.",
+            "support": "Our support team typically responds within 24–48 hours. Provide clear details for faster assistance with Instagram video, Reels, or story downloads."
+        }
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Quick answers about downloading Instagram videos, Reels, stories, highlights, photos, and MP3 audio.",
+        "show": "Show",
+        "hide": "Hide",
+        "questions": {
+            "free": {
+                "q": "Is the Instagram Video Downloader free to use?",
+                "a": "Yes. Our Instagram Video Downloader is completely free. There are no hidden charges, and you can download as many Instagram videos, Reels, stories, photos, or MP3 audio as you want."
+            },
+            "limits": {
+                "q": "Are there any limits on the number of downloads?",
+                "a": "No. You can use our Instagram downloader to save unlimited videos, Reels, photos, stories, highlights, and audio files. Download as much as you need, completely free."
+            },
+            "software": {
+                "q": "Do I need to install any software to download Instagram videos?",
+                "a": "No. This Instagram Video Downloader is web-based, so you don't need to install any apps. Just copy the URL of the video, paste it into our tool, and click 'Download'."
+            },
+            "mobile": {
+                "q": "Can I download Instagram videos on my smartphone?",
+                "a": "Yes. Our Instagram Video Downloader works on mobile, tablet, and desktop browsers. Simply copy the video, Reels, or story URL, paste it into our tool, and download instantly."
+            },
+            "private": {
+                "q": "Can I download private Instagram videos?",
+                "a": "No. Only publicly accessible videos, Reels, stories, highlights, and photos are supported. Private content cannot be downloaded due to Instagram restrictions."
+            },
+            "storage": {
+                "q": "Do you store my videos or links?",
+                "a": "No. We respect your privacy. Downloaded files and URLs are never stored beyond the time needed to process your request."
+            }
+        },
+        "disclaimer": "This site is not affiliated with Instagram, Facebook, or Meta Platforms, Inc. Always follow platform rules and local laws while using our free Instagram downloader.",
+        "contactPrompt": "Still have questions?",
+        "contactLink": "Contact us",
+        "contactSuffix": "for help downloading Instagram videos, Reels, stories, photos, or MP3 audio."
+    },
+    "footer": {
+        "brand": "Social Video Downloader",
+        "description": "This tool was built to make it easier to save and organize your favorite public videos from social platforms.",
+        "legal": {
+            "title": "Legal",
+            "content": "This site is not affiliated with Instagram, Facebook, or Meta Platforms, Inc. Please respect copyrights and platform terms."
+        },
+        "follow": "Follow",
+        "copyright": "© 2025 Social Video Downloader By",
+        "allRights": ". All rights reserved."
+    },
+    "accessibility": {
+        "scrollToTop": "Scroll to top",
+        "toggleMenu": "Toggle menu",
+        "switchToLight": "Switch to light mode",
+        "switchToDark": "Switch to dark mode",
+        "selectLanguage": "Select language"
+    }
+}

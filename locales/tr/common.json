@@ -1,0 +1,242 @@
+{
+    "header": {
+        "siteName": "Anında Sosyal İndirici",
+        "platform": "Instagram",
+        "downloadNow": "Şimdi İndir",
+        "nav": {
+            "howItWorks": "Nasıl Çalışır",
+            "platforms": "Platformlar",
+            "benefits": "Avantajlar",
+            "faq": "SSS",
+            "compatibility": "Uyumluluk",
+            "useCases": "Kullanım Senaryoları",
+            "contact": "İletişim"
+        }
+    },
+    "hero": {
+        "title": "Instagram Video, Reels ve MP3 İndirici",
+        "subtitle": "Instagram videolarını, reels'leri ve ses (MP3) dosyalarını saniyeler içinde çevrimiçi indirin. Ücretsiz, hızlı, filigransız ve giriş gerektirmez.",
+        "description": "Herkese açık bir Instagram video veya reels bağlantısını yapıştırın; MP4 videosunu indirin veya MP3 sesini anında çıkarın."
+    },
+    "downloader": {
+        "urlLabel": "Instagram URL",
+        "placeholder": "Video bağlantınızı buraya yapıştırın...",
+        "paste": "Yapıştır",
+        "downloadVideo": "Video İndir",
+        "processing": "İşleniyor...",
+        "errors": {
+            "emptyUrl": "Lütfen bir Instagram URL'si girin",
+            "invalidUrl": "Geçersiz Instagram URL'si. Lütfen geçerli bir video, reels veya IGTV bağlantısı girin.",
+            "timeout": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin.",
+            "network": "Ağ hatası. Bağlantınızı kontrol edip tekrar deneyin.",
+            "server": "Sunucuya bağlanılamıyor. Lütfen daha sonra tekrar deneyin.",
+            "fetchFailed": "Video alınamadı. Lütfen tekrar deneyin.",
+            "noVideo": "Video bulunamadı. Bu bir görsel paylaşımı olabilir ya da video kullanılamıyor."
+        }
+    },
+    "videoResult": {
+        "videoReady": "Video Hazır",
+        "downloadMp4": "MP4 İndir",
+        "downloadMp3": "MP3 İndir (Sadece Ses)",
+        "downloading": "İndiriliyor...",
+        "converting": "Dönüştürülüyor & İndiriliyor...",
+        "downloadFailed": "İndirme başarısız. Lütfen tekrar deneyin.",
+        "downloadTimeout": "İndirme zaman aşımına uğradı. Lütfen tekrar deneyin."
+    },
+    "features": {
+        "instagram": {
+            "title": "Instagram İçeriğini Destekler",
+            "description": "Instagram videolarını, reels'leri ve IGTV'lerini çevrimiçi MP4 formatında indirin."
+        },
+        "quality": {
+            "title": "HD & Orijinal Kalite",
+            "description": "Instagram videolarını ve reels'lerini filigransız ve kalite kaybı olmadan HD olarak kaydedin."
+        },
+        "fast": {
+            "title": "Hızlı, Ücretsiz & Güvenli",
+            "description": "Giriş gerektirmeyen, izleme yapmayan ve veri saklamayan anında Instagram indirmeleri."
+        }
+    },
+    "heroFooter": {
+        "line1": "Bu araç yalnızca herkese açık Instagram gönderilerinden video, reels ve ses (MP3) indirmeyi destekler.",
+        "line2": "Özel veya kısıtlı içeriklere erişilemez."
+    },
+    "platforms": {
+        "eyebrow": "Platformlar",
+        "title": "Desteklenen Platformlar",
+        "subtitle": "Popüler sosyal platformlardan videoları, reels'leri ve sesleri hızlı ve güvenli bir şekilde indirin.",
+        "instagram": {
+            "name": "Instagram",
+            "description": "Herkese açık Instagram videolarını, reels'leri, IGTV'lerini ve ses (MP3) dosyalarını anında ve HD kalitede indirin.",
+            "status": "Canlı"
+        },
+        "facebook": {
+            "name": "Facebook",
+            "description": "Facebook video indirici desteği yakında gelecek; Shorts ve tam uzunlukta videolar dahil.",
+            "status": "Yakında"
+        },
+        "youtube": {
+            "name": "YouTube",
+            "description": "YouTube video indirici desteği yakında gelecek; Shorts ve tam uzunlukta videolar için.",
+            "status": "Yakında"
+        },
+        "footer": "Bu sayfayı yer imlerine ekleyin veya yakında tekrar kontrol edin; yeni platformlar eklendikçe daha fazla video, reels ve MP3 ses indirebileceksiniz."
+    },
+    "howItWorks": {
+        "eyebrow": "Nasıl Çalışır",
+        "title": "Nasıl Çalışır",
+        "subtitle": "Instagram videolarını, Reels'lerini, fotoğraflarını ve MP3 seslerini üç basit adımda indirin.",
+        "step1": {
+            "step": "Adım 1",
+            "title": "Bağlantıyı Yapıştır",
+            "description": "Instagram video, Reels, fotoğraf veya MP3 ses URL'sini kopyalayın ve sayfanın üst kısmındaki kutuya yapıştırın."
+        },
+        "step2": {
+            "step": "Adım 2",
+            "title": "Önizleme & Kalite Seçimi",
+            "description": "İçeriği getiriyoruz ve destekleniyorsa video, fotoğraf ve ses için mevcut kalite seçeneklerini gösteriyoruz."
+        },
+        "step3": {
+            "step": "Adım 3",
+            "title": "Anında İndir",
+            "description": "İndir düğmesine tıklayarak MP4 video veya MP3 ses dosyasını doğrudan cihazınıza kaydedin."
+        },
+        "tryItNow": "Şimdi Deneyin"
+    },
+    "whyChoose": {
+        "eyebrow": "Avantajlar",
+        "title": "Instagram İndiricimizi Neden Seçmelisiniz?",
+        "subtitle": "Videolar, Reels'ler, fotoğraflar ve MP3 sesler için hızlı, güvenli ve yüksek kaliteli indirmeler.",
+        "fast": {
+            "title": "Hızlı ve Güvenilir Instagram Video & Ses İndirmeleri",
+            "description": "Instagram videolarını, Reels'lerini, fotoğraflarını ve MP3 seslerini saniyeler içinde indirin. Altyapımız uzun HD kliplerde bile sorunsuz ve yüksek hızlı indirme sağlar."
+        },
+        "quality": {
+            "title": "Orijinal Kalite Koruma",
+            "description": "Instagram'ın izin verdiği durumlarda videoları ve sesleri orijinal çözünürlük ve netlikte tutun; HD ve 4K içerikler dahil."
+        },
+        "noLogin": {
+            "title": "Giriş Gerekmez",
+            "description": "Giriş yapmadan Instagram içeriğini güvenli bir şekilde indirin. Video, Reels veya ses bağlantısını yapıştırın ve anında indirmeye başlayın."
+        },
+        "privacy": {
+            "title": "Gizlilik Dostu & Güvenli",
+            "description": "İndirmelerinizi saklamıyor veya yapıştırdığınız bağlantıları izlemiyoruz; Instagram etkinliğiniz gizli kalır."
+        },
+        "footer": "Gizlilik detayları merak mı ediyorsunuz? Aşağıdaki SSS bölümünde güvenli Instagram video, Reels, fotoğraf ve MP3 ses indirme sürecimizin kısa bir özetini bulun."
+    },
+    "worksAnywhere": {
+        "eyebrow": "Uyumluluk",
+        "title": "Her Cihazda Instagram Video & MP3 Ses İndirin",
+        "subtitle": "Telefon, tablet veya masaüstünde sorunsuz oynatma ve hızlı indirme için indiricimizi kullanın.",
+        "description": "Tüm indirmeler MP4 video veya MP3 ses dosyası olarak kullanılabilir. Kameraya, dizüstü bilgisayara veya bulut depolamaya kaydedin ve istediğiniz zaman keyfini çıkarın.",
+        "features": {
+            "mobile": "Yolda hızlı video ve ses indirme için mobil uyumlu arayüz.",
+            "noApp": "Uygulama yüklemeye gerek yok — her şey tarayıcınızda çalışır.",
+            "saveDirect": "Doğrudan cihaz depolamasına veya tercih ettiğiniz klasöre kaydedin.",
+            "share": "İndirilen klipleri veya sesleri mesajlaşma uygulamalarına veya ekiplere tek dokunuşla kolayca paylaşın."
+        },
+        "openOnPhone": "Telefonunuzda açın",
+        "copyLink": "Paylaşmak için bağlantıyı kopyala",
+        "imageAlt": "Masaüstü, tablet ve mobil cihazlarda Instagram video ve MP3 ses indirmelerinin önizlemesi",
+        "footer": "Instagram video ve MP3 ses indirmelerinizin masaüstü, tablet ve mobilde nasıl göründüğünü izleyin — her yerde aynı basit arayüz."
+    },
+    "usageTips": {
+        "eyebrow": "Kullanım Senaryoları",
+        "title": "Instagram İndiricimizi Akıllıca Kullanma Yolları",
+        "subtitle": "Kişisel veya profesyonel kullanım için Instagram videolarını, Reels'lerini, fotoğraflarını ve MP3 seslerini indirmenin yaratıcı yollarını keşfedin.",
+        "saveOwn": {
+            "title": "Kendi Reels & Videolarınızı Kaydedin",
+            "description": "Kendi Instagram veya Facebook videolarınızı, Reels'lerinizi, fotoğraflarınızı ve MP3 seslerinizi düzenleme, arşivleme veya başka platformlara yeniden paylaşma için indirin."
+        },
+        "offline": {
+            "title": "Her Zaman Çevrimdışı İzleme",
+            "description": "Eğitim videolarını, egzersiz videolarını, Reels'leri veya müzikleri çevrimdışı kaydedin; mobil veri harcamadan izleyin veya dinleyin."
+        },
+        "share": {
+            "title": "Arkadaşlar & Ekiplerle Paylaşın",
+            "description": "Kampanyalar, tasarım ilhamı veya içerik beyin fırtınası için referans klipleri, Reels'leri, videoları veya MP3 sesleri ortak bir klasörde toplayın."
+        },
+        "library": {
+            "title": "İçerik İlhamı & Kütüphane",
+            "description": "Sonraki paylaşımınız, pazarlama fikriniz veya yaratıcı projeniz için ilham verecek video, Reels, fotoğraf ve MP3 ses kliplerinden kişisel bir kütüphane oluşturun."
+        },
+        "footer": "Instagram videolarını, Reels'lerini, fotoğraflarını veya MP3 seslerini indirirken her zaman yaratıcıların telif haklarına ve platform kurallarına saygı gösterin."
+    },
+    "contact": {
+        "eyebrow": "İletişim",
+        "title": "Instagram İndirici Ekibimizle İletişime Geçin",
+        "subtitle": "Video, Reels, Hikaye veya Fotoğraf İndiricimiz hakkında soru, geri bildirim veya ticari sorgunuz mu var? Bize mesaj gönderin, hızlı yanıt vereceğiz.",
+        "form": {
+            "name": "Ad",
+            "namePlaceholder": "Tam adınız",
+            "email": "E-posta",
+            "emailPlaceholder": "siz@ornek.com",
+            "message": "Mesaj",
+            "messagePlaceholder": "Instagram Video, Reels, Hikaye veya Fotoğraf İndirici hakkında sorunuzu veya geri bildiriminizi yazın…",
+            "send": "Mesaj Gönder",
+            "responseTime": "Genellikle 1–2 iş günü içinde yanıt veririz."
+        },
+        "info": {
+            "title": "Instagram İndirici için Destek & Geri Bildirim",
+            "description": "Video İndirici, Reels İndirici, Hikaye Kaydedici, Öne Çıkanlar İndirici veya Fotoğraf İndirici ile ilgili sorular, özellik istekleri veya ticari ortaklıklar için bu iletişim formunu kullanın. Teknik sorunlar için URL veya platform detaylarını ekleyin.",
+            "privacy": "Asla parola veya hassas kişisel bilgi paylaşmayın. Sosyal medya giriş bilgilerini talep etmiyoruz.",
+            "support": "Destek ekibimiz genellikle 24–48 saat içinde yanıt verir. Instagram video, Reels veya hikaye indirmeleri için daha hızlı yardım almak adına net detaylar verin."
+        }
+    },
+    "faq": {
+        "eyebrow": "SSS",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Instagram videoları, Reels'leri, hikayeleri, öne çıkanları, fotoğrafları ve MP3 seslerini indirme hakkında hızlı cevaplar.",
+        "show": "Göster",
+        "hide": "Gizle",
+        "questions": {
+            "free": {
+                "q": "Instagram Video İndirici ücretsiz mi?",
+                "a": "Evet. Instagram Video İndiricimiz tamamen ücretsizdir. Gizli ücret yok; istediğiniz kadar Instagram videosu, Reels'i, hikayesi, fotoğrafı veya MP3 sesini indirebilirsiniz."
+            },
+            "limits": {
+                "q": "İndirme sayısında sınır var mı?",
+                "a": "Hayır. Instagram indiricimizi kullanarak sınırsız video, Reels, fotoğraf, hikaye, öne çıkan ve ses dosyası kaydedebilirsiniz. İhtiyacınız kadar indirin, tamamen ücretsiz."
+            },
+            "software": {
+                "q": "Instagram videolarını indirmek için yazılım yüklemem gerekir mi?",
+                "a": "Hayır. Bu Instagram Video İndirici web tabanlıdır, uygulama yüklemenize gerek yok. Video URL'sini kopyalayın, aracımıza yapıştırın ve 'İndir'e tıklayın."
+            },
+            "mobile": {
+                "q": "Akıllı telefonumda Instagram videolarını indirebilir miyim?",
+                "a": "Evet. Instagram Video İndiricimiz mobil, tablet ve masaüstü tarayıcılarda çalışır. Video, Reels veya hikaye URL'sini kopyalayın, aracımıza yapıştırın ve anında indirin."
+            },
+            "private": {
+                "q": "Özel Instagram videolarını indirebilir miyim?",
+                "a": "Hayır. Yalnızca herkese açık videolar, Reels'ler, hikayeler, öne çıkanlar ve fotoğraflar desteklenir. Instagram kısıtlamaları nedeniyle özel içerik indirilemez."
+            },
+            "storage": {
+                "q": "Videolarımı veya bağlantılarımı saklıyor musunuz?",
+                "a": "Hayır. Gizliliğinize saygı duyuyoruz. İndirilen dosyalar ve URL'ler isteğinizi işlemek için gereken süreden fazla saklanmaz."
+            }
+        },
+        "disclaimer": "Bu site Instagram, Facebook veya Meta Platforms, Inc. ile ilişkili değildir. Ücretsiz Instagram indiricimizi kullanırken her zaman platform kurallarına ve yerel yasalara uyun.",
+        "contactPrompt": "Hâlâ sorunuz mu var?",
+        "contactLink": "Bize Ulaşın",
+        "contactSuffix": "Instagram videoları, Reels'leri, hikayeleri, fotoğrafları veya MP3 seslerini indirme konusunda yardım için."
+    },
+    "footer": {
+        "brand": "Sosyal Video İndirici",
+        "description": "Bu araç, sosyal platformlardaki favori herkese açık videolarınızı kaydetmeyi ve düzenlemeyi kolaylaştırmak için oluşturuldu.",
+        "legal": {
+            "title": "Yasal",
+            "content": "Bu site Instagram, Facebook veya Meta Platforms, Inc. ile ilişkili değildir. Telif haklarına ve platform şartlarına saygı gösterin."
+        },
+        "follow": "Takip Et",
+        "copyright": "© 2025 Sosyal Video İndirici Tarafından",
+        "allRights": ". Tüm hakları saklıdır."
+    },
+    "accessibility": {
+        "scrollToTop": "Yukarı kaydır",
+        "toggleMenu": "Menüyü aç/kapat",
+        "switchToLight": "Açık moda geç",
+        "switchToDark": "Koyu moda geç",
+        "selectLanguage": "Dil seç"
+    }
+}

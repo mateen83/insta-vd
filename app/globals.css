@@ -2,14 +2,34 @@
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
+/* RTL Support for Arabic */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .rtl\:space-x-reverse> :not([hidden])~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
 /* Light theme (default) */
 :root {
   /* Page background: light mode */
-  --background: oklch(0.98 0.005 260); /* soft off-white */
-  --foreground: oklch(0.15 0.02 260); /* dark text */
+  --background: oklch(0.98 0.005 260);
+  /* soft off-white */
+  --foreground: oklch(0.15 0.02 260);
+  /* dark text */
 
   /* Cards / big panels */
-  --card: oklch(1 0 0); /* white card */
+  --card: oklch(1 0 0);
+  /* white card */
   --card-foreground: var(--foreground);
 
   /* Small popovers / tooltips */
@@ -17,8 +37,10 @@
   --popover-foreground: var(--foreground);
 
   /* Instagram gradient accent (pink) */
-  --primary: oklch(0.60 0.24 0); /* Instagram pink */
-  --primary-foreground: oklch(0.98 0.01 0); /* white text on primary */
+  --primary: oklch(0.60 0.24 0);
+  /* Instagram pink */
+  --primary-foreground: oklch(0.98 0.01 0);
+  /* white text on primary */
 
   /* Section backgrounds */
   --secondary: oklch(0.96 0.005 260);
@@ -38,10 +60,12 @@
   /* Borders */
   --border: oklch(0.88 0.01 260);
   --input: oklch(0.96 0.005 260);
-  --ring: oklch(0.60 0.24 0); /* Instagram pink focus ring */
+  --ring: oklch(0.60 0.24 0);
+  /* Instagram pink focus ring */
 
   /* Charts */
-  --chart-1: oklch(0.60 0.24 0); /* pink */
+  --chart-1: oklch(0.60 0.24 0);
+  /* pink */
   --chart-2: oklch(0.65 0.20 10);
   --chart-3: oklch(0.55 0.08 260);
   --chart-4: oklch(0.60 0.12 230);
@@ -60,7 +84,7 @@
   --sidebar-ring: var(--ring);
 
   /* Section gradient for light mode */
-  --section-gradient: radial-gradient(circle at 0% 0%, oklch(0.90 0.04 260 / 0.45), transparent 60%), radial-gradient(circle at 100% 0%, oklch(0.60 0.24 0 / 0.20), transparent 55%), radial-gradient(circle at 50% 100%,oklch(0.88 0.04 260 / 0.40), transparent 60%);
+  --section-gradient: radial-gradient(circle at 0% 0%, oklch(0.90 0.04 260 / 0.45), transparent 60%), radial-gradient(circle at 100% 0%, oklch(0.60 0.24 0 / 0.20), transparent 55%), radial-gradient(circle at 50% 100%, oklch(0.88 0.04 260 / 0.40), transparent 60%);
 }
 
 /* Dark theme */
@@ -78,7 +102,8 @@
   --popover-foreground: var(--foreground);
 
   /* Primary */
-  --primary: oklch(0.68 0.23 0); /* Instagram pink */
+  --primary: oklch(0.68 0.23 0);
+  /* Instagram pink */
   --primary-foreground: oklch(0.98 0.01 0);
 
   /* Secondary */
@@ -119,7 +144,7 @@
   --sidebar-ring: var(--ring);
 
   /* Section gradient for dark mode */
-  --section-gradient: radial-gradient(circle at 0% 0%, oklch(0.30 0.05 260 / 0.75), transparent 60%), radial-gradient(circle at 100% 0%, oklch(0.65 0.22 0 / 0.40), transparent 55%), radial-gradient(circle at 50% 100%,oklch(0.26 0.05 260 / 0.60), transparent 60%);
+  --section-gradient: radial-gradient(circle at 0% 0%, oklch(0.30 0.05 260 / 0.75), transparent 60%), radial-gradient(circle at 100% 0%, oklch(0.65 0.22 0 / 0.40), transparent 55%), radial-gradient(circle at 50% 100%, oklch(0.26 0.05 260 / 0.60), transparent 60%);
 }
 
 @theme inline {
@@ -180,6 +205,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

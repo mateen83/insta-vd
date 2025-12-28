@@ -22,6 +22,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { VideoResult } from "@/components/video-result"
+import { useTranslation } from "@/components/language-context"
+import { LanguageSwitcher, LanguageSwitcherCompact } from "@/components/language-switcher"
 
 interface VideoData {
   success: boolean
@@ -41,15 +43,16 @@ export function VideoDownloader() {
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+  const { t } = useTranslation()
 
   const navItems = [
-    { label: "How it works", href: "#how-it-works" },
-    { label: "Platforms", href: "#supported-platforms" },
-    { label: "Benefits", href: "#why-choose" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Compatibility", href: "#works-anywhere" },
-    { label: "Use cases", href: "#usage-tips" },
-    { label: "Contact", href: "#contact" }
+    { label: t('header.nav.howItWorks'), href: "#how-it-works" },
+    { label: t('header.nav.platforms'), href: "#supported-platforms" },
+    { label: t('header.nav.benefits'), href: "#why-choose" },
+    { label: t('header.nav.faq'), href: "#faq" },
+    { label: t('header.nav.compatibility'), href: "#works-anywhere" },
+    { label: t('header.nav.useCases'), href: "#usage-tips" },
+    { label: t('header.nav.contact'), href: "#contact" }
 
   ]
 
@@ -198,9 +201,9 @@ export function VideoDownloader() {
           <div className="flex items-center gap-3">
             <div>
               <p className="text-sm font-semibold text-foreground tracking-tight">
-                Instant Social Downloader
+                {t('header.siteName')}
               </p>
-              <p className="text-xs text-muted-foreground">Instagram</p>
+              <p className="text-xs text-muted-foreground">{t('header.platform')}</p>
             </div>
           </div>
 
@@ -218,12 +221,14 @@ export function VideoDownloader() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
+            {/* Language Switcher */}
+            <LanguageSwitcher />
             {/* Theme Toggle Button */}
             <button
               type="button"
               onClick={toggleTheme}
               className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
-              aria-label={mounted && theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={mounted && theme === 'dark' ? t('accessibility.switchToLight') : t('accessibility.switchToDark')}
             >
               {mounted && theme === 'dark' ? (
                 <Sun className="h-5 w-5" />
@@ -236,17 +241,19 @@ export function VideoDownloader() {
               onClick={(e) => handleSmoothScroll(e, '#video-downloader-hero')}
               className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground cursor-pointer"
             >
-              Download now
+              {t('header.downloadNow')}
             </a>
           </div>
 
           <div className="flex items-center gap-2 min-[900px]:hidden">
+            {/* Language Switcher (Mobile) */}
+            <LanguageSwitcherCompact />
             {/* Theme Toggle Button (Mobile) */}
             <button
               type="button"
               onClick={toggleTheme}
               className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-              aria-label={mounted && theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={mounted && theme === 'dark' ? t('accessibility.switchToLight') : t('accessibility.switchToDark')}
             >
               {mounted && theme === 'dark' ? (
                 <Sun className="h-5 w-5" />
@@ -257,7 +264,7 @@ export function VideoDownloader() {
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground"
-              aria-label="Toggle menu"
+              aria-label={t('accessibility.toggleMenu')}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((prev) => !prev)}
             >
@@ -283,7 +290,7 @@ export function VideoDownloader() {
               onClick={(e) => handleSmoothScroll(e, '#video-downloader-hero')}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground cursor-pointer"
             >
-              Download now
+              {t('header.downloadNow')}
             </a>
           </div>
         )}
@@ -302,16 +309,15 @@ export function VideoDownloader() {
         </div>
 
         <h1 className="text-3xl font-bold text-foreground tracking-tight md:text-4xl lg:text-5xl">
-          Instagram Video, Reels & MP3 Downloader
+          {t('hero.title')}
         </h1>
 
         <p className="mt-4 text-base text-muted-foreground md:text-lg">
-          Download Instagram videos, reels, and audio (MP3) online in seconds. Free, fast,
-          no watermark, and no login required.
+          {t('hero.subtitle')}
         </p>
 
         <p className="mt-2 text-xs text-muted-foreground">
-          Paste a public Instagram video or reel link to download MP4 video or extract MP3 audio instantly.
+          {t('hero.description')}
         </p>
       </div>
 
@@ -322,13 +328,13 @@ export function VideoDownloader() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="url" className="text-sm font-medium text-foreground">
-                Instagram URL
+                {t('downloader.urlLabel')}
               </label>
               <div className="relative">
                 <Input
                   id="url"
                   type="text"
-                  placeholder="Paste your video link here..."
+                  placeholder={t('downloader.placeholder')}
                   value={url}
                   onChange={(e) => {
                     setUrl(e.target.value)
@@ -343,7 +349,7 @@ export function VideoDownloader() {
                   onClick={handlePaste}
                   className="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-medium text-primary hover:text-primary/80 px-2 py-1 rounded transition-colors"
                 >
-                  Paste
+                  {t('downloader.paste')}
                 </button>
               </div>
             </div>
@@ -356,12 +362,12 @@ export function VideoDownloader() {
               {loading ? (
                 <>
                   <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                  Processing...
+                  {t('downloader.processing')}
                 </>
               ) : (
                 <>
                   <Download className="w-5 h-5 mr-2" />
-                  Download Video
+                  {t('downloader.downloadVideo')}
                 </>
               )}
             </Button>
@@ -384,20 +390,20 @@ export function VideoDownloader() {
       <div className="mt-12 grid grid-cols-1 gap-6 w-full max-w-3xl md:grid-cols-3">
         <FeatureCard
           icon={<Video className="w-5 h-5" role="img" aria-label="Instagram video and reels downloader support" />}
-          title="Supports Instagram Content"
-          description="Download Instagram videos, reels, and IGTV online in MP4 format."
+          title={t('features.instagram.title')}
+          description={t('features.instagram.description')}
         />
 
         <FeatureCard
           icon={<CheckCircle2 className="w-5 h-5" role="img" aria-label="High quality Instagram video downloader" />}
-          title="HD & Original Quality"
-          description="Save Instagram videos and reels in HD without watermark or quality loss."
+          title={t('features.quality.title')}
+          description={t('features.quality.description')}
         />
 
         <FeatureCard
           icon={<FileVideo className="w-5 h-5" role="img" aria-label="Fast and secure Instagram downloader" />}
-          title="Fast, Free & Secure"
-          description="Instant Instagram downloads with no login, no tracking, and no data storage."
+          title={t('features.fast.title')}
+          description={t('features.fast.description')}
         />
       </div>
 
@@ -405,10 +411,10 @@ export function VideoDownloader() {
       <footer className="mt-16 text-center text-sm text-muted-foreground w-full">
         <p className="flex flex-col sm:flex-row justify-center gap-1">
           <span>
-            This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only.
+            {t('heroFooter.line1')}
           </span>
           <span>
-            Private or restricted content cannot be accessed.
+            {t('heroFooter.line2')}
           </span>
         </p>
       </footer>
@@ -420,7 +426,7 @@ export function VideoDownloader() {
         <button
           onClick={scrollToTop}
           className="fixed bottom-5 right-5 z-50 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-110 active:scale-95 cursor-pointer"
-          aria-label="Scroll to top"
+          aria-label={t('accessibility.scrollToTop')}
         >
           <ArrowUp className="h-4 w-4" />
         </button>
