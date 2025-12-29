@@ -452,5 +452,6 @@ function FeatureCard({
       <h2 className="font-medium text-foreground mb-1">{title}</h2>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
+    
   )
 }
