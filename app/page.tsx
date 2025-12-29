@@ -611,10 +611,10 @@ function AppFooterSection() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 md:flex-row md:items-start md:justify-between  ">
         <div className="space-y-3 md:max-w-sm">
           <div className="inline-flex items-center rounded-full ">
-            <span className="h-2 w-2 rounded-full " />
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
+            {/* <span className="h-2 w-2 rounded-full " /> */}
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
               {t('footer.brand')}
-            </span>
+            </h3>
           </div>
           <p className="text-sm text-muted-foreground">
             {t('footer.description')}
@@ -660,13 +660,13 @@ function AppFooterSection() {
       {/* Bottom copyright row (no extra styling added) */}
       <div className="border-t border-border/60">
         <div className="mx-auto w-full max-w-5xl px-4 py-4">
-          <p className="text-center text-xs text-muted-foreground">
+          <p className="text-center text-xs text-foreground">
             {t('footer.copyright')}{" "}
             <a
               href="https://www.linkedin.com/in/abdul-mateen-5b6197261/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-primary hover:underline"
             >
               Abdul Mateen
             </a>

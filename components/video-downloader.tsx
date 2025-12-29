@@ -449,7 +449,7 @@ function FeatureCard({
       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
         {icon}
       </div>
-      <h3 className="font-medium text-foreground mb-1">{title}</h3>
+      <h2 className="font-medium text-foreground mb-1">{title}</h2>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   )
