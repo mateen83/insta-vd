@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { VideoDownloader } from "@/components/video-downloader"
-import { Link2, Eye, Download, Zap, MonitorPlay, KeyRound, Shield, Instagram, Facebook, Youtube, Twitter } from "lucide-react"
+import { Link2, Eye, Download, Zap, MonitorPlay, KeyRound, Shield, FileVideo, Instagram, Save, Facebook, Youtube, Twitter, SlidersHorizontal, MousePointerClick, HardDriveDownload, ClipboardCheck, Copy, Music, Image as LucideImage, Tv, Layers, CheckCircle2, Smartphone, ShieldCheck, UserMinus, Gauge, BadgeCheck } from "lucide-react"
 import { useTranslation } from "@/components/language-context"
 
 
@@ -18,8 +18,11 @@ export default function Home() {
       <SupportedPlatformsSection />
       <HowItWorksSection />
       <WorksOnAnyDeviceSection />
+      <AboutSection />
       <WhyChooseSection />
       <UsageTipsSection />
+      <KeyFeaturesSection />
+      <SafetySection />
       <ContactSection />
       <FaqSection />
       <AppFooterSection />
@@ -95,19 +98,31 @@ function HowItWorksSection() {
               step: t('howItWorks.step1.step'),
               title: t('howItWorks.step1.title'),
               description: t('howItWorks.step1.description'),
-              icon: Link2,
+              icon: Copy,
             },
             {
               step: t('howItWorks.step2.step'),
               title: t('howItWorks.step2.title'),
               description: t('howItWorks.step2.description'),
-              icon: Eye,
+              icon: ClipboardCheck,
             },
             {
               step: t('howItWorks.step3.step'),
               title: t('howItWorks.step3.title'),
               description: t('howItWorks.step3.description'),
-              icon: Download,
+              icon: SlidersHorizontal,
+            },
+            {
+              step: t('howItWorks.step4.step'),
+              title: t('howItWorks.step4.title'),
+              description: t('howItWorks.step4.description'),
+              icon: MousePointerClick,
+            },
+            {
+              step: t('howItWorks.step5.step'),
+              title: t('howItWorks.step5.title'),
+              description: t('howItWorks.step5.description'),
+              icon: HardDriveDownload,
             },
           ].map((item) => (
             <div
@@ -220,6 +235,70 @@ function SupportedPlatformsSection() {
   )
 }
 
+function AboutSection() {
+  const { t } = useTranslation()
+
+  const items = [
+    {
+      title: t("aboutSection.step.title"),
+      description: t("aboutSection.step.description"),
+      icon: MousePointerClick,
+    },
+    {
+      title: t("aboutSection.quality.title"),
+      description: t("aboutSection.quality.description"),
+      icon: CheckCircle2,
+    },
+    {
+      title: t("aboutSection.secure.title"),
+      description: t("aboutSection.secure.description"),
+      icon: Shield,
+    },
+    {
+      title: t("aboutSection.conclusion.title"),
+      description: t("aboutSection.conclusion.description"),
+      icon: Layers,
+    },
+  ]
+
+  return (
+    <div
+      id="about-platform"
+      className="relative overflow-hidden
+        bg-[radial-gradient(1000px_450px_at_50%_50%,rgba(99,102,241,0.1),rgba(0,0,0,0)_65%)]
+        before:content-[''] before:absolute before:inset-0 before:pointer-events-none
+        before:bg-[radial-gradient(600px_600px_at_85%_65%,rgba(168,85,247,0.08),rgba(0,0,0,0)_75%)]
+        after:content-[''] after:absolute after:inset-0 after:pointer-events-none
+        after:bg-[radial-gradient(650px_650px_at_15%_35%,rgba(99,102,241,0.06),rgba(0,0,0,0)_80%)]"
+    >
+      <SectionWrapper>
+        <SectionHeader eyebrow={t("aboutSection.eyebrow")} title={t("aboutSection.title")} subtitle={t("aboutSection.intro")} />
+
+        <div className="grid gap-6 sm:grid-cols-2">
+          {items.map((item, idx) => (
+            <div
+              key={idx}
+              className="group flex flex-col gap-4 rounded-2xl border border-border/60 bg-card/60 p-6 shadow-sm transition hover:border-primary/50"
+            >
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <item.icon className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+    </div>
+  )
+}
+
 function WhyChooseSection() {
   const { t } = useTranslation()
 
@@ -267,18 +346,18 @@ function WhyChooseSection() {
           {benefits.map((b) => (
             <div
               key={b.title}
-              className="flex gap-4 rounded-2xl border border-border/60 bg-card/60 p-5"
+              className="flex flex-col gap-4 rounded-2xl border border-border/60 bg-card/60 p-5 shadow-sm transition hover:border-primary/40"
               aria-label={b.title}
             >
               <div
-                className="mt-1 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
+                className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
                 aria-hidden="true"
               >
                 <b.icon className="h-5 w-5" />
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-foreground md:text-base">{b.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{b.description}</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{b.description}</p>
               </div>
             </div>
           ))}
@@ -426,6 +505,139 @@ function UsageTipsSection() {
   );
 }
 
+function KeyFeaturesSection() {
+  const { t } = useTranslation()
+
+  const features = [
+    {
+      title: t("keyFeatures.videoHD.title"),
+      description: t("keyFeatures.videoHD.description"),
+      icon: MonitorPlay,
+    },
+    {
+      title: t("keyFeatures.reels.title"),
+      description: t("keyFeatures.reels.description"),
+      icon: Instagram,
+    },
+    {
+      title: t("keyFeatures.mp3.title"),
+      description: t("keyFeatures.mp3.description"),
+      icon: Music,
+    },
+    {
+      title: t("keyFeatures.photo.title"),
+      description: t("keyFeatures.photo.description"),
+      icon: LucideImage,
+    },
+    {
+      title: t("keyFeatures.igtv.title"),
+      description: t("keyFeatures.igtv.description"),
+      icon: Tv,
+    },
+    {
+      title: t("keyFeatures.carousel.title"),
+      description: t("keyFeatures.carousel.description"),
+      icon: Layers,
+    },
+    {
+      title: t("keyFeatures.speed.title"),
+      description: t("keyFeatures.speed.description"),
+      icon: Gauge,
+    },
+    {
+      title: t("keyFeatures.safe.title"),
+      description: t("keyFeatures.safe.description"),
+      icon: ShieldCheck,
+    },
+    {
+      title: t("keyFeatures.noLogin.title"),
+      description: t("keyFeatures.noLogin.description"),
+      icon: UserMinus,
+    },
+    {
+      title: t("keyFeatures.devices.title"),
+      description: t("keyFeatures.devices.description"),
+      icon: Smartphone,
+    },
+  ]
+
+  return (
+    <div
+      id="key-features"
+      className="relative overflow-hidden
+        bg-[radial-gradient(1000px_450px_at_50%_50%,rgba(59,130,246,0.1),rgba(0,0,0,0)_65%)]
+        before:content-[''] before:absolute before:inset-0 before:pointer-events-none
+        before:bg-[radial-gradient(600px_600px_at_15%_65%,rgba(99,102,241,0.08),rgba(0,0,0,0)_75%)]
+        after:content-[''] after:absolute after:inset-0 after:pointer-events-none
+        after:bg-[radial-gradient(650px_650px_at_85%_35%,rgba(236,72,153,0.06),rgba(0,0,0,0)_80%)]"
+    >
+      <SectionWrapper>
+        <SectionHeader eyebrow={t("keyFeatures.eyebrow")} title={t("keyFeatures.title")} subtitle={t("keyFeatures.subtitle")} />
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, idx) => (
+            <div
+              key={idx}
+              className="group flex flex-col rounded-2xl border border-border/60 bg-card/60 p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
+            >
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <feature.icon className="h-5 w-5" />
+              </div>
+              <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+                {feature.title}
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+    </div>
+  )
+}
+
+function SafetySection() {
+  const { t } = useTranslation()
+
+  return (
+    <div
+      id="safety"
+      className="relative overflow-hidden
+        bg-[radial-gradient(1000px_450px_at_50%_50%,rgba(16,185,129,0.1),rgba(0,0,0,0)_65%)]
+        before:content-[''] before:absolute before:inset-0 before:pointer-events-none
+        before:bg-[radial-gradient(600px_600px_at_15%_65%,rgba(5,150,105,0.08),rgba(0,0,0,0)_75%)]
+        after:content-[''] after:absolute after:inset-0 after:pointer-events-none
+        after:bg-[radial-gradient(650px_650px_at_85%_35%,rgba(16,185,129,0.06),rgba(0,0,0,0)_80%)]"
+    >
+      <SectionWrapper>
+        <SectionHeader eyebrow={t("safety.eyebrow")} title={t("safety.title")} subtitle={t("safety.subtitle")} />
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {[
+            { content: t("safety.content1"), icon: ShieldCheck },
+            { content: t("safety.content2"), icon: BadgeCheck },
+            { content: t("safety.content3"), icon: Smartphone },
+            { content: t("safety.content4"), icon: Zap },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col gap-4 rounded-2xl border border-border/60 bg-card/60 p-6 shadow-sm transition hover:border-primary/40"
+            >
+              <div className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <item.icon className="h-5 w-5" />
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {item.content}
+              </p>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+    </div>
+  )
+}
+
 function ContactSection() {
   const { t } = useTranslation()
 
@@ -547,6 +759,58 @@ function FaqSection() {
     {
       q: t('faq.questions.storage.q'),
       a: t('faq.questions.storage.a'),
+    },
+    {
+      q: t('faq.questions.storage1.q'),
+      a: t('faq.questions.storage1.a'),
+    },
+    {
+      q: t('faq.questions.storage2.q'),
+      a: t('faq.questions.storage2.a'),
+    },
+    {
+      q: t('faq.questions.storage3.q'),
+      a: t('faq.questions.storage3.a'),
+    },
+    {
+      q: t('faq.questions.storage4.q'),
+      a: t('faq.questions.storage4.a'),
+    },
+    {
+      q: t('faq.questions.storage5.q'),
+      a: t('faq.questions.storage5.a'),
+    },
+    {
+      q: t('faq.questions.storage6.q'),
+      a: t('faq.questions.storage6.a'),
+    },
+    {
+      q: t('faq.questions.storage7.q'),
+      a: t('faq.questions.storage7.a'),
+    },
+    {
+      q: t('faq.questions.storage8.q'),
+      a: t('faq.questions.storage8.a'),
+    },
+    {
+      q: t('faq.questions.storage9.q'),
+      a: t('faq.questions.storage9.a'),
+    },
+    {
+      q: t('faq.questions.storage10.q'),
+      a: t('faq.questions.storage10.a'),
+    },
+    {
+      q: t('faq.questions.storage11.q'),
+      a: t('faq.questions.storage11.a'),
+    },
+    {
+      q: t('faq.questions.storage12.q'),
+      a: t('faq.questions.storage12.a'),
+    },
+    {
+      q: t('faq.questions.storage13.q'),
+      a: t('faq.questions.storage13.a'),
     },
   ];
 

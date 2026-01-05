@@ -308,7 +308,7 @@ export function VideoDownloader() {
           </div>
         </div>
 
-        <h1 className="text-3xl font-bold text-foreground tracking-tight md:text-4xl lg:text-5xl">
+        <h1 className="text-2xl font-bold text-foreground tracking-tight md:text-3xl lg:text-4xl">
           {t('hero.title')}
         </h1>
 
@@ -408,16 +408,14 @@ export function VideoDownloader() {
       </div>
 
       {/* Footer */}
-      <footer className="mt-16 text-center text-sm text-muted-foreground w-full">
-        <p className="flex flex-col sm:flex-row justify-center gap-1">
-          <span>
-            {t('heroFooter.line1')}
-          </span>
-          <span>
-            {t('heroFooter.line2')}
-          </span>
-        </p>
-      </footer>
+      <footer className="mt-16 flex justify-center">
+  <div className="max-w-3xl rounded-lg  border-border bg-card  px-6 py-4 text-center text-sm text-muted-foreground shadow-sm">
+    <p className="flex flex-col sm:flex-row justify-center gap-1">
+      <span>{t('heroFooter.line1')}</span>
+    </p>
+  </div>
+</footer>
+
 
 
 

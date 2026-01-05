@@ -11,9 +11,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 // <CHANGE> Updated metadata for Instagram Video Downloader
 export const metadata: Metadata = {
-  title: "Instagram Video Downloader - Download Reels & Videos",
+  title: "Download Instagram Videos, Reel, Photos, IGTV, carousel MP3",
   description:
-    "Download Instagram videos, reels, and IGTV content for free. Fast, secure, and easy to use.",
+    "Download Instagram videos & reels, save ig photos, IGTV, carousel, and convert Insta videos to MP3. Free, HD quality, no login required, and works on all devices.",
   generator: "Social video downloader",
   icons: {
     icon: "/fav-icon.png",
