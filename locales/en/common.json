@@ -31,7 +31,7 @@
             "network": "Network error. Please check your connection and try again.",
             "server": "Unable to connect to server. Please try again later.",
             "fetchFailed": "Failed to fetch video. Please try again.",
-            "noVideo": "No video found. This might be an image post or the video is unavailable."
+            "noVideo": "No video found This might be an image post or the video is unavailable."
         }
     },
     "videoResult": {
