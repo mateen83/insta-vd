@@ -1,6 +1,6 @@
 {
     "header": {
-        "siteName": "Descargador Social Instantáneo",
+        "siteName": "DownloadTrend",
         "platform": "Instagram",
         "downloadNow": "Descargar ahora",
         "nav": {
@@ -14,229 +14,434 @@
         }
     },
     "hero": {
-        "title": "Descargador de Videos, Reels y MP3 de Instagram",
-        "subtitle": "Descarga videos, reels y audio (MP3) de Instagram en segundos. Gratis, rápido, sin marca de agua y sin necesidad de iniciar sesión.",
-        "description": "Pega un enlace público de video o reel de Instagram para descargar video MP4 o extraer audio MP3 al instante."
+        "title": "Descargar videos de Instagram, Reels, guardar fotos, IGTV, Carousels, MP3",
+        "subtitle": "Descarga videos de Instagram, Reels y audio (MP3) en línea en segundos. Gratis, rápido, sin marca de agua y sin necesidad de iniciar sesión.",
+        "description": "Pega un enlace público de video o Reel de Instagram para descargar video MP4 o extraer audio MP3 al instante."
     },
     "downloader": {
         "urlLabel": "URL de Instagram",
         "placeholder": "Pega tu enlace de video aquí...",
         "paste": "Pegar",
-        "downloadVideo": "Descargar Video",
+        "downloadVideo": "Descargar video",
         "processing": "Procesando...",
         "errors": {
             "emptyUrl": "Por favor ingresa una URL de Instagram",
-            "invalidUrl": "URL de Instagram inválida. Por favor ingresa un enlace válido de video, reel o IGTV.",
-            "timeout": "La solicitud expiró. Por favor intenta de nuevo.",
-            "network": "Error de red. Por favor verifica tu conexión e intenta de nuevo.",
-            "server": "No se puede conectar al servidor. Por favor intenta más tarde.",
-            "fetchFailed": "Error al obtener el video. Por favor intenta de nuevo.",
-            "noVideo": "No se encontró video. Puede ser una publicación de imagen o el video no está disponible."
+            "invalidUrl": "URL de Instagram inválida. Por favor ingresa un enlace de video, Reel o IGTV válido.",
+            "timeout": "La solicitud ha expirado. Por favor inténtalo de nuevo.",
+            "network": "Error de red. Por favor verifica tu conexión e inténtalo de nuevo.",
+            "server": "No se pudo conectar al servidor. Por favor inténtalo más tarde.",
+            "fetchFailed": "No se pudo obtener el video. Por favor inténtalo de nuevo.",
+            "noVideo": "No se encontró video. Esto podría ser una publicación de imagen o el video no está disponible."
         }
     },
     "videoResult": {
-        "videoReady": "Video Listo",
+        "videoReady": "Video listo",
         "downloadMp4": "Descargar MP4",
-        "downloadMp3": "Descargar MP3 (Solo Audio)",
+        "downloadMp3": "Descargar MP3 (Solo audio)",
         "downloading": "Descargando...",
-        "converting": "Convirtiendo y Descargando...",
-        "downloadFailed": "Descarga fallida. Por favor intenta de nuevo.",
-        "downloadTimeout": "La descarga expiró. Por favor intenta de nuevo."
+        "converting": "Convirtiendo y descargando...",
+        "downloadFailed": "La descarga falló. Por favor inténtalo de nuevo.",
+        "downloadTimeout": "La descarga ha expirado. Por favor inténtalo de nuevo."
     },
     "features": {
         "instagram": {
-            "title": "Soporta Contenido de Instagram",
-            "description": "Descarga videos, reels e IGTV de Instagram en formato MP4."
+            "title": "Soporta contenido de Instagram",
+            "description": "Descarga videos de Instagram, Reels e IGTV en línea en formato MP4."
         },
         "quality": {
-            "title": "Calidad HD y Original",
-            "description": "Guarda videos y reels de Instagram en HD sin marca de agua ni pérdida de calidad."
+            "title": "Calidad HD y original",
+            "description": "Guarda videos y Reels de Instagram en HD sin marca de agua ni pérdida de calidad."
         },
         "fast": {
-            "title": "Rápido, Gratis y Seguro",
-            "description": "Descargas instantáneas de Instagram sin inicio de sesión, sin rastreo y sin almacenamiento de datos."
+            "title": "Rápido, gratis y seguro",
+            "description": "Descargas instantáneas de Instagram sin inicio de sesión, sin seguimiento y sin almacenamiento de datos."
         }
     },
     "heroFooter": {
-        "line1": "Esta herramienta soporta la descarga de videos, reels y audio (MP3) solo de publicaciones públicas de Instagram.",
-        "line2": "El contenido privado o restringido no puede ser accedido."
+        "line1": "Descarga videos de Instagram, Reels y audio (MP3) en línea en segundos. Gratis, rápido, sin marca de agua y sin necesidad de iniciar sesión. Pega un enlace público de video o Reel de Instagram para descargar video MP4 o extraer audio MP3 al instante. Descargar videos, Reels, fotos o audio directamente desde Instagram no es posible, por lo que los usuarios necesitan una herramienta confiable de terceros.",
+        "line2": "Esta herramienta es un descargador de Instagram seguro, rápido y gratuito que te permite descargar videos de Instagram, guardar Reels y convertir videos de Instagram a MP3 sin ningún inicio de sesión o instalación de aplicación. Es una de las opciones más seguras para descargar contenido de Instagram porque no almacenamos ningún dato personal del usuario.",
+        "line3": "Nunca proporcionamos archivos corruptos o modificados. Solo el archivo original de la URL exacta enviada por el usuario se descarga de manera segura. Nuestro sistema avanzado también garantiza velocidades de descarga extremadamente rápidas para todo el contenido compatible.",
+        "line4": "Con esta herramienta, puedes guardar fácilmente videos de Instagram, Reels, fotos y fotos de perfil en calidad HD en tu dispositivo. Esta herramienta admite la descarga de videos, Reels y audio (MP3) solo de publicaciones públicas de Instagram. No se puede acceder a contenido privado o restringido."
     },
     "platforms": {
         "eyebrow": "Plataformas",
-        "title": "Plataformas Soportadas",
-        "subtitle": "Descarga videos, reels y audio de plataformas sociales populares de forma rápida y segura.",
+        "title": "Plataformas compatibles",
+        "subtitle": "Descarga videos, Reels y audio de plataformas sociales populares de forma rápida y segura.",
         "instagram": {
             "name": "Instagram",
-            "description": "Descarga videos públicos, reels, IGTV y audio (MP3) de Instagram al instante y en HD.",
-            "status": "Activo"
+            "description": "Descarga videos públicos de Instagram, Reels, IGTV y audio (MP3) al instante y en HD.",
+            "status": "En vivo"
         },
         "facebook": {
             "name": "Facebook",
-            "description": "El soporte para descargador de videos de Facebook llegará pronto, incluyendo Shorts y videos completos.",
+            "description": "El soporte del descargador de videos de Facebook llegará pronto, incluyendo Shorts y videos completos.",
             "status": "Próximamente"
         },
         "youtube": {
             "name": "YouTube",
-            "description": "El soporte para descargador de videos de YouTube llegará pronto para Shorts y videos completos.",
+            "description": "El soporte del descargador de videos de YouTube llegará pronto para Shorts y videos completos.",
             "status": "Próximamente"
         },
-        "footer": "Guarda esta página o vuelve pronto para descargar videos, reels y audio MP3 de más plataformas a medida que se agreguen."
+        "footer": "Marca esta página como favorita o vuelve pronto para descargar videos, Reels y audio MP3 de más plataformas a medida que se agreguen."
     },
     "howItWorks": {
         "eyebrow": "Cómo funciona",
-        "title": "Cómo Funciona",
-        "subtitle": "Descarga videos, Reels, fotos y audio MP3 de Instagram en tres simples pasos.",
+        "title": "Cómo descargar videos y Reels de Instagram en nuestra plataforma",
+        "subtitle": "Descarga videos de Instagram, Reels, fotos y audio MP3 en cinco sencillos pasos. Descargar videos de Instagram con nuestra plataforma es simple, rápido y seguro. No necesitas crear una cuenta ni instalar ninguna aplicación. Solo sigue estos sencillos pasos",
         "step1": {
             "step": "Paso 1",
-            "title": "Pegar Enlace",
-            "description": "Copia la URL del video, Reel, foto o audio MP3 de Instagram y pégala en el cuadro en la parte superior de la página."
+            "title": "Copia la URL del video de Instagram",
+            "description": "Abre Instagram y encuentra el video, Reel, foto o perfil que quieres descargar. Copia la URL de ese contenido desde la barra de direcciones o la opción de compartir."
         },
         "step2": {
             "step": "Paso 2",
-            "title": "Vista Previa y Elegir Calidad",
-            "description": "Obtenemos el contenido y mostramos opciones de calidad disponibles para videos, fotos y audio cuando están soportados."
+            "title": "Pega el enlace en el campo de entrada",
+            "description": "Ve a nuestro sitio web y pega el enlace de Instagram copiado en el cuadro de entrada de descarga en la página de inicio."
         },
         "step3": {
             "step": "Paso 3",
-            "title": "Descargar al Instante",
-            "description": "Haz clic en el botón de descarga para guardar el video MP4 o archivo de audio MP3 directamente en tu dispositivo."
+            "title": "Elige el formato de descarga",
+            "description": "Selecciona tu formato preferido, como video, Reel, audio MP3, foto o foto de perfil, dependiendo del contenido que quieras guardar."
+        },
+        "step4": {
+            "step": "Paso 4",
+            "title": "Haz clic en el botón de descarga",
+            "description": "Haz clic en el botón de descarga y nuestro sistema procesará instantáneamente el enlace y obtendrá el archivo original desde Instagram."
+        },
+        "step5": {
+            "step": "Paso 5",
+            "title": "Guarda el archivo en tu dispositivo",
+            "description": "Una vez que el archivo esté listo, descárgalo directamente a tu dispositivo en calidad HD con alta velocidad y seguridad completa."
         },
         "tryItNow": "Pruébalo ahora"
     },
     "whyChoose": {
         "eyebrow": "Beneficios",
-        "title": "¿Por Qué Elegir Nuestro Descargador de Instagram?",
+        "title": "¿Por qué elegir nuestro descargador de Instagram?",
         "subtitle": "Descargas rápidas, seguras y de alta calidad para videos, Reels, fotos y audio MP3.",
         "fast": {
-            "title": "Descargas Rápidas y Confiables de Video y Audio de Instagram",
-            "description": "Descarga videos, Reels, fotos y audio MP3 de Instagram en segundos. Nuestra infraestructura asegura descargas suaves y de alta velocidad incluso para clips HD más largos."
+            "title": "Descargas de video y audio de Instagram rápidas y confiables",
+            "description": "Descarga videos de Instagram, Reels, fotos y audio MP3 en segundos. Nuestra infraestructura garantiza descargas fluidas y de alta velocidad incluso para clips HD más largos."
         },
         "quality": {
-            "title": "Preservación de Calidad Original",
-            "description": "Mantén tus videos y audio en su resolución y claridad original cuando Instagram lo permite, incluyendo contenido HD y 4K."
+            "title": "Preservación de la calidad original",
+            "description": "Mantén tus videos y audio en su resolución y claridad originales siempre que Instagram lo permita, incluido contenido HD y 4K."
         },
         "noLogin": {
-            "title": "Sin Necesidad de Iniciar Sesión",
-            "description": "Descarga contenido de Instagram de forma segura sin iniciar sesión. Solo pega el enlace del video, Reel o audio y comienza a descargar al instante."
+            "title": "No requiere inicio de sesión",
+            "description": "Descarga contenido de Instagram de forma segura sin iniciar sesión. Solo pega el enlace de video, Reel o audio y comienza a descargar al instante."
         },
         "privacy": {
-            "title": "Amigable con la Privacidad y Seguro",
-            "description": "No almacenamos tus descargas ni rastreamos los enlaces que pegas, asegurando que tu actividad en Instagram se mantenga privada."
+            "title": "Respetuoso con la privacidad y seguro",
+            "description": "No almacenamos tus descargas ni rastreamos los enlaces que pegas, garantizando que tu actividad en Instagram permanezca privada."
         },
-        "footer": "¿Curioso sobre los detalles de privacidad? Consulta la sección de preguntas frecuentes a continuación para una descripción concisa de nuestro proceso seguro de descarga de videos, Reels, fotos y audio MP3 de Instagram."
+        "footer": "¿Curioso sobre los detalles de privacidad? Revisa la sección de Preguntas frecuentes a continuación para obtener una descripción concisa de nuestro proceso seguro de descarga de videos, Reels, fotos y audio MP3 de Instagram."
     },
     "worksAnywhere": {
         "eyebrow": "Compatibilidad",
-        "title": "Descarga Videos y Audio MP3 de Instagram en Cualquier Dispositivo",
-        "subtitle": "Usa nuestro descargador en tu teléfono, tableta o computadora para reproducción suave y descargas rápidas.",
-        "description": "Todas las descargas están disponibles como videos MP4 o archivos de audio MP3. Guárdalos en tu rollo de cámara, laptop o almacenamiento en la nube y disfruta en cualquier momento.",
+        "title": "Descarga videos y audio MP3 de Instagram en cualquier dispositivo",
+        "subtitle": "Usa nuestro descargador en tu teléfono, tableta o escritorio para una reproducción fluida y descargas rápidas.",
+        "description": "Todas las descargas están disponibles como videos MP4 o archivos de audio MP3. Guárdalos en tu rollo de cámara, laptop o almacenamiento en la nube y disfrútalos en cualquier momento.",
         "features": {
-            "mobile": "Interfaz amigable para móviles para descargas rápidas de video y audio en movimiento.",
-            "noApp": "No se requiere instalación de aplicación — todo funciona en tu navegador.",
-            "saveDirect": "Guarda directamente en el almacenamiento del dispositivo o tu carpeta preferida.",
-            "share": "Comparte fácilmente clips descargados o audio a aplicaciones de mensajería o equipos con un toque."
+            "mobile": "Interfaz amigable para móviles para descargas rápidas de video y audio sobre la marcha.",
+            "noApp": "No se requiere instalación de aplicación: todo funciona en tu navegador.",
+            "saveDirect": "Guarda directamente en el almacenamiento del dispositivo o en tu carpeta preferida.",
+            "share": "Comparte fácilmente clips o audio descargados en aplicaciones de mensajería o equipos con un toque."
         },
         "openOnPhone": "Abrir en tu teléfono",
         "copyLink": "Copiar enlace para compartir",
-        "imageAlt": "Vista previa de descargas de video y audio MP3 de Instagram en escritorio, tableta y dispositivos móviles",
-        "footer": "Vista previa de cómo se ven tus descargas de video y audio MP3 de Instagram en escritorio, tableta y dispositivos móviles — la misma interfaz simple en todas partes."
+        "imageAlt": "Vista previa de descargas de video y audio MP3 de Instagram en escritorio, tablet y dispositivos móviles",
+        "footer": "Vista previa de cómo se ven tus descargas de video y audio MP3 de Instagram en escritorio, tablet y dispositivos móviles: la misma interfaz simple en todas partes."
     },
     "usageTips": {
-        "eyebrow": "Casos de Uso",
-        "title": "Formas Inteligentes de Usar Nuestro Descargador de Instagram",
+        "eyebrow": "Casos de uso",
+        "title": "Formas inteligentes de usar nuestro descargador de Instagram",
         "subtitle": "Descubre formas creativas de descargar videos, Reels, fotos y audio MP3 de Instagram para uso personal o profesional.",
         "saveOwn": {
-            "title": "Guarda Tus Propios Reels y Videos",
-            "description": "Descarga tus propios videos, Reels, fotos y audio MP3 de Instagram o Facebook para editar, archivar o republicar en otras plataformas."
+            "title": "Guarda tus propios Reels y videos",
+            "description": "Descarga tus propios videos de Instagram o Facebook, Reels, fotos y audio MP3 para editar, archivar o volver a publicar en otras plataformas."
         },
         "offline": {
-            "title": "Ver Sin Conexión en Cualquier Momento",
-            "description": "Mantén tutoriales, videos de ejercicios, Reels o música sin conexión para que puedas ver o escuchar sin usar datos móviles."
+            "title": "Visualización sin conexión en cualquier momento",
+            "description": "Mantén tutoriales, videos de ejercicio, Reels o música sin conexión para que puedas ver o escuchar sin usar datos móviles."
         },
         "share": {
-            "title": "Compartir con Amigos y Equipos",
+            "title": "Comparte con amigos y equipos",
             "description": "Recopila clips de referencia, Reels, videos o audio MP3 para campañas, inspiración de diseño o lluvias de ideas de contenido en una carpeta compartida."
         },
         "library": {
-            "title": "Inspiración de Contenido y Biblioteca",
+            "title": "Inspiración y biblioteca de contenido",
             "description": "Crea una biblioteca personal de videos, Reels, fotos y clips de audio MP3 para inspirar tu próxima publicación, idea de marketing o proyecto creativo."
         },
-        "footer": "Siempre respeta los derechos de autor de los creadores y los términos de la plataforma al descargar videos, Reels, fotos o audio MP3 de Instagram."
+        "footer": "Respeta siempre los derechos de autor de los creadores y los términos de la plataforma al descargar videos, Reels, fotos o audio MP3 de Instagram."
+    },
+    "keyFeatures": {
+        "eyebrow": "Características",
+        "title": "Características principales de nuestra plataforma",
+        "subtitle": "Nuestra plataforma está diseñada para proporcionar una experiencia rápida, segura y fácil de usar para descargar contenido de Instagram. A diferencia de muchas otras herramientas, nuestra plataforma se centra en la seguridad, la calidad del archivo original y la velocidad, lo que la convierte en una opción confiable para usuarios que quieren descargas sin complicaciones.",
+        "videoHD": {
+            "title": "Descarga videos de Instagram en calidad HD",
+            "description": "Nuestra plataforma te permite descargar videos de Instagram en alta definición sin ninguna pérdida. Obtenemos el archivo de video original directamente desde Instagram, asegurando que el contenido descargado permanezca claro, fluido y sin modificar."
+        },
+        "reels": {
+            "title": "Descargador de Reels de Instagram",
+            "description": "Puedes descargar fácilmente Reels de Instagram con un clic. Nuestro sistema admite descargas de Reels en HD con procesamiento rápido, lo que lo hace ideal para usuarios que quieren guardar Reels populares o informativos para ver sin conexión."
+        },
+        "mp3": {
+            "title": "Convierte videos de Instagram a MP3",
+            "description": "Con nuestra plataforma, puedes convertir videos y Reels de Instagram en archivos de audio MP3 de forma rápida y segura. Esta función es perfecta para guardar música, podcasts o contenido de voz sin descargar el video completo."
+        },
+        "photo": {
+            "title": "Descargador de fotos y fotos de perfil de Instagram",
+            "description": "Nuestra plataforma admite la descarga de fotos de Instagram, incluidas publicaciones individuales y fotos de perfil. Puedes guardar imágenes en su resolución HD original, lo que facilita la descarga de contenido visual de alta calidad directamente a tu dispositivo."
+        },
+        "igtv": {
+            "title": "Descarga videos de IGTV de Instagram",
+            "description": "Nuestra herramienta también admite descargas de videos de IGTV en HD. Puedes guardar contenido más largo de Instagram sin conexión sin perder calidad, lo que lo hace perfecto para tutoriales, entrevistas o videos completos que quieras ver en cualquier momento."
+        },
+        "carousel": {
+            "title": "Descarga publicaciones de carrusel de Instagram",
+            "description": "Nuestra plataforma te permite descargar publicaciones de carrusel de Instagram, incluidas todas las imágenes o videos en una sola publicación. Cada archivo se guarda en resolución original, para que puedas acceder a cada medio de publicaciones con múltiples fotos o videos."
+        },
+        "speed": {
+            "title": "Velocidad de descarga extremadamente rápida",
+            "description": "La velocidad es uno de los mayores puntos fuertes de nuestra plataforma. Nuestro sistema de procesamiento avanzado garantiza análisis de enlaces instantáneos y entrega rápida de archivos, por lo que no tendrás que esperar mucho para descargar tu contenido."
+        },
+        "safe": {
+            "title": "100% seguro y protegido para usar",
+            "description": "La seguridad del usuario es nuestra máxima prioridad. Nuestra plataforma no almacena datos personales, no requiere inicio de sesión y nunca entrega archivos corruptos o modificados. Solo el archivo original de la URL proporcionada se descarga de forma segura."
+        },
+        "noLogin": {
+            "title": "No requiere inicio de sesión ni instalación de aplicación",
+            "description": "Puedes usar nuestra plataforma completamente en línea sin crear una cuenta ni instalar ninguna aplicación. Esto hace que la herramienta sea simple, privada y accesible desde cualquier lugar."
+        },
+        "devices": {
+            "title": "Funciona en todos los dispositivos y navegadores",
+            "description": "Nuestra plataforma funciona sin problemas en teléfonos móviles, tabletas, laptops y computadoras de escritorio. Es totalmente compatible con todos los navegadores principales, incluidos Chrome, Firefox, Safari y Edge."
+        }
+    },
+    "aboutSection": {
+        "eyebrow": "Descripción general",
+        "title": "Descarga fácilmente videos, Reels, fotos y MP3 de Instagram con nuestra plataforma",
+        "intro": "Descargar contenido de Instagram nunca ha sido tan simple. Ya sean videos, Reels, fotos o audio, nuestra plataforma lo hace rápido, seguro y completamente gratis. Con solo unos clics, puedes descargar videos de Instagram, guardar Reels, convertir videos a MP3 o descargar fotos y fotos de perfil, todo sin ningún inicio de sesión o instalación de aplicación.",
+        "step": {
+            "title": "Proceso sin esfuerzo",
+            "description": "Usar nuestra plataforma es sin esfuerzo. Solo copia el enlace del video, Reel, foto o perfil de Instagram que deseas y pégalo en la herramienta. Elige tu formato preferido (MP4, MP3 o imagen) y haz clic en descargar. En segundos, tu contenido se guardará en calidad HD, listo para disfrutar en cualquier dispositivo."
+        },
+        "quality": {
+            "title": "Original y sin marca de agua",
+            "description": "Nuestro sistema garantiza que todas las descargas sean originales y sin modificar, sin archivos corruptos. Aunque nuestra plataforma es completamente gratuita, no se agrega marca de agua a tus videos, Reels o fotos. Esto significa que obtienes la mejor experiencia de visualización sin interrupciones."
+        },
+        "secure": {
+            "title": "Descargas rápidas y seguras",
+            "description": "Con nuestra plataforma, también puedes disfrutar de descargas rápidas y seguras. Nuestro sistema avanzado garantiza descargas de alta velocidad mientras mantiene tus datos completamente privados. Ya sea que uses un teléfono móvil, tableta o escritorio, nuestra plataforma funciona sin problemas en todos los dispositivos y navegadores."
+        },
+        "conclusion": {
+            "title": "Solución todo en uno",
+            "description": "Desde videos de Instagram hasta Reels, audio MP3, fotos y fotos de perfil, nuestra plataforma es tu solución todo en uno para guardar contenido de Instagram de forma rápida y segura. Di adiós a las descargas complicadas y disfruta de tu contenido favorito de Instagram en cualquier momento y lugar."
+        }
+    },
+    "safety": {
+        "eyebrow": "Seguridad",
+        "title": "Por qué nuestra plataforma es segura de usar",
+        "subtitle": "La seguridad y privacidad del usuario son nuestras principales prioridades en nuestra plataforma. Muchos descargadores de Instagram de terceros pueden almacenar datos personales o entregar archivos corruptos, pero con nuestra plataforma, puedes descargar contenido sin ningún riesgo para tu privacidad.",
+        "content1": "No almacenamos información personal de nuestros usuarios. La herramienta funciona completamente en línea, por lo que no es necesario crear una cuenta ni compartir datos sensibles. Esto garantiza que tu actividad en Instagram permanezca privada y segura.",
+        "content2": "Nuestra plataforma garantiza que solo descargues los archivos originales de las URL que proporcionas. Nunca modificamos, comprimimos o entregamos archivos corruptos. Esto significa que el contenido que guardas es exactamente lo que ves en Instagram, manteniéndolo auténtico y seguro.",
+        "content3": "Tampoco es necesario instalar ninguna aplicación o software. Puedes usar nuestra plataforma directamente desde cualquier navegador en tu móvil, tableta o escritorio, lo que la convierte en una experiencia completamente segura y sin complicaciones.",
+        "content4": "Finalmente, nuestro sistema seguro avanzado garantiza un procesamiento rápido mientras mantiene los más altos estándares de seguridad. Obtienes descargas rápidas sin comprometer la seguridad o la calidad del archivo, lo que hace que nuestra plataforma sea una de las herramientas más confiables para contenido de Instagram."
     },
     "contact": {
         "eyebrow": "Contacto",
-        "title": "Ponte en Contacto con Nuestro Equipo de Descargador de Instagram",
-        "subtitle": "¿Tienes preguntas, comentarios o consultas comerciales sobre nuestro Descargador de Videos, Reels, Historias o Fotos? Envíanos un mensaje y responderemos rápidamente.",
+        "title": "Ponte en contacto con nuestro equipo de descargador de Instagram",
+        "subtitle": "¿Tienes preguntas, comentarios o consultas comerciales sobre nuestro descargador de Video, Reels, Stories o Fotos? Envíanos un mensaje y responderemos rápidamente.",
         "form": {
             "name": "Nombre",
             "namePlaceholder": "Tu nombre completo",
             "email": "Correo electrónico",
-            "emailPlaceholder": "tu@ejemplo.com",
+            "emailPlaceholder": "tú@ejemplo.com",
             "message": "Mensaje",
-            "messagePlaceholder": "Escribe tu pregunta o comentario sobre el Descargador de Videos, Reels, Historias o Fotos de Instagram…",
-            "send": "Enviar Mensaje",
+            "messagePlaceholder": "Escribe tu pregunta o comentario sobre el descargador de Video, Reels, Stories o Fotos de Instagram...",
+            "send": "Enviar mensaje",
             "responseTime": "Normalmente respondemos en 1-2 días hábiles."
         },
         "info": {
-            "title": "Soporte y Comentarios para el Descargador de Instagram",
-            "description": "Usa este formulario de contacto para preguntas, solicitudes de funciones o asociaciones comerciales relacionadas con nuestro Descargador de Videos, Descargador de Reels, Guardador de Historias, Descargador de Destacados o Descargador de Fotos. Para problemas técnicos, incluye la URL o detalles de la plataforma.",
-            "privacy": "Nunca compartas contraseñas o información personal sensible. No solicitamos credenciales de inicio de sesión de redes sociales.",
-            "support": "Nuestro equipo de soporte normalmente responde en 24-48 horas. Proporciona detalles claros para una asistencia más rápida con descargas de videos, Reels o historias de Instagram."
+            "title": "Soporte y comentarios para el descargador de Instagram",
+            "description": "Usa este formulario de contacto para preguntas, solicitudes de funciones o asociaciones comerciales relacionadas con nuestro Descargador de Video, Descargador de Reels, Guardador de Stories, Descargador de Destacados o Descargador de Fotos. Para problemas técnicos, incluye la URL o detalles de la plataforma.",
+            "privacy": "Nunca compartas contraseñas o información personal sensible. No solicitamos credenciales de inicio de sesión en redes sociales.",
+            "support": "Nuestro equipo de soporte normalmente responde dentro de 24-48 horas. Proporciona detalles claros para obtener ayuda más rápida con descargas de video, Reels o stories de Instagram."
         }
     },
     "faq": {
-        "eyebrow": "Preguntas Frecuentes",
-        "title": "Preguntas Frecuentes",
-        "subtitle": "Respuestas rápidas sobre la descarga de videos, Reels, historias, destacados, fotos y audio MP3 de Instagram.",
+        "eyebrow": "Preguntas frecuentes",
+        "title": "Preguntas frecuentes",
+        "subtitle": "Respuestas rápidas sobre descargar videos, Reels, stories, destacados, fotos y audio MP3 de Instagram.",
         "show": "Mostrar",
         "hide": "Ocultar",
         "questions": {
             "free": {
-                "q": "¿Es gratis usar el Descargador de Videos de Instagram?",
-                "a": "Sí. Nuestro Descargador de Videos de Instagram es completamente gratis. No hay cargos ocultos y puedes descargar tantos videos, Reels, historias, fotos o audio MP3 de Instagram como quieras."
+                "q": "¿El descargador de videos de Instagram es gratuito?",
+                "a": "¡Sí! Nuestra plataforma es completamente gratuita. No necesitas pagar nada para descargar videos, Reels, fotos o audio MP3 de Instagram. No hay cargos ocultos ni planes premium. Puedes acceder a todas las funciones, incluidas descargas de video HD y conversión de audio, sin gastar ni un centavo. Esto hace que nuestra plataforma sea una de las herramientas de descarga de videos de Instagram más convenientes y accesibles en línea."
             },
             "limits": {
-                "q": "¿Hay límites en el número de descargas?",
-                "a": "No. Puedes usar nuestro descargador de Instagram para guardar videos, Reels, fotos, historias, destacados y archivos de audio ilimitados. Descarga todo lo que necesites, completamente gratis."
+                "q": "¿Hay límites en la cantidad de descargas?",
+                "a": "No. Puedes usar nuestro descargador de Instagram para guardar videos, Reels, fotos, stories, destacados y archivos de audio ilimitados. Descarga todo lo que necesites, completamente gratis."
             },
             "software": {
                 "q": "¿Necesito instalar algún software para descargar videos de Instagram?",
-                "a": "No. Este Descargador de Videos de Instagram está basado en web, por lo que no necesitas instalar ninguna aplicación. Solo copia la URL del video, pégala en nuestra herramienta y haz clic en 'Descargar'."
+                "a": "No. Este Descargador de videos de Instagram es basado en web, por lo que no necesitas instalar ninguna aplicación. Solo copia la URL del video, pégala en nuestra herramienta y haz clic en 'Descargar'."
             },
             "mobile": {
-                "q": "¿Puedo descargar videos de Instagram en mi teléfono inteligente?",
-                "a": "Sí. Nuestro Descargador de Videos de Instagram funciona en navegadores móviles, de tableta y de escritorio. Simplemente copia la URL del video, Reel o historia, pégala en nuestra herramienta y descarga al instante."
+                "q": "¿Puedo descargar videos de Instagram en mi smartphone?",
+                "a": "Sí. Nuestro Descargador de videos de Instagram funciona en navegadores móviles, de tabletas y de escritorio. Simplemente copia la URL del video, Reels o story, pégala en nuestra herramienta y descarga al instante."
             },
             "private": {
                 "q": "¿Puedo descargar videos privados de Instagram?",
-                "a": "No. Solo se admiten videos, Reels, historias, destacados y fotos de acceso público. El contenido privado no puede ser descargado debido a las restricciones de Instagram."
+                "a": "No. Solo se admiten videos, Reels, stories, destacados y fotos accesibles públicamente. El contenido privado no se puede descargar debido a las restricciones de Instagram."
             },
             "storage": {
-                "q": "¿Almacenan mis videos o enlaces?",
-                "a": "No. Respetamos tu privacidad. Los archivos descargados y las URLs nunca se almacenan más allá del tiempo necesario para procesar tu solicitud."
+                "q": "¿Almacenas mis videos o enlaces?",
+                "a": "No. Respetamos tu privacidad. Los archivos descargados y las URL nunca se almacenan más allá del tiempo necesario para procesar tu solicitud."
+            },
+            "storage1": {
+                "q": "¿Necesito iniciar sesión o crear una cuenta?",
+                "a": "No se requiere inicio de sesión ni creación de cuenta. Puedes usar nuestra plataforma directamente desde tu navegador en cualquier dispositivo. Esto garantiza que tu experiencia sea rápida, privada y sin complicaciones. No necesitarás compartir información personal, correos electrónicos o contraseñas, lo que mantiene tus datos completamente seguros mientras descargas contenido de Instagram."
+            },
+            "storage2": {
+                "q": "¿Puedo descargar Reels de Instagram en HD?",
+                "a": "¡Absolutamente! Con nuestra plataforma, puedes descargar fácilmente Reels de Instagram en calidad de alta definición. Ya sea un clip corto o un Reel popular, nuestro sistema preserva la resolución de video original. También obtienes los beneficios de velocidad de procesamiento rápida y descargas seguras, asegurando que tus Reels guardados sean exactamente como aparecen en Instagram."
+            },
+            "storage3": {
+                "q": "¿Puedo convertir videos de Instagram a MP3?",
+                "a": "¡Sí! Una de las características destacadas de nuestra plataforma es la capacidad de convertir videos y Reels de Instagram en archivos de audio MP3. Esto es perfecto si quieres guardar música, podcasts o contenido hablado de videos de Instagram. Los archivos MP3 se descargan rápidamente, de forma segura y con calidad clara, lo que lo convierte en un descargador de MP3 de Instagram confiable."
+            },
+            "storage4": {
+                "q": "¿Es seguro usar nuestra plataforma?",
+                "a": "¡100% seguro! Nuestra plataforma garantiza privacidad y seguridad completa del usuario. No almacenamos información personal y todas las descargas se obtienen directamente de las URL que proporcionas. No hay archivos corruptos, software oculto ni malware, por lo que puedes descargar videos, Reels, audio MP3, fotos y fotos de perfil de Instagram de forma segura. Nuestro sistema avanzado también previene interrupciones o riesgos de seguridad durante el proceso de descarga."
+            },
+            "storage5": {
+                "q": "¿Puedo descargar fotos y fotos de perfil de Instagram?",
+                "a": "Sí, puedes descargar fotos de Instagram, publicaciones de carrusel y fotos de perfil en calidad HD usando nuestra plataforma. La herramienta te permite guardar imágenes exactamente como aparecen en Instagram, sin compresión ni modificación. Esta función es particularmente útil si quieres conservar fotos memorables o imágenes de perfil sin conexión para uso personal."
+            },
+            "storage6": {
+                "q": "¿Funciona en dispositivos móviles y de escritorio?",
+                "a": "¡Absolutamente! Nuestra plataforma es totalmente compatible con todos los dispositivos y navegadores principales. Ya sea que uses un smartphone, tableta, laptop o computadora de escritorio, puedes descargar videos, Reels, MP3, fotos y fotos de perfil de Instagram sin problemas. No se requiere instalación de aplicación, lo que la convierte en un descargador de Instagram multiplataforma que funciona dondequiera que estés."
+            },
+            "storage7": {
+                "q": "¿Hay límites en cuántos videos de Instagram puedo descargar?",
+                "a": "No, no hay límites estrictos. Con nuestra plataforma, puedes descargar videos, Reels, fotos y MP3 de Instagram tantas veces como quieras. Ya sean algunos clips o docenas de videos, nuestro sistema garantiza descargas rápidas, seguras e ilimitadas, lo que la convierte en uno de los descargadores de Instagram más flexibles en línea."
+            },
+            "storage8": {
+                "q": "¿Puedo descargar contenido privado de Instagram?",
+                "a": "No, nuestra plataforma solo admite contenido público de Instagram. Puedes descargar de forma segura videos, Reels, fotos y fotos de perfil de Instagram de cuentas y publicaciones públicas. El contenido privado está protegido por la configuración de privacidad de Instagram y nuestra herramienta respeta esas limitaciones."
+            },
+            "storage9": {
+                "q": "¿Puedo usar nuestra plataforma en múltiples dispositivos simultáneamente?",
+                "a": "¡Sí! Puedes usar nuestra plataforma en múltiples dispositivos al mismo tiempo. Funciona sin problemas en teléfonos móviles, tabletas, laptops y computadoras de escritorio, por lo que puedes descargar contenido de Instagram dondequiera que estés sin restricciones."
+            },
+            "storage10": {
+                "q": "¿Nuestra plataforma agrega una marca de agua a los videos o MP3 descargados?",
+                "a": "No. Una de las principales ventajas de nuestra plataforma es que te permite descargar videos, Reels, fotos y MP3 de Instagram sin agregar ninguna marca de agua. Tus descargas permanecen limpias, originales y en calidad HD, proporcionando la mejor experiencia de visualización o escucha."
+            },
+            "storage11": {
+                "q": "¿Puedo descargar Stories de Instagram?",
+                "a": "Si es compatible, nuestra plataforma te permite descargar Stories de Instagram de cuentas públicas de forma rápida y segura. Todas las Stories se guardan en formato de alta calidad, asegurando que nunca te pierdas contenido importante o popular."
+            },
+            "storage12": {
+                "q": "¿Necesito algún navegador o software especial para usar nuestra plataforma?",
+                "a": "Para nada. Nuestra plataforma funciona directamente desde cualquier navegador principal, incluidos Chrome, Firefox, Safari y Edge. No se requiere instalación de software o aplicación, lo que la convierte en un descargador de Instagram completamente en línea accesible en cualquier momento y lugar."
+            },
+            "storage13": {
+                "q": "¿Qué formatos se admiten para descargas?",
+                "a": "Nuestra plataforma admite múltiples formatos para satisfacer todas las necesidades del usuario. Puedes descargar videos y Reels de Instagram en MP4, convertir videos o Reels a MP3 y guardar fotos o fotos de perfil en formato JPEG/PNG. Esta versatilidad la convierte en el descargador de Instagram más completo en línea."
             }
         },
-        "disclaimer": "Este sitio no está afiliado con Instagram, Facebook o Meta Platforms, Inc. Siempre sigue las reglas de la plataforma y las leyes locales al usar nuestro descargador gratuito de Instagram.",
+        "disclaimer": "Este sitio no está afiliado a Instagram, Facebook o Meta Platforms, Inc. Siempre sigue las reglas de la plataforma y las leyes locales al usar nuestro descargador gratuito de Instagram.",
         "contactPrompt": "¿Aún tienes preguntas?",
         "contactLink": "Contáctanos",
-        "contactSuffix": "para ayuda descargando videos, Reels, historias, fotos o audio MP3 de Instagram."
+        "contactSuffix": "para obtener ayuda descargando videos, Reels, stories, fotos o audio MP3 de Instagram."
     },
     "footer": {
-        "brand": "Descargador de Videos Sociales",
-        "description": "Esta herramienta fue creada para facilitar el guardado y organización de tus videos públicos favoritos de plataformas sociales.",
+        "brand": "DownloadTrend",
+        "description": "Esta herramienta fue creada para facilitar el guardado y organización de tus videos públicos favoritos de Instagram.",
         "legal": {
             "title": "Legal",
-            "content": "Este sitio no está afiliado con Instagram, Facebook o Meta Platforms, Inc. Por favor respeta los derechos de autor y los términos de la plataforma."
+            "content": "Este sitio no está afiliado a Instagram o Meta Platforms, Inc. Por favor respeta los derechos de autor y los términos de la plataforma."
         },
         "follow": "Seguir",
-        "copyright": "© 2025 Descargador de Videos Sociales Por",
+        "copyright": "© 2025 DownloadTrend Por",
         "allRights": ". Todos los derechos reservados."
     },
     "accessibility": {
-        "scrollToTop": "Ir arriba",
+        "scrollToTop": "Desplazarse hacia arriba",
         "toggleMenu": "Alternar menú",
         "switchToLight": "Cambiar a modo claro",
         "switchToDark": "Cambiar a modo oscuro",
         "selectLanguage": "Seleccionar idioma"
+    },
+    "download": {
+        "downloading": "Descargando...",
+        "converting": "Convirtiendo y descargando...",
+        "mp4": "Descargar MP4",
+        "mp3": "Descargar MP3",
+        "audioOnly": "Solo audio"
+    },
+    "privacyPolicy": {
+        "title": "Política de Privacidad",
+        "effectiveDate": "Fecha de entrada en vigencia: 11 de enero de 2026",
+        "intro": "En DownloadTrend (downloadtrend.com), tu privacidad y seguridad son nuestras principales prioridades. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos la información mientras usas nuestra plataforma para descargar videos, Reels, fotos, IGTV y audio MP3 de Instagram. Al usar nuestro servicio, aceptas los términos descritos a continuación.",
+        "section1": {
+            "title": "1. Información que recopilamos",
+            "content1": "Respetamos tu privacidad y no recopilamos información personal como nombres, direcciones de correo electrónico o credenciales de cuentas de redes sociales.",
+            "content2": "No se requiere inicio de sesión: puedes descargar contenido sin crear una cuenta.",
+            "content3": "Sin almacenamiento de datos personales: no almacenamos enlaces, contenido descargado o actividad del usuario en nuestros servidores.",
+            "content4": "Uso anónimo: la única información procesada es la URL pública que pegas para descargar contenido, y se usa temporalmente para obtener el archivo solicitado."
+        },
+        "section2": {
+            "title": "2. Cómo usamos tus datos",
+            "content1": "Las URL que envías se usan únicamente para descargar contenido de Instagram. No compartimos, vendemos ni usamos tus datos para marketing o análisis.",
+            "content2": "El contenido se obtiene directamente de los servidores de Instagram y se entrega a tu dispositivo.",
+            "content3": "No se realiza seguimiento de terceros, publicidad ni análisis."
+        },
+        "section3": {
+            "title": "3. Cookies y seguimiento",
+            "content": "DownloadTrend no utiliza cookies ni tecnologías de seguimiento para monitorear tu actividad. Tus descargas permanecen privadas y seguras."
+        },
+        "section4": {
+            "title": "4. Integridad y seguridad de archivos",
+            "content": "Priorizamos la seguridad y autenticidad:",
+            "item1": "Solo se proporciona contenido original de la URL enviada.",
+            "item2": "Los archivos nunca son modificados, dañados o marcados con marca de agua por nuestra plataforma.",
+            "item3": "Las descargas se procesan de forma segura y rápida para prevenir cualquier riesgo para tu dispositivo o datos."
+        },
+        "section5": {
+            "title": "5. Limitaciones",
+            "content1": "Nuestro descargador solo funciona con contenido público de Instagram. No se puede acceder a publicaciones privadas, restringidas o protegidas.",
+            "content2": "DownloadTrend no está afiliado a Instagram, Facebook o Meta Platforms, Inc.",
+            "content3": "Los usuarios deben respetar los derechos de autor y los términos de la plataforma al descargar contenido."
+        },
+        "section6": {
+            "title": "6. Servicios de terceros",
+            "content": "Actualmente, DownloadTrend no se integra con ningún servicio de terceros que pueda recopilar información personal. Cualquier actualización futura seguirá los mismos principios de privacidad."
+        },
+        "section7": {
+            "title": "7. Privacidad de los niños",
+            "content": "Nuestro servicio no está destinado a niños menores de 13 años. No recopilamos conscientemente información personal de menores."
+        },
+        "section8": {
+            "title": "8. Cambios en esta Política de Privacidad",
+            "content": "Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestra plataforma o requisitos legales. Cualquier actualización se publicará en esta página con una fecha de vigencia actualizada."
+        },
+        "section9": {
+            "title": "9. Contáctanos",
+            "content": "Si tienes preguntas, comentarios o preocupaciones sobre tu privacidad, contáctanos:",
+            "email": "Correo electrónico: mateen8325@gmail.com",
+            "website": "Sitio web: downloadtrend.com",
+            "responseTime": "Normalmente respondemos en 1-2 días hábiles."
+        },
+        "disclaimer": {
+            "title": "Descargo de responsabilidad:",
+            "content": "DownloadTrend es una herramienta gratuita para descargar contenido público de Instagram. No estamos afiliados a Instagram, Facebook o Meta Platforms, Inc. Siempre cumple con las leyes locales y las reglas de la plataforma al usar nuestro servicio."
+        },
+        "copyright": "© 2025 DownloadTrend por Abdul Mateen. Todos los derechos reservados."
     }
 }

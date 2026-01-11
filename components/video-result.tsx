@@ -88,7 +88,7 @@ export function VideoResult({ data }: VideoResultProps) {
         await ffmpeg.writeFile('input.mp4', await fetchFile(blob))
         await ffmpeg.exec(['-i', 'input.mp4', '-q:a', '0', '-map', 'a', 'output.mp3'])
         const data = await ffmpeg.readFile('output.mp3')
-        blob = new Blob([data], { type: 'audio/mpeg' })
+        blob = new Blob([], { type: 'audio/mpeg' })
       }
 
       const url = window.URL.createObjectURL(blob)

@@ -57,17 +57,12 @@
             "description": "Instant Instagram downloads with no login, no tracking, and no data storage."
         }
     },
-  "heroFooter": {
-  "line1": "Download Instagram videos, reels, and audio (MP3) online in seconds. Free, fast, no watermark, and no login required. Paste a public Instagram video or reel link to download MP4 video or extract MP3 audio instantly. Downloading videos, reels, photos, or audio directly from Instagram is not possible, which is why users need a reliable third-party tool.",
-  
-  "line2": "This tool is a safe, fast, and free Instagram downloader that allows you to download Instagram videos, save reels, and convert Instagram videos to MP3 without any login or app installation. It is one of the most secure options for downloading Instagram content because we do not store any user personal data.",
-  
-  "line3": "We never provide corrupted or modified files. Only the original file from the exact URL submitted by the user is downloaded safely. Our advanced system also ensures extremely fast download speeds for all supported content.",
-  
-  "line4": "With this tool, you can easily save Instagram videos, reels, photos, and profile pictures in HD quality on your device. This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only. Private or restricted content cannot be accessed."
-}
-
-,
+    "heroFooter": {
+        "line1": "Download Instagram videos, reels, and audio (MP3) online in seconds. Free, fast, no watermark, and no login required. Paste a public Instagram video or reel link to download MP4 video or extract MP3 audio instantly. Downloading videos, reels, photos, or audio directly from Instagram is not possible, which is why users need a reliable third-party tool.",
+        "line2": "This tool is a safe, fast, and free Instagram downloader that allows you to download Instagram videos, save reels, and convert Instagram videos to MP3 without any login or app installation. It is one of the most secure options for downloading Instagram content because we do not store any user personal data.",
+        "line3": "We never provide corrupted or modified files. Only the original file from the exact URL submitted by the user is downloaded safely. Our advanced system also ensures extremely fast download speeds for all supported content.",
+        "line4": "With this tool, you can easily save Instagram videos, reels, photos, and profile pictures in HD quality on your device. This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only. Private or restricted content cannot be accessed."
+    },
     "platforms": {
         "eyebrow": "Platforms",
         "title": "Supported Platforms",
@@ -366,14 +361,14 @@
         "contactSuffix": "for help downloading Instagram videos, Reels, stories, photos, or MP3 audio."
     },
     "footer": {
-        "brand": "Social Video Downloader",
+        "brand": "DownloadTrend",
         "description": "This tool was built to make it easier to save and organize your favorite public videos from Instagram.",
         "legal": {
             "title": "Legal",
             "content": "This site is not affiliated with Instagram or Meta Platforms, Inc. Please respect copyrights and platform terms."
         },
         "follow": "Follow",
-        "copyright": "© 2025 Social Video Downloader By",
+        "copyright": "© 2025 DownloadTrend By",
         "allRights": ". All rights reserved."
     },
     "accessibility": {
@@ -389,5 +384,64 @@
         "mp4": "Download MP4",
         "mp3": "Download MP3",
         "audioOnly": "Audio Only"
+    },
+    "privacyPolicy": {
+        "title": "Privacy Policy",
+        "effectiveDate": "Effective Date: January 11, 2026",
+        "intro": "At DownloadTrend (downloadtrend.com), your privacy and security are our top priorities. This Privacy Policy explains how we collect, use, and protect information while you use our platform to download Instagram videos, reels, photos, IGTV, and MP3 audio. By using our service, you agree to the terms outlined below.",
+        "section1": {
+            "title": "1. Information We Collect",
+            "content1": "We respect your privacy and do not collect personal information such as names, email addresses, or social media account credentials.",
+            "content2": "No login required: You can download content without creating an account.",
+            "content3": "No personal data storage: We do not store any links, downloaded content, or user activity on our servers.",
+            "content4": "Anonymous usage: The only information processed is the public URL you paste to download content, and it is temporarily used to fetch the requested file."
+        },
+        "section2": {
+            "title": "2. How We Use Your Data",
+            "content1": "The URLs you submit are used solely for the purpose of downloading content from Instagram. We do not share, sell, or use your data for marketing or analytics.",
+            "content2": "Content is fetched directly from Instagram servers and delivered to your device.",
+            "content3": "No third-party tracking, advertising, or analytics is performed."
+        },
+        "section3": {
+            "title": "3. Cookies and Tracking",
+            "content": "DownloadTrend does not use cookies or tracking technologies to monitor your activity. Your downloads remain private and secure."
+        },
+        "section4": {
+            "title": "4. File Integrity and Security",
+            "content": "We prioritize safety and authenticity:",
+            "item1": "Only original content from the submitted URL is provided.",
+            "item2": "Files are never modified, corrupted, or watermarked by our platform.",
+            "item3": "Downloads are processed securely and quickly to prevent any risk to your device or data."
+        },
+        "section5": {
+            "title": "5. Limitations",
+            "content1": "Our downloader only works with public Instagram content. Private, restricted, or protected posts cannot be accessed.",
+            "content2": "DownloadTrend is not affiliated with Instagram, Facebook, or Meta Platforms, Inc.",
+            "content3": "Users must respect copyrights and platform terms while downloading content."
+        },
+        "section6": {
+            "title": "6. Third-Party Services",
+            "content": "Currently, DownloadTrend does not integrate with any third-party services that may collect personal information. Any future updates will follow the same privacy principles."
+        },
+        "section7": {
+            "title": "7. Children’s Privacy",
+            "content": "Our service is not intended for children under 13. We do not knowingly collect personal information from minors."
+        },
+        "section8": {
+            "title": "8. Changes to This Privacy Policy",
+            "content": "We may update this Privacy Policy occasionally to reflect changes to our platform or legal requirements. Any updates will be posted on this page with an updated effective date."
+        },
+        "section9": {
+            "title": "9. Contact Us",
+            "content": "If you have questions, feedback, or concerns regarding your privacy, please contact us:",
+            "email": "Email: mateen8325@gmail.com",
+            "website": "Website: downloadtrend.com",
+            "responseTime": "We typically respond within 1–2 business days."
+        },
+        "disclaimer": {
+            "title": "Disclaimer:",
+            "content": "DownloadTrend is a free tool for downloading public Instagram content. We are not affiliated with Instagram, Facebook, or Meta Platforms, Inc. Always comply with local laws and platform rules while using our service."
+        },
+        "copyright": "© 2025 DownloadTrend by Abdul Mateen. All rights reserved."
     }
 }
