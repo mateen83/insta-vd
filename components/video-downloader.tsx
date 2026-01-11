@@ -47,11 +47,11 @@ export function VideoDownloader() {
 
   const navItems = [
     { label: t('header.nav.howItWorks'), href: "#how-it-works" },
-    { label: t('header.nav.platforms'), href: "#supported-platforms" },
+    // { label: t('header.nav.platforms'), href: "#supported-platforms" },
     { label: t('header.nav.benefits'), href: "#why-choose" },
-    { label: t('header.nav.faq'), href: "#faq" },
+    // { label: t('header.nav.faq'), href: "#faq" },
     { label: t('header.nav.compatibility'), href: "#works-anywhere" },
-    { label: t('header.nav.useCases'), href: "#usage-tips" },
+    // { label: t('header.nav.useCases'), href: "#usage-tips" },
     { label: t('header.nav.contact'), href: "#contact" }
 
   ]
@@ -308,17 +308,17 @@ export function VideoDownloader() {
           </div>
         </div>
 
-        <h1 className="text-2xl font-bold text-foreground tracking-tight md:text-3xl lg:text-4xl">
+        <h1 className=" max-w-4xl text-2xl font-bold text-foreground tracking-tight md:text-3xl lg:text-4xl">
           {t('hero.title')}
         </h1>
 
-        <p className="mt-4 text-base text-muted-foreground md:text-lg">
+        {/* <p className="mt-4 text-base text-muted-foreground md:text-lg">
           {t('hero.subtitle')}
         </p>
 
         <p className="mt-2 text-xs text-muted-foreground">
           {t('hero.description')}
-        </p>
+        </p> */}
       </div>
 
 
@@ -386,6 +386,23 @@ export function VideoDownloader() {
         </CardContent>
       </Card>
 
+      {/* Footer */}
+      <section className="mt-16 flex justify-center">
+  <div className="max-w-4xl rounded-lg  border-border bg-card  px-6 py-4 text-center text-sm text-muted-foreground shadow-sm">
+    <p className="flex flex-col sm:flex-row justify-center gap-1">
+      {t('heroFooter.line1')}
+     <br></br>
+     <br></br>
+      {t('heroFooter.line2')}
+      <br></br>
+      <br></br>
+      {t('heroFooter.line3')}
+      <br></br>
+      <br></br>
+      {t('heroFooter.line4')}
+    </p>
+  </div>
+</section>
       {/* Features */}
       <div className="mt-12 grid grid-cols-1 gap-6 w-full max-w-3xl md:grid-cols-3">
         <FeatureCard
@@ -407,14 +424,6 @@ export function VideoDownloader() {
         />
       </div>
 
-      {/* Footer */}
-      <footer className="mt-16 flex justify-center">
-  <div className="max-w-3xl rounded-lg  border-border bg-card  px-6 py-4 text-center text-sm text-muted-foreground shadow-sm">
-    <p className="flex flex-col sm:flex-row justify-center gap-1">
-      <span>{t('heroFooter.line1')}</span>
-    </p>
-  </div>
-</footer>
 
 
 

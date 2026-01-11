@@ -1,6 +1,6 @@
 {
     "header": {
-        "siteName": "Instant Social Downloader",
+        "siteName": "DownloadTrend",
         "platform": "Instagram",
         "downloadNow": "Download now",
         "nav": {
@@ -57,9 +57,17 @@
             "description": "Instant Instagram downloads with no login, no tracking, and no data storage."
         }
     },
-    "heroFooter": {
-        "line1": "Downloading videos, reels, photos, or audio directly from Instagram is not possible, which is why users need a reliable third-party tool. This tool is a safe, fast, and free Instagram downloader that allows you to download Instagram videos, save reels, and convert Instagram videos to MP3 without any login or app installation. This tool is one of the most secure options for downloading Instagram content because we do not store any user personal data and never provide corrupted or modified files. Only the original file from the exact URL submitted by the user is downloaded safely. Our advanced system also ensures extremely fast download speeds. With this tool, you can easily save Instagram videos, reels, photos, and profile pictures in HD quality on your device. This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only. Private or restricted content cannot be accessed."
-    },
+  "heroFooter": {
+  "line1": "Download Instagram videos, reels, and audio (MP3) online in seconds. Free, fast, no watermark, and no login required. Paste a public Instagram video or reel link to download MP4 video or extract MP3 audio instantly. Downloading videos, reels, photos, or audio directly from Instagram is not possible, which is why users need a reliable third-party tool.",
+  
+  "line2": "This tool is a safe, fast, and free Instagram downloader that allows you to download Instagram videos, save reels, and convert Instagram videos to MP3 without any login or app installation. It is one of the most secure options for downloading Instagram content because we do not store any user personal data.",
+  
+  "line3": "We never provide corrupted or modified files. Only the original file from the exact URL submitted by the user is downloaded safely. Our advanced system also ensures extremely fast download speeds for all supported content.",
+  
+  "line4": "With this tool, you can easily save Instagram videos, reels, photos, and profile pictures in HD quality on your device. This tool supports downloading videos, reels, and audio (MP3) from public Instagram posts only. Private or restricted content cannot be accessed."
+}
+
+,
     "platforms": {
         "eyebrow": "Platforms",
         "title": "Supported Platforms",
@@ -359,10 +367,10 @@
     },
     "footer": {
         "brand": "Social Video Downloader",
-        "description": "This tool was built to make it easier to save and organize your favorite public videos from social platforms.",
+        "description": "This tool was built to make it easier to save and organize your favorite public videos from Instagram.",
         "legal": {
             "title": "Legal",
-            "content": "This site is not affiliated with Instagram, Facebook, or Meta Platforms, Inc. Please respect copyrights and platform terms."
+            "content": "This site is not affiliated with Instagram or Meta Platforms, Inc. Please respect copyrights and platform terms."
         },
         "follow": "Follow",
         "copyright": "© 2025 Social Video Downloader By",
